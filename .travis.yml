@@ -12,10 +12,10 @@ before_install:
 #- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; PYTHONPATH=src/ mkdocs gh-deploy -v --clean --remote-name gh-token; git push gh-token gh-pages; fi;
 
 deploy:
- provider: script
- skip_cleanup: true
- script: "./.travis-deploy.sh"
- #github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
- #local_dir: site
- on:
-   branch: master
+  provider: script
+  skip_cleanup: true
+  script: "./.travis-deploy.sh"
+  #github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  #local_dir: site
+  on:
+    branch: master
