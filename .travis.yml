@@ -7,8 +7,8 @@ script:
 before_install:
 - openssl aes-256-cbc -K $encrypted_2d9a5b6d5068_key -iv $encrypted_2d9a5b6d5068_iv -in deploy-key.enc -out deploy-key -d
 #- git config user.name "Automatic Publish"
-#- git remote add gh-token "${GH_REF}";
-#- git fetch gh-token && git fetch gh-token gh-pages:gh-pages;
+- git remote add gh-token "${GH_REF}";
+- git fetch gh-token && git fetch gh-token gh-pages:gh-pages;
 #- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; PYTHONPATH=src/ mkdocs gh-deploy -v --clean --remote-name gh-token; git push gh-token gh-pages; fi;
 
 deploy:
