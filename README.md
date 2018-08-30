@@ -8,4 +8,10 @@ Documentation
 
 `pip install mkdocs-material`
 
+### Edit
+
 `mkdocs serve`
+
+### Deploy
+
+`mkdocs gh-deploy`

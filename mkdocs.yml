@@ -11,7 +11,8 @@ theme:
     primary: 'blue'
     #primary: 'indigo'
     accent: 'green'
-    logo: 'assets/images/logo.svg'
+  logo: 'assets/images/logo.svg'
+  favicon: 'assets/images/favicon.ico'
 
 footer:
     project: 'The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
