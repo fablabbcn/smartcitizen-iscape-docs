@@ -220,38 +220,16 @@
         
       
         
-  
-  
-    <li class="md-tabs__item">
       
-        <a href="../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-tabs__link">
-          Citizen Kit
-        </a>
-      
-    </li>
-  
-
+        
       
         
   
   
     <li class="md-tabs__item">
       
-        <a href="../../Components/Components/" title="Components" class="md-tabs__link">
+        <a href="../../Components/" title="Components" class="md-tabs__link">
           Components
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-tabs__link">
-          Living Lab Station
         </a>
       
     </li>
@@ -295,16 +273,46 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
+                    <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" data-md-level="0">
+
+  <!-- Site title -->
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.iscape.smartcitizen.me/" title="iSCAPE Sensors Documentation" class="md-nav__button md-logo">
+    <a href="https://docs.iscape.smartcitizen.me/"
+        title="iSCAPE Sensors Documentation" class="md-nav__button md-logo">
       
-        <img src="../../assets/images/logo.svg" width="48" height="48">
+        <img src="../../assets/images/logo.svg" width="48" height="48" />
       
     </a>
     iSCAPE Sensors Documentation
   </label>
+
+  <!-- Repository containing source -->
   
+
+  <!-- Render item list -->
   <ul class="md-nav__list" data-md-scrollfix>
     
       
@@ -315,6 +323,30 @@
   <li class="md-nav__item">
     <a href="../.." title="Home" class="md-nav__link">
       Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Citizen Kit/" title="Citizen Kit" class="md-nav__link">
+      Citizen Kit
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Living Lab Station/" title="Living Lab Station" class="md-nav__link">
+      Living Lab Station
     </a>
   </li>
 
@@ -338,49 +370,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-3">
-      Citizen Kit
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Citizen Kit
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-nav__link">
-      Citizen Kit
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Components
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Components
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -392,8 +388,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Components/Components/" title="Components" class="md-nav__link">
-      Components
+    <a href="../../Components/" title="Index" class="md-nav__link">
+      Index
     </a>
   </li>
 
@@ -405,13 +401,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
     
-    <label class="md-nav__link" for="nav-4-2">
+    <label class="md-nav__link" for="nav-5-2">
       Data Board
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
+      <label class="md-nav__title" for="nav-5-2">
         Data Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -423,8 +419,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Components/Data Board/Data Board/" title="Data Board" class="md-nav__link">
-      Data Board
+    <a href="../../Components/Data Board/" title="Index" class="md-nav__link">
+      Index
     </a>
   </li>
 
@@ -441,13 +437,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
     
-    <label class="md-nav__link" for="nav-4-3">
+    <label class="md-nav__link" for="nav-5-3">
       Firmware
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-3">
+      <label class="md-nav__title" for="nav-5-3">
         Firmware
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -459,8 +455,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Components/Firmware/Firmware/" title="Firmware" class="md-nav__link">
-      Firmware
+    <a href="../../Components/Firmware/" title="Index" class="md-nav__link">
+      Index
     </a>
   </li>
 
@@ -472,13 +468,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3-2" type="checkbox" id="nav-5-3-2">
     
-    <label class="md-nav__link" for="nav-4-3-2">
+    <label class="md-nav__link" for="nav-5-3-2">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-3-2">
+      <label class="md-nav__title" for="nav-5-3-2">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -537,13 +533,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
     
-    <label class="md-nav__link" for="nav-4-4">
+    <label class="md-nav__link" for="nav-5-4">
       Gas Pro Sensor Board
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
+      <label class="md-nav__title" for="nav-5-4">
         Gas Pro Sensor Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -580,13 +576,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4-3" type="checkbox" id="nav-5-4-3">
     
-    <label class="md-nav__link" for="nav-4-4-3">
+    <label class="md-nav__link" for="nav-5-4-3">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-4-4-3">
+      <label class="md-nav__title" for="nav-5-4-3">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -621,13 +617,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
     
-    <label class="md-nav__link" for="nav-4-5">
+    <label class="md-nav__link" for="nav-5-5">
       PM Sensor Board
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
+      <label class="md-nav__title" for="nav-5-5">
         PM Sensor Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -639,8 +635,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Components/PM Sensor Board/PM Sensor Board/" title="PM Sensor Board" class="md-nav__link">
-      PM Sensor Board
+    <a href="../../Components/PM Sensor Board/" title="Index" class="md-nav__link">
+      Index
     </a>
   </li>
 
@@ -669,17 +665,29 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
     
-    <label class="md-nav__link" for="nav-4-6">
+    <label class="md-nav__link" for="nav-5-6">
       Urban Sensor Board
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-6">
+      <label class="md-nav__title" for="nav-5-6">
         Urban Sensor Board
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Components/Urban Sensor Board/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
         
           
           
@@ -705,56 +713,8 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Components/Urban Sensor Board/Urban Sensor Board/" title="Urban Sensor Board" class="md-nav__link">
-      Urban Sensor Board
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Living Lab Station
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Living Lab Station
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-nav__link">
-      Living Lab Station
-    </a>
   </li>
 
         
@@ -1117,6 +1077,13 @@
       <!-- Social links -->
       
         
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/fablabbcn?utf8=%E2%9C%93&q=smartcitizen&type=source" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

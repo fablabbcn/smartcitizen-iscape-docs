@@ -6,27 +6,32 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.iscape.smartcitizen.me/Citizen Kit/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.iscape.smartcitizen.me/Living Lab Station/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.iscape.smartcitizen.me/mk-ref/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Citizen Kit/Citizen Kit/</loc>
+     <loc>https://docs.iscape.smartcitizen.me/Components/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Components/Components/</loc>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Data Board/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Components/Data Board/Data Board/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Components/Firmware/Firmware/</loc>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Firmware/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -61,12 +66,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Components/PM Sensor Board/PM Sensor Board/</loc>
+     <loc>https://docs.iscape.smartcitizen.me/Components/PM Sensor Board/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.iscape.smartcitizen.me/Components/PM Sensor Board/Plantower PMS/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Urban Sensor Board/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -77,16 +87,6 @@
     </url>
     <url>
      <loc>https://docs.iscape.smartcitizen.me/Components/Urban Sensor Board/MICS/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Components/Urban Sensor Board/Urban Sensor Board/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Living Lab Station/Living Lab Station/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
