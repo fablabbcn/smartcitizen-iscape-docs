@@ -5,4 +5,134 @@
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Citizen Kit/Citizen Kit/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Citizen Kit/guides/Installation Guide/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Components/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Data Board/Data Board/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Gas Pro Sensor Board/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Gas Pro Sensor Board/Electrochemical Sensors/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Gas Pro Sensor Board/guides/Advanced setup/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/PM Sensor Board/PM Sensor Board/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/PM Sensor Board/Plantower PMS/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Urban Sensor Board/Audio/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Urban Sensor Board/MICS/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Components/Urban Sensor Board/Urban Sensor Board/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Firmware/Firmware/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Firmware/Guides/Debugging the firmware/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Firmware/Guides/Developers Guide/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Firmware/Guides/Firmware updates/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Living Lab Station/Living Lab Station/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Living Lab Station/guides/Installation Guide/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/MK/reference/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Analysis Framework/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Analysis Framework/Calibration/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Analysis Framework/guides/Install the framework/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Analysis Framework/guides/Stations data post processing/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Platform/Sensor Platform/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Platform/guides/Onboarding Sensors/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/fablabbcn/smartcitizen-iscape-docs/Sensor Platform/guides/Uploading CSV Data/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>

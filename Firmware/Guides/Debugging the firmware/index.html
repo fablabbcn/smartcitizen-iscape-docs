@@ -1,0 +1,2059 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="iSCAPE Projects Air Pollution Sensors Technical Documentation">
+      
+      
+        <link rel="canonical" href="https://github.com/fablabbcn/smartcitizen-iscape-docs/Firmware/Guides/Debugging the firmware/">
+      
+      
+        <meta name="author" content="Smart Citizen Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Debugging the firmware - iSCAPE Sensors Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../../#debugging-the-firmware" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Application header -->
+<header class="md-header" data-md-component="header">
+
+  <!-- Top-level navigation -->
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+
+      <!-- Link to home -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/fablabbcn/smartcitizen-iscape-docs"
+            title="iSCAPE Sensors Documentation"
+            class="md-header-nav__button md-logo">
+          
+            <img style="margin-top: -5px;" src="../../../assets/images/logo.svg" height="32" />
+          
+        </a>
+      </div>
+
+      <!-- Button to toggle drawer -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button"
+            for="__drawer"></label>
+      </div>
+
+      <!-- Header title -->
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title"
+            data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                iSCAPE Sensors Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Debugging the firmware
+              </span>
+            
+          
+        </div>
+      </div>
+
+      <!-- Button to open search dialogue -->
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button"
+                for="__search"></label>
+
+            <!-- Search interface -->
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+
+      <!-- Repository containing source -->
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-tabs__link">
+          Citizen Kit
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Components/Components/" title="Components" class="md-tabs__link">
+          Components
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../Firmware/" title="Firmware" class="md-tabs__link md-tabs__link--active">
+          Firmware
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-tabs__link">
+          Living Lab Station
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../MK/reference/" title="MK" class="md-tabs__link">
+          MK
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
+          Sensor Analysis Framework
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../Sensor Platform/Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+          Sensor Platform
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.com/fablabbcn/smartcitizen-iscape-docs" title="iSCAPE Sensors Documentation" class="md-nav__button md-logo">
+      
+        <img src="../../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    iSCAPE Sensors Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Citizen Kit
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Citizen Kit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-nav__link">
+      Citizen Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Citizen Kit/guides/Installation Guide/" title="Installation Guide" class="md-nav__link">
+      Installation Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Components
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Data Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        Data Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Data Board/Data Board/" title="Data Board" class="md-nav__link">
+      Data Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Gas Pro Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Gas Pro Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Gas Pro Sensor Board/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors" class="md-nav__link">
+      Electrochemical Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Gas Pro Sensor Board/guides/Advanced setup/" title="Advanced setup" class="md-nav__link">
+      Advanced setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      PM Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        PM Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/PM Sensor Board/PM Sensor Board/" title="PM Sensor Board" class="md-nav__link">
+      PM Sensor Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/PM Sensor Board/Plantower PMS/" title="Plantower PMS" class="md-nav__link">
+      Plantower PMS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Urban Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        Urban Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Audio/" title="Audio" class="md-nav__link">
+      Audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/MICS/" title="MICS" class="md-nav__link">
+      MICS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/Urban Sensor Board/Urban Sensor Board/" title="Urban Sensor Board" class="md-nav__link">
+      Urban Sensor Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Firmware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Firmware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Firmware/" title="Firmware" class="md-nav__link">
+      Firmware
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Debugging the firmware
+      </label>
+    
+    <a href="./" title="Debugging the firmware" class="md-nav__link md-nav__link--active">
+      Debugging the firmware
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#raspberry-pi-setup" title="Raspberry pi setup" class="md-nav__link">
+    Raspberry pi setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openocd-installation" title="Openocd installation" class="md-nav__link">
+    Openocd installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-openocd-remotely-from-other-computer" title="Using OpenOCD remotely from other computer" class="md-nav__link">
+    Using OpenOCD remotely from other computer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-arduino-original-bootloader" title="Uploading Arduino original bootloader" class="md-nav__link">
+    Uploading Arduino original bootloader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixing-usb-native-port-not-detected-after-burn-bootloader-bug" title="Fixing USB Native Port Not Detected After Burn Bootloader bug" class="md-nav__link">
+    Fixing USB Native Port Not Detected After Burn Bootloader bug
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints" title="Breakpoints" class="md-nav__link">
+    Breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-setting-variables-and-more" title="Printing / setting variables and more" class="md-nav__link">
+    Printing / setting variables and more
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-console" title="GDB Console" class="md-nav__link">
+    GDB Console
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui" title="TUI" class="md-nav__link">
+    TUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-init-file" title="GDB init file" class="md-nav__link">
+    GDB init file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-from-sublime-text" title="GDB from Sublime Text" class="md-nav__link">
+    GDB from Sublime Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-gdb-references-and-examples" title="General GDB references and examples" class="md-nav__link">
+    General GDB references and examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes-from-platformio-documentation" title="Additional notes from Platformio documentation" class="md-nav__link">
+    Additional notes from Platformio documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-a-agregar" title="notas a agregar" class="md-nav__link">
+    notas a agregar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21" title="Hacer un extracto de la documentación de openocd y de los específicos para samd21:" class="md-nav__link">
+    Hacer un extracto de la documentación de openocd y de los específicos para samd21:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo" title="TODO" class="md-nav__link">
+    TODO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-what-about-the-esp8266" title="And what about the ESP8266?" class="md-nav__link">
+    And what about the ESP8266?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-forum-open-debugging-for-the-sck" title="Post Forum - Open Debugging for the SCK" class="md-nav__link">
+    Post Forum - Open Debugging for the SCK
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Developers Guide/" title="Developers Guide" class="md-nav__link">
+      Developers Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Firmware updates/" title="Firmware updates" class="md-nav__link">
+      Firmware updates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Living Lab Station
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Living Lab Station
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-nav__link">
+      Living Lab Station
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Living Lab Station/guides/Installation Guide/" title="Installation Guide" class="md-nav__link">
+      Installation Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      MK
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        MK
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../MK/reference/" title="Welcome to MkDocs" class="md-nav__link">
+      Welcome to MkDocs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Sensor Analysis Framework
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Sensor Analysis Framework
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Analysis Framework/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Analysis Framework/Calibration/" title="Calibration" class="md-nav__link">
+      Calibration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Analysis Framework/guides/Install the framework/" title="Install the framework" class="md-nav__link">
+      Install the framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Analysis Framework/guides/Stations data post processing/" title="Welcome to MkDocs" class="md-nav__link">
+      Welcome to MkDocs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Sensor Platform
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Sensor Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/Sensor Platform/" title="Sensors Platform" class="md-nav__link">
+      Sensors Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
+    
+    <label class="md-nav__link" for="nav-8-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors" class="md-nav__link">
+      Onboarding Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Sensor Platform/guides/Uploading CSV Data/" title="Uploading CSV Data" class="md-nav__link">
+      Uploading CSV Data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#raspberry-pi-setup" title="Raspberry pi setup" class="md-nav__link">
+    Raspberry pi setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openocd-installation" title="Openocd installation" class="md-nav__link">
+    Openocd installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-openocd-remotely-from-other-computer" title="Using OpenOCD remotely from other computer" class="md-nav__link">
+    Using OpenOCD remotely from other computer
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-arduino-original-bootloader" title="Uploading Arduino original bootloader" class="md-nav__link">
+    Uploading Arduino original bootloader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixing-usb-native-port-not-detected-after-burn-bootloader-bug" title="Fixing USB Native Port Not Detected After Burn Bootloader bug" class="md-nav__link">
+    Fixing USB Native Port Not Detected After Burn Bootloader bug
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakpoints" title="Breakpoints" class="md-nav__link">
+    Breakpoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printing-setting-variables-and-more" title="Printing / setting variables and more" class="md-nav__link">
+    Printing / setting variables and more
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-console" title="GDB Console" class="md-nav__link">
+    GDB Console
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tui" title="TUI" class="md-nav__link">
+    TUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-init-file" title="GDB init file" class="md-nav__link">
+    GDB init file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gdb-from-sublime-text" title="GDB from Sublime Text" class="md-nav__link">
+    GDB from Sublime Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-gdb-references-and-examples" title="General GDB references and examples" class="md-nav__link">
+    General GDB references and examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes-from-platformio-documentation" title="Additional notes from Platformio documentation" class="md-nav__link">
+    Additional notes from Platformio documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-a-agregar" title="notas a agregar" class="md-nav__link">
+    notas a agregar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21" title="Hacer un extracto de la documentación de openocd y de los específicos para samd21:" class="md-nav__link">
+    Hacer un extracto de la documentación de openocd y de los específicos para samd21:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo" title="TODO" class="md-nav__link">
+    TODO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#and-what-about-the-esp8266" title="And what about the ESP8266?" class="md-nav__link">
+    And what about the ESP8266?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-forum-open-debugging-for-the-sck" title="Post Forum - Open Debugging for the SCK" class="md-nav__link">
+    Post Forum - Open Debugging for the SCK
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="debugging-the-firmware">Debugging the Firmware<a class="headerlink" href="#debugging-the-firmware" title="Permanent link">Link</a></h1>
+<p>These are working notes about the process and the necessary components to work directly with the MCU flash memory and interactively debugging with a toolchain based on open hardware and software.</p>
+<p><img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" /></p>
+<h2 id="raspberry-pi-setup"><img alt="" src="http://www.taranus.es/wp-content/uploads/2013/04/RaspiLogo.png" /> Raspberry pi setup<a class="headerlink" href="#raspberry-pi-setup" title="Permanent link">Link</a></h2>
+<ul>
+<li>
+<p>First download and copy <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Lite</a> to your SDcard, here are the installation <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">docs</a>.</p>
+</li>
+<li>
+<p>Add wifi configuration</p>
+<p>Create a file name <code class="codehilite">wpa_supplicant.conf</code> on the <code class="codehilite">/boot</code> partition of the SD card, the content of this file should looks like this:</p>
+<p>```shell=
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1</p>
+<p>network={
+    ssid="wifi_ssid"
+    psk="wifi_password"
+}
+```
+Replacing wifi_ssid and wifi_password with your actual wifi network     information. The wpa_supplicant.conf file will be copied to /etc/wpa_supplicant/ directory automatically once the Raspberry Pi is booted up.</p>
+</li>
+<li>
+<p>Enable SSH server.</p>
+<p>SSH access is disabled as default for security reasons. To enable the SSH server when Raspberry Pi is booted up for the first time: create a file called <code class="codehilite">ssh</code> with no file extension and no contents, and copy it to the <code class="codehilite">/boot</code> partition on the SD card.</p>
+</li>
+<li>
+<p>Find your raspberry on the network
+:::danger
+Corregir desde aqui
+:::
+In order to find a raspberry pi over the network we can use commands like these:</p>
+</li>
+</ul>
+<p><strong>Linux</strong>
+```shell=
+MY_IP_RANGE=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}') &amp;&amp; nmap -sn <span><span class="MathJax_Preview">MY_IP_RANGE &amp;&amp; IP=</span><script type="math/tex">MY_IP_RANGE && IP=</script></span>(arp -na | grep b8:27:eb | grep -Eo '[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}') &amp;&amp; ssh $IP;
+<div class="codehilite"><pre><span></span>**Mac** (To be reviewed)
+```shell=
+MY_RANGE=$(ip addr | grep &quot;UP&quot; -A3 | grep &#39;192&#39; -A0 | awk &#39;{print $2}&#39;) &amp;&amp; nmap -sn $MY_RANGE &amp;&amp; arp -na | grep b8:27:eb
+</pre></div></p>
+<ul>
+<li>
+<p>SSH login without password:</p>
+<ul>
+<li>Si nunca has generado RSA key: <code class="codehilite">ssh-keygen</code> sin poner nada en la passphrase.</li>
+<li>Copiar la clave a la raspberry: <code class="codehilite">ssh-copy-id -i ~/.ssh/id_rsa.pub raspi-address</code></li>
+</ul>
+<p>Ya que esté lista la raspberry con conectarla debe bootear y conectarse sola a la red, el commando que esta arriba (<code class="codehilite">MY_IP...</code>) la localiza y hace ssh login.</p>
+</li>
+</ul>
+<p>Once you are logged to your raspberry pi and connected to the internet, do a <strong>system upgrade</strong>:
+```shell=
+sudo apt-get install rpi-update
+sudo rpi-update
+sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
+<div class="codehilite"><pre><span></span>Install some **dependencies**:
+```shell=
+sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev telnet sshfs
+</pre></div></p>
+<h2 id="openocd-installation">Openocd installation<a class="headerlink" href="#openocd-installation" title="Permanent link">Link</a></h2>
+<ul>
+<li>Clon <strong>openocd</strong> repository and compile:
+<code class="codehilite">shell=git clone git://git.code.sf.net/p/openocd/code openocd-codecd openocd-code./bootstrap./configure --enable-sysfsgpio --enable-bcm2835gpiomakesudo make installwzxhzdk:2You can store this file in OpenOCD scripts dir so it will auto find it</code>shell=
+sudo mv sck.cfg /usr/local/share/openocd/scripts/
+<div class="codehilite"><pre><span></span>and then run the OpenOCD server with:
+```shell=
+sudo openocd -f sck.cfg
+</pre></div></li>
+</ul>
+<p>Then you can connect to OpenOCD, if you want to connect from an external computer, replace <code class="codehilite">127.0.0.1</code> with your Raspberry Pi IP address.
+```shell=
+telnet 127.0.0.1 4444
+<div class="codehilite"><pre><span></span>:::info
+On a ***arduino zero*** go to the directory where the *.cfg is and:
+```shell=
+openocd -f arduino_zero.cfg
+Open On-Chip Debugger 0.10.0
+Licensed under GNU GPL v2
+For bug reports, read
+    http://openocd.org/doc/doxygen/bugs.html
+Info : auto-selecting first available session transport &quot;swd&quot;. To override use &#39;transport select &lt;transport&gt;&#39;.
+none separate
+adapter speed: 400 kHz
+cortex_m reset_config sysresetreq
+Info : CMSIS-DAP: SWD  Supported
+Info : CMSIS-DAP: Interface Initialised (SWD)
+Info : CMSIS-DAP: FW Version = 02.01.0157
+Info : SWCLK/TCK = 1 SWDIO/TMS = 1 TDI = 1 TDO = 1 nTRST = 0 nRESET = 1
+Info : CMSIS-DAP: Interface ready
+Info : clock speed 400 kHz
+Info : SWD DPIDR 0x0bc11477
+Info : at91samd21g18.cpu: hardware has 4 breakpoints, 2 watchpoints
+</pre></div>
+:::</p>
+<h2 id="using-openocd-remotely-from-other-computer">Using OpenOCD remotely from other computer<a class="headerlink" href="#using-openocd-remotely-from-other-computer" title="Permanent link">Link</a></h2>
+<p>We need to give the OpenOCD server access to your project files that are remotely stored. To do this you can mount your working directory remotely on the Raspberry Pi via SSH:</p>
+<p>```shell=
+ssh pi@raspi_address
+pi$ mkdir working_dir
+pi$ sshfs user@computer_address:working_path working_dir
+pi$ cd working_dir
+pi$ sudo openocd -f sck.cfg
+<div class="codehilite"><pre><span></span>Then you can connect to OpenOCD from your computer with:
+```shell=
+telnet raspi_address 4444
+</pre></div></p>
+<h3 id="uploading-arduino-original-bootloader">Uploading Arduino original bootloader<a class="headerlink" href="#uploading-arduino-original-bootloader" title="Permanent link">Link</a></h3>
+<ul>
+<li>Get the bootloader file <a href="https://github.com/arduino/ArduinoCore-samd/tree/master/bootloaders/zero">here</a> and build it. <strong>Faltan instrucciones para compilar el bootloader</strong></li>
+<li>Connect to OpenOCD server and run:
+```shell=
+reset halt
+at91samd bootloader 0
+at91samd chip-erase
+program samd21_sam_ba.bin verify
+at91samd bootloader 8192
+reset run
+<div class="codehilite"><pre><span></span>If you don&#39;t see any error youre done!
+
+### Uploading SCK Firmware
+
+* Install platformio, download and build SCK firmware
+* Connect to OpenOCD server and run:
+```shell=
+reset halt
+flash write_image firmware.bin 8192
+verify_image firmware.bin 8192
+reset run
+reset run
+</pre></div></li>
+</ul>
+<h3 id="fixing-usb-native-port-not-detected-after-burn-bootloader-bug">Fixing <em>USB Native Port Not Detected After Burn Bootloader</em> bug<a class="headerlink" href="#fixing-usb-native-port-not-detected-after-burn-bootloader-bug" title="Permanent link">Link</a></h3>
+<p>:::danger
+<strong>ORGANIZAR ESTO!!!*</strong>
+Documentar aqui el bug que deja muerto el bootloader por watchdog loop y cómo arreglarlo
+:::</p>
+<p><a href="https://github.com/arduino/ArduinoCore-samd/issues/137">Hay un bug que deja inutilizable al SCK</a>. El Openocd borra el NVM user row y mete problemas con los fuses del watchDog y otras cosas, creo que la unica manera de reduperarlo sera con atmel studio.</p>
+<p>Un post del que implemento varios comandos especificos para el at91samd, en donde dice que seria facil agregar la capacidad de modificar el user row.
+<a href="http://yurovsky.github.io/2014/10/13/openocd-samd20-improvements/">http://yurovsky.github.io/2014/10/13/openocd-samd20-improvements/</a>
+<a href="http://openocd.zylin.com/#/c/2326/5/src/flash/nor/at91samd.c">y el codigo</a></p>
+<p><strong>Esto lo arregla!!!!!!:</strong></p>
+<p>Esto deshabilita la bootloader protection, borra todo el chip, programa el bootloader, programa un sketch que corrige los fuses cuando corre y vuelve a poner la protección del bootlader <strong>este es el paso importante que no hace la IDE de Arduino</strong> por que si lo haces dos veces seguidas dejas el chip inútil por culpa del fuse de watchdog. Esta solución usa el sketch para corregir el fuse una vez reseteado el SAM y así queda con protección y funcionando.</p>
+<ul>
+<li>Build <a href="https://gist.github.com/vicobarberan/dc336abe61df3134148fad612188d15b">this</a> code and upload it to the SCK like this:
+```shell=
+reset halt
+at91samd bootloader 0
+at91samd chip-erase
+flash write_image samd21_sam_ba.bin 0
+verify_image samd21_sam_ba.bin 0
+flash write_image unbrickSCK.bin 8192
+verify_image unbrickSCK.bin 8192
+at91samd bootloader 8192
+<div class="codehilite"><pre><span></span><span class="cp">### Working with registers</span>
+<span class="o">*</span> <span class="n">Hay</span> <span class="n">que</span> <span class="n">investigar</span> <span class="n">las</span> <span class="n">posibilidades</span><span class="p">...</span>
+<span class="o">*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">obtain</span> <span class="n">a</span> <span class="k">register</span> <span class="n">description</span> <span class="n">with</span> <span class="n">the</span> <span class="err">`</span><span class="n">reg</span><span class="err">`</span> <span class="n">command</span>
+<span class="o">*</span> <span class="n">Here</span> <span class="n">is</span> <span class="n">a</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">registers</span> <span class="n">on</span> <span class="p">[</span><span class="n">Atmel</span> <span class="n">datasheet</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//www.atmel.com/Images/Atmel-42181-SAM-D21_Datasheet.pdf#_OPENTOPIC_TOC_PROCESSING_d94e34017)</span>
+
+<span class="p">[</span><span class="n">OpenOCD</span> <span class="n">manual</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//openocd.org/doc/html/index.html)</span>
+
+
+<span class="cp">## ![](https:</span><span class="c1">//i.imgur.com/0iMkHRt.png)  GDB </span>
+
+<span class="cp">### General description</span>
+
+<span class="n">The</span> <span class="n">purpose</span> <span class="n">of</span> <span class="n">a</span> <span class="n">debugger</span> <span class="n">such</span> <span class="n">as</span> <span class="n">GDB</span> <span class="n">is</span> <span class="n">to</span> <span class="n">allow</span> <span class="n">you</span> <span class="n">to</span> <span class="n">see</span> <span class="n">what</span> <span class="n">is</span> <span class="n">going</span> <span class="n">on</span> <span class="err">“</span><span class="n">inside</span><span class="err">”</span> <span class="n">another</span> <span class="n">program</span> <span class="k">while</span> <span class="n">it</span> <span class="n">executes</span><span class="err">—</span><span class="n">or</span> <span class="n">what</span> <span class="n">another</span> <span class="n">program</span> <span class="n">was</span> <span class="n">doing</span> <span class="n">at</span> <span class="n">the</span> <span class="n">moment</span> <span class="n">it</span> <span class="n">crashed</span><span class="p">.</span> 
+
+<span class="n">GDB</span> <span class="n">can</span> <span class="k">do</span> <span class="n">four</span> <span class="n">main</span> <span class="n">kinds</span> <span class="n">of</span> <span class="n">things</span> <span class="p">(</span><span class="n">plus</span> <span class="n">other</span> <span class="n">things</span> <span class="k">in</span> <span class="n">support</span> <span class="n">of</span> <span class="n">these</span><span class="p">)</span> <span class="n">to</span> <span class="n">help</span> <span class="n">you</span> <span class="n">catch</span> <span class="n">bugs</span> <span class="k">in</span> <span class="n">the</span> <span class="nl">act</span><span class="p">:</span> 
+<span class="o">*</span> <span class="n">Start</span> <span class="n">your</span> <span class="n">program</span><span class="p">,</span> <span class="n">specifying</span> <span class="n">anything</span> <span class="n">that</span> <span class="n">might</span> <span class="n">affect</span> <span class="n">its</span> <span class="n">behavior</span><span class="p">.</span> 
+<span class="o">*</span> <span class="n">Make</span> <span class="n">your</span> <span class="n">program</span> <span class="n">stop</span> <span class="n">on</span> <span class="n">specified</span> <span class="n">conditions</span><span class="p">.</span> 
+<span class="o">*</span> <span class="n">Examine</span> <span class="n">what</span> <span class="n">has</span> <span class="n">happened</span><span class="p">,</span> <span class="n">when</span> <span class="n">your</span> <span class="n">program</span> <span class="n">has</span> <span class="n">stopped</span><span class="p">.</span> 
+<span class="o">*</span> <span class="n">Change</span> <span class="n">things</span> <span class="k">in</span> <span class="n">your</span> <span class="n">program</span><span class="p">,</span> <span class="n">so</span> <span class="n">you</span> <span class="n">can</span> <span class="n">experiment</span> <span class="n">with</span> <span class="n">correcting</span> <span class="n">the</span> <span class="n">effects</span> <span class="n">of</span> <span class="n">one</span> <span class="n">bug</span> <span class="n">and</span> <span class="n">go</span> <span class="n">on</span> <span class="n">to</span> <span class="n">learn</span> <span class="n">about</span> <span class="n">another</span><span class="p">.</span> 
+
+<span class="cp">### Debugging session with Raspberry Pi as the OpenOCD server</span>
+<span class="n">Once</span> <span class="n">your</span> <span class="n">raspberry</span> <span class="n">pi</span> <span class="n">is</span> <span class="n">setup</span> <span class="n">with</span> <span class="n">above</span> <span class="n">instructions</span> <span class="n">you</span> <span class="n">can</span> <span class="n">just</span> <span class="k">do</span><span class="o">:</span>
+<span class="err">```</span><span class="n">shell</span><span class="o">=</span>
+<span class="n">ssh</span> <span class="n">pi</span><span class="p">@</span><span class="n">RaspberryAddress</span> <span class="n">sudo</span> <span class="n">openocd</span> <span class="o">-</span><span class="n">f</span> <span class="n">sck</span><span class="p">.</span><span class="n">cfg</span> <span class="o">&amp;</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">platformio_project</span><span class="o">/</span><span class="n">path</span>
+<span class="n">arm</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">eabi</span><span class="o">-</span><span class="n">gdb</span> <span class="p">.</span><span class="o">/</span><span class="n">pioenvs</span><span class="o">/</span><span class="n">zeroUSB</span><span class="o">/</span><span class="n">firmware</span><span class="p">.</span><span class="n">elf</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">target</span> <span class="n">remote</span> <span class="nl">RaspberryAddress</span><span class="p">:</span><span class="mi">3333</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">monitor</span> <span class="n">reset</span> <span class="n">run</span>
+</pre></div></li>
+</ul>
+<p>If you are using <em>platformio</em>, you need to modify the compiling option to avoid optimisation with -0g message to the compiler. In case you are not using <em>platformio</em>, activate verbose compiling output at Arduino IDE and find your compiled .elf directory.</p>
+<p><div class="codehilite"><pre><span></span><span class="k">[env:zeroUSB]</span>
+<span class="na">platform</span> <span class="o">=</span> <span class="s">atmelsam</span>
+<span class="na">board</span> <span class="o">=</span> <span class="s">zeroUSB</span>
+<span class="na">framework</span> <span class="o">=</span> <span class="s">arduino</span>
+<span class="na">build_flags</span> <span class="o">=</span> <span class="s">-Og</span>
+</pre></div>
+Now we are all set and ready to go. The debugger is waiting for instructions on the execution, which we detail below.
+:::info
+<strong>Quick handy instructions inside GDB environment</strong>
+1. <em>(gdb)</em> appears in every line and you don't have to type it each time
+2. In case you need to exit GDB, just type in <code class="codehilite">quit</code>, but remember always killing the process before, should you have a target running
+```shell=
+(gdb) kill
+(gdb) quit
+<div class="codehilite"><pre><span></span>3. `RET` repeats the previous command
+:::
+
+### GDB commands
+
+All commands in gdb during debugging are detailed in the GDB guide, chapter [GDB commands in detail (continue and stepping)](https://sourceware.org/gdb/onlinedocs/gdb/Continuing-and-Stepping.html)
+
+An **extract** of some useful commands are detailed below:
+
+#### Continuing and stepping
+
+`continue [ignore-count]` 
+
+* Resumes program execution until next breakpoint. `[ignore-count]` argument allows to specify a further number of times to ingore a breakpoint.
+```shell=
+(gdb) continue
+Continuing.
+
+Breakpoint 1, tick () at src/HOLA.cpp:9
+9   void tick() {
+</pre></div></p>
+<p><code class="codehilite">step count</code> </p>
+<ul>
+<li>Continues running your program until control reaches a <strong>different source line</strong>, only availabe for source lines and functions compiled with debugging information. <code class="codehilite">count</code> is optional and states the number of steps to be performed before stopping, if no breakpoint arrives earlier.</li>
+</ul>
+<p><code class="codehilite">next [count]</code> </p>
+<ul>
+<li>Continue to the next source line <strong>without going into functions</strong>. It has the same functionality as step, but it stays in the same stack frame. <code class="codehilite">count</code> works as in <code class="codehilite">step count</code>. As well, it understands jumps calls as in the end of <code class="codehilite">for</code> loops and return to the beginning of the loop.</li>
+</ul>
+<p>:::info
+<code class="codehilite">set step-mode on/off</code> sets the behaviour of <code class="codehilite">(gdb)</code> when stepping into a function with no debugging information. In the case of <code class="codehilite">step-mode on</code>, it inspects the first line of code of the function, whereas on <code class="codehilite">step-mode off</code> it skips the function completely.
+:::</p>
+<p><code class="codehilite">finish</code> </p>
+<ul>
+<li>Continue running until <strong>just after function in the selected stack frame returns</strong>.</li>
+</ul>
+<p><code class="codehilite">until</code> </p>
+<ul>
+<li>Has the same behaviour as <code class="codehilite">step</code>, but it <strong>ignores the jumps between lines due to loops</strong> (for, whiles, etc), continuing to the next source code with incremental line number.</li>
+</ul>
+<h4 id="breakpoints">Breakpoints<a class="headerlink" href="#breakpoints" title="Permanent link">Link</a></h4>
+<p><code class="codehilite">info breakpoints</code></p>
+<ul>
+<li>Retrieve information about breakpoints
+```shell=
+(gdb) info breakpoints
+Num     Type           Disp Enb 
+ress    What
+1       breakpoint     keep y   0x00002140 in tick() at src/HOLA.cpp:9
+    breakpoint already hit 15 times
+<div class="codehilite"><pre><span></span>`break`
+
+* Set a breakpoint in a specific function
+```shell=
+(gdb) break loop
+</pre></div></li>
+<li>Set a breakpoint in a specific line (344)
+```shell=
+(gdb) break main.cpp:344
+<div class="codehilite"><pre><span></span>:::info
+Use the **tbreak** command instead of break if you want to stop the program once, and then remove the breakpoint. More **breakpoint condition** options can be found [**here**](https://sourceware.org/gdb/current/onlinedocs/gdb/Conditions.html#Conditions) you can find conditions for the breakpoints (expressions, counters, etc).
+:::
+
+`watchpoint`
+
+* Set a watchpoint [**watchpoint**](https://sourceware.org/gdb/current/onlinedocs/gdb/Set-Watchpoints.html#Set-Watchpoints) to only stop once a variable has a certain value. 
+```shell=
+(gdb) watch timer
+</pre></div></li>
+</ul>
+<p>:::info
+Type in <code class="codehilite">info watchpoints</code> to get information about watchpoints.
+:::
+<code class="codehilite">commands</code></p>
+<ul>
+<li>Set a <strong>list of actions</strong> related to the breakpoint:
+```shell=
+break main.cpp:50
+commands
+silent
+printf "count is %d\n",count
+cont
+end
+<div class="codehilite"><pre><span></span>`delete`
+
+* Delete a breakpoint
+```shell=
+(gdb) delete 1
+(gdb) info breakpoints
+No breakpoints or watchpoints.
+</pre></div></li>
+</ul>
+<h4 id="printing-setting-variables-and-more">Printing / setting variables and more<a class="headerlink" href="#printing-setting-variables-and-more" title="Permanent link">Link</a></h4>
+<p><code class="codehilite">loop</code></p>
+<ul>
+<li>
+<p>Read what is around a certain function
+<code class="codehilite">``shell=(gdb) l loop25    //while (!Serial) {26      //; // wait for serial port to connect. Needed for native USB port only27    //}28  }2930  void loop() {31    // put your main code here, to run repeatedly:32    Serial.println(&quot;HOLA&quot;);33    tick();34    Serial.println(millis());wzxhzdk:13</code>set`</p>
+</li>
+<li>
+<p>Set variable to a certain value
+```shell=
+(gdb) set timer = 0
+<div class="codehilite"><pre><span></span>#### Target commands (load)
+`load filename offset`
+
+* `Load` it is meant to make filename (an executable) available for debugging on the remote system—by downloading it. `load` also records the filename symbol table in GDB, like the add-symbol-file command. The file is loaded at whatever address is specified in the executable, also into flash memory. 
+
+
+---
+
+:::danger
+Falta por explicar:
+* display
+* diferencia entre hw y sw breakpoints
+[info](http://web.mit.edu/gnu/doc/html/gdb_7.html)
+:::
+
+
+### Making changes in the code
+Anytime we make a change in the code, we don&#39;t need to reload the debugging session. We can easily do so by:
+
+1. Compile the code:
+    a. Define Shell build in Sublime Text and configure a build sytem with: 
+
+    ```
+    &quot;shell_cmd&quot;: &quot;cd .. &amp;&amp; pio run&quot;
+    ```
+
+    Then, everytime you hit Ctrl+B (Cmd+B) and you use your custom build system, it will automatically use this option.
+
+    b. Or hit `pio run` in another terminal located in your project root directory
+
+2. In gdb, `load` file. This will reload the file defined at the beginning of your debugging session and upload it to the target
+```shell=
+(gdb) load
+Loading section .text, size 0x2e50 lma 0x2000
+Loading section .ramfunc, size 0x60 lma 0x4e50
+Loading section .data, size 0x110 lma 0x4eb0
+Start address 0x2910, load size 12224
+Transfer rate: 3 KB/sec, 4074 bytes/write.
+</pre></div></p>
+</li>
+<li>Keep debugging</li>
+</ul>
+<h3 id="gdb-console">GDB Console<a class="headerlink" href="#gdb-console" title="Permanent link">Link</a></h3>
+<h4 id="tui">TUI<a class="headerlink" href="#tui" title="Permanent link">Link</a></h4>
+<p>GDB has a console GUI option available with the command line option <strong>--tui</strong>
+In the upper frame you can see the code that's being executed.</p>
+<p><img alt="" src="http://www.yolinux.com/TUTORIALS/images/GDB-tui.png" /></p>
+<h4 id="gdb-init-file">GDB init file<a class="headerlink" href="#gdb-init-file" title="Permanent link">Link</a></h4>
+<p>From this <a href="https://github.com/cyrus-and/gdb-dashboard">example dashboard</a> we can generate a custom .gdbinit file for the SCK which will be placed in the HOME directory... (ON GOING)</p>
+<p>:::info
+Would be interesting to generate a custom option for production validation and one for internal debugging purposes
+:::</p>
+<p>For references about where to locate the .gdbinit and more custom behaviour for gdb in general see <a href="http://www.dirac.org/linux/gdb/03-Initialization,_Listing,_And_Running.php">here</a>.</p>
+<h3 id="gdb-from-sublime-text">GDB from Sublime Text<a class="headerlink" href="#gdb-from-sublime-text" title="Permanent link">Link</a></h3>
+<p>Documentarlo aqui... (WIP)</p>
+<p><a href="http://docs.platformio.org/en/latest/ide/sublimetext.html">Setup Platformio project with sublime Text</a>
+<a href="http://developers-club.com/posts/270789/">Setup sublimeGDB</a></p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">Link</a></h2>
+<h3 id="general-gdb-references-and-examples">General GDB references and examples<a class="headerlink" href="#general-gdb-references-and-examples" title="Permanent link">Link</a></h3>
+<p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Summary.html#Summary">Debugging with GDB - Book</a></p>
+<p><a href="http://openocd.org/doc-release/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD">Debugging example from GDB and OpenOCD</a></p>
+<p><a href="http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/">Arduino zero example</a></p>
+<h3 id="additional-notes-from-platformio-documentation">Additional notes from Platformio documentation<a class="headerlink" href="#additional-notes-from-platformio-documentation" title="Permanent link">Link</a></h3>
+<ol>
+<li>How to set other <a href="http://docs.platformio.org/en/latest/projectconf/section_env_debug.html#projectconf-debug-server">DEBUG FLAGS</a></li>
+<li>About project configuration with <a href="http://docs.platformio.org/en/latest/projectconf.html">Platformio init</a></li>
+<li>Check <a href="https://community.platformio.org/t/confusion-surrounding-preprocessor-build-flags-ifdefs-with-cmake-and-clion/2119"><strong>here</strong></a> for building an *.ini file with custom build target for debugging and production.</li>
+</ol>
+<h2 id="notas-a-agregar">notas a agregar<a class="headerlink" href="#notas-a-agregar" title="Permanent link">Link</a></h2>
+<h3 id="hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21">Hacer un extracto de la documentación de openocd y de los específicos para samd21:<a class="headerlink" href="#hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21" title="Permanent link">Link</a></h3>
+<p><a href="http://openocd.org/doc-release/html/Flash-Commands.html#flashprotect">http://openocd.org/doc-release/html/Flash-Commands.html#flashprotect</a>
+```=
+Flash Driver: at91samd</p>
+<div class="codehilite"><pre><span></span>All members of the ATSAMD, ATSAMR, ATSAML and ATSAMC microcontroller families from Atmel include internal flash and use ARM’s Cortex-M0+ core. This driver uses the same cmd names/syntax as See at91sam3.
+
+Command: at91samd chip-erase
+
+    Issues a complete Flash erase via the Device Service Unit (DSU). This can be used to erase a chip back to its factory state and does not require the processor to be halted.
+
+Command: at91samd set-security
+
+    Secures the Flash via the Set Security Bit (SSB) command. This prevents access to the Flash and can only be undone by using the chip-erase command which erases the Flash contents and turns off the security bit. Warning: at this time, openocd will not be able to communicate with a secured chip and it is therefore not possible to chip-erase it without using another tool.
+
+    at91samd set-security enable
+
+Command: at91samd eeprom
+
+    Shows or sets the EEPROM emulation size configuration, stored in the User Row of the Flash. When setting, the EEPROM size must be specified in bytes and it must be one of the permitted sizes according to the datasheet. Settings are written immediately but only take effect on MCU reset. EEPROM emulation requires additional firmware support and the minumum EEPROM size may not be the same as the minimum that the hardware supports. Set the EEPROM size to 0 in order to disable this feature.
+
+    at91samd eeprom
+    at91samd eeprom 1024
+
+Command: at91samd bootloader
+
+    Shows or sets the bootloader size configuration, stored in the User Row of the Flash. This is called the BOOTPROT region. When setting, the bootloader size must be specified in bytes and it must be one of the permitted sizes according to the datasheet. Settings are written immediately but only take effect on MCU reset. Setting the bootloader size to 0 disables bootloader protection.
+
+    at91samd bootloader
+    at91samd bootloader 16384
+
+Command: at91samd dsu_reset_deassert
+
+    This command releases internal reset held by DSU and prepares reset vector catch in case of reset halt. Command is used internally in event event reset-deassert-post.
+</pre></div>
+
+
+<p>```
+
+links a revisar de tutoriales para openocd-gdb
+<a href="http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/">http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/</a>
+<a href="http://www.blackmesaeast.com.pl/linux/openocd/">http://www.blackmesaeast.com.pl/linux/openocd/</a>
+<a href="http://electronicdesign.com/memory/understanding-onboard-flash-programming">http://electronicdesign.com/memory/understanding-onboard-flash-programming</a>
+<a href="https://learn.adafruit.com/debugging-the-samd21-with-gdb/software-installation">https://learn.adafruit.com/debugging-the-samd21-with-gdb/software-installation</a>
+:::success</p>
+<h3 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">Link</a></h3>
+<ul>
+<li>Preparar una imagen para raspi lo más pequeña posible con todo lo necesario de manera que cada vez que agregue una feature se pueda actualizar automaticamente.</li>
+<li>Poner un lcd a la pi para automatizar todo headless de cara a hacer una estación automatizada de fix/test SCK.</li>
+<li>Pensar como hacer diagnóstico remoto de los kits que requieran support. Una consola a traves de internet, se podría con ssh tunneling? o con una interfaz html? pensarlo...
+:::
+</li>
+</ul>
+<h3 id="and-what-about-the-esp8266">And what about the ESP8266?<a class="headerlink" href="#and-what-about-the-esp8266" title="Permanent link">Link</a></h3>
+<p>Starting to investigate the posiblities of debugging the ESP8266 part of the firmware, still we need to read a lot!.
+Some first clues:
+* <a href="https://hackaday.com/2015/12/12/squash-your-esp-8266-bugs-with-esp-gdbstub/">https://hackaday.com/2015/12/12/squash-your-esp-8266-bugs-with-esp-gdbstub/</a>
+* GDBStub (via serial port) <a href="https://github.com/espressif/esp-gdbstub">https://github.com/espressif/esp-gdbstub</a>
+* <a href="https://github.com/sysprogs/esp8266-openocd">https://github.com/sysprogs/esp8266-openocd</a>
+* <a href="https://github.com/projectgus/openocd">https://github.com/projectgus/openocd</a> (seems dead)
+
+*[SCK]: Smart Citizen Kit
+*[SWD]: Serial Wire Debug
+*[GDB]: The GNU Project Debugger
+*[OpenOCD]: Open On-Chip Debugger
+</p>
+<h2 id="post-forum-open-debugging-for-the-sck">Post Forum - Open Debugging for the SCK<a class="headerlink" href="#post-forum-open-debugging-for-the-sck" title="Permanent link">Link</a></h2>
+<p>Hey everyone!
+
+Today we are going to take a pause on the audio development posts and talk about something we have been working on for a while now: an <strong>open source debugging toolchain</strong> for the Smart Citizen Kit. 
+
+Sometimes (many times actually), our code won't do what we want it to do and we need to take a look at what it's doing. By using a <strong>debugger</strong> we will be able to see what is going on <em>inside</em> another program while it executes or even crashes. This is fairly straight forward when you code for a modern day computer, since most IDEs have a proper interface integrated for it. However, debugging a chip like the <em>SAMD21</em> can sometimes be tricky and here is where it's interesting to use a debugging kit.
+
+<img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" />
+
+<em>Image Credit: <a href="https://xkcd.com/">XKCD</a></em>
+
+To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.
+
+So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.
+
+<img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" />
+
+<em>Image Credit: Smart Citizen</em>
+
+These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.
+
+<code class="codehilite">sequenceGDB-&gt;OpenOCD: Let&#39;s debug the SCKOpenOCD-&gt;GDB: OK!OpenOCD-&gt;SCK: We are debugging youNote right of SCK: SCK thinksSCK-&gt;OpenOCD: OK!GDB-&gt;OpenOCD: Load firmwareGDB-&gt;OpenOCD: Set BreakpointsOpenOCD-&gt;SCK: Do it!OpenOCD-&gt;SCK: Run!Note right of SCK: SCK runsNote right of SCK: SCK hits a breakpointSCK-&gt;GDB: Temperature sensor reading is 500ºCNote left of GDB: Oh, oh...</code></p>
+<p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
+<ul>
+<li>Starting our program, specifying anything that might affect its behavior.</li>
+<li>Make our program stop on specified conditions.</li>
+<li>Examine what has happened when our program has stopped.</li>
+<li>Change things in our program, so we can experiment with correcting the effects of one bug and go on to learn about another.</li>
+</ul>
+<p>GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface of the SCK, and we will see what's going on in them from our computer's terminal via SSH. Fairly <em>simple</em>, right? Now, we can make some changes to our code, make GDB flash it to the SCK and keep debugging in a completely open toolchain!</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Application footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+
+        <!-- Link to previous page -->
+        
+          <a href="../../Firmware/"
+              title="Firmware"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Firmware
+              </span>
+            </div>
+          </a>
+        
+
+        <!-- Link to next page -->
+        
+          <a href="../Developers Guide/"
+              title="Developers Guide"
+              class="md-flex md-footer-nav__link md-footer-nav__link--next"
+              rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Developers Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+		        <img style="margin-top: 20px" alt="The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="assets/images/eu-flag.png">
+         		<p class="md-footer-copyright__highlight">The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
+            	<div class="md-source__icon">
+            		<svg viewBox="0 0 24 24" width="24" height="24">
+            			<use xlink:href="#__github" width="24" height="24"></use>
+            		</svg>
+            	</div>
+              	Contribute at <a href="https://github.com/fablabbcn/smartcitizen-iscape-docs">smartcitizen-iscape-docs</a>
+      </div>
+
+      <!-- Social links -->
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.2",url:{base:"../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
