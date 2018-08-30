@@ -6,12 +6,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Citizen Kit/Citizen Kit/</loc>
+     <loc>https://docs.iscape.smartcitizen.me/mk-ref/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Citizen Kit/guides/Installation Guide/</loc>
+     <loc>https://docs.iscape.smartcitizen.me/Citizen Kit/Citizen Kit/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -22,6 +22,26 @@
     </url>
     <url>
      <loc>https://docs.iscape.smartcitizen.me/Components/Data Board/Data Board/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Firmware/Firmware/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Firmware/guides/Debug the firmware/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Firmware/guides/Edit the Firmware/</loc>
+     <lastmod>2018-08-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://docs.iscape.smartcitizen.me/Components/Firmware/guides/Update the firmware/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -66,37 +86,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.iscape.smartcitizen.me/Firmware/Firmware/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Firmware/Guides/Debugging the firmware/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Firmware/Guides/Developers Guide/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Firmware/Guides/Firmware updates/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://docs.iscape.smartcitizen.me/Living Lab Station/Living Lab Station/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/Living Lab Station/guides/Installation Guide/</loc>
-     <lastmod>2018-08-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://docs.iscape.smartcitizen.me/MK/reference/</loc>
      <lastmod>2018-08-30</lastmod>
      <changefreq>daily</changefreq>
     </url>

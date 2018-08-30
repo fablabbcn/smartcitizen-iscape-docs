@@ -13,7 +13,7 @@
         <meta name="description" content="iSCAPE Projects Air Pollution Sensors Technical Documentation">
       
       
-        <link rel="canonical" href="https://docs.iscape.smartcitizen.me/Firmware/Guides/Debugging the firmware/">
+        <link rel="canonical" href="https://docs.iscape.smartcitizen.me/Components/Firmware/guides/Debug the firmware/">
       
       
         <meta name="author" content="Smart Citizen Team">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
     
     
       
-        <title>Debugging the firmware - iSCAPE Sensors Documentation</title>
+        <title>Debug the firmware - iSCAPE Sensors Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -66,7 +66,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
     
     
   </head>
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#debugging-the-firmware" tabindex="1" class="md-skip">
+      <a href="../../../../#introduction" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
             title="iSCAPE Sensors Documentation"
             class="md-header-nav__button md-logo">
           
-            <img style="margin-top: -5px;" src="../../../assets/images/logo.svg" height="32" />
+            <img style="margin-top: -5px;" src="../../../../assets/images/logo.svg" height="32" />
           
         </a>
       </div>
@@ -146,7 +146,7 @@
                 iSCAPE Sensors Documentation
               </span>
               <span class="md-header-nav__topic">
-                Debugging the firmware
+                Debug the firmware
               </span>
             
           
@@ -210,7 +210,7 @@
         
   <li class="md-tabs__item">
     
-      <a href="../../.." title="Home" class="md-tabs__link">
+      <a href="../../../.." title="Home" class="md-tabs__link">
         Home
       </a>
     
@@ -218,11 +218,13 @@
 
       
         
+      
+        
   
   
     <li class="md-tabs__item">
       
-        <a href="../../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-tabs__link">
+        <a href="../../../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-tabs__link">
           Citizen Kit
         </a>
       
@@ -235,7 +237,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../Components/Components/" title="Components" class="md-tabs__link">
+        <a href="../../../Components/" title="Components" class="md-tabs__link md-tabs__link--active">
           Components
         </a>
       
@@ -248,20 +250,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Firmware/" title="Firmware" class="md-tabs__link md-tabs__link--active">
-          Firmware
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-tabs__link">
+        <a href="../../../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-tabs__link">
           Living Lab Station
         </a>
       
@@ -274,20 +263,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../MK/reference/" title="MK" class="md-tabs__link">
-          MK
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
+        <a href="../../../../Sensor Analysis Framework/" title="Sensor Analysis Framework" class="md-tabs__link">
           Sensor Analysis Framework
         </a>
       
@@ -300,7 +276,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../Sensor Platform/Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+        <a href="../../../../Sensor Platform/Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
           Sensor Platform
         </a>
       
@@ -323,7 +299,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://docs.iscape.smartcitizen.me/" title="iSCAPE Sensors Documentation" class="md-nav__button md-logo">
       
-        <img src="../../../assets/images/logo.svg" width="48" height="48">
+        <img src="../../../../assets/images/logo.svg" width="48" height="48">
       
     </a>
     iSCAPE Sensors Documentation
@@ -337,7 +313,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
+    <a href="../../../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -348,70 +324,10 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Citizen Kit
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Citizen Kit
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-nav__link">
-      Citizen Kit
+    <a href="../../../../mk-ref/" title="MK reference" class="md-nav__link">
+      MK reference
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
-    
-    <label class="md-nav__link" for="nav-2-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Citizen Kit/guides/Installation Guide/" title="Installation Guide" class="md-nav__link">
-      Installation Guide
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -425,11 +341,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Components
+      Citizen Kit
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Components
+        Citizen Kit
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -440,237 +356,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Components/Components/" title="Components" class="md-nav__link">
-      Components
+    <a href="../../../../Citizen Kit/Citizen Kit/" title="Citizen Kit" class="md-nav__link">
+      Citizen Kit
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
-    
-    <label class="md-nav__link" for="nav-3-2">
-      Data Board
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
-        Data Board
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Data Board/Data Board/" title="Data Board" class="md-nav__link">
-      Data Board
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
-    
-    <label class="md-nav__link" for="nav-3-3">
-      Gas Pro Sensor Board
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Gas Pro Sensor Board
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Gas Pro Sensor Board/" title="Index" class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors" class="md-nav__link">
-      Electrochemical Sensors
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3">
-    
-    <label class="md-nav__link" for="nav-3-3-3">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-3-3">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Gas Pro Sensor Board/guides/Advanced setup/" title="Advanced setup" class="md-nav__link">
-      Advanced setup
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      PM Sensor Board
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        PM Sensor Board
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/PM Sensor Board/PM Sensor Board/" title="PM Sensor Board" class="md-nav__link">
-      PM Sensor Board
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/PM Sensor Board/Plantower PMS/" title="Plantower PMS" class="md-nav__link">
-      Plantower PMS
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
-    
-    <label class="md-nav__link" for="nav-3-5">
-      Urban Sensor Board
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
-        Urban Sensor Board
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Urban Sensor Board/Audio/" title="Audio" class="md-nav__link">
-      Audio
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Urban Sensor Board/MICS/" title="MICS" class="md-nav__link">
-      MICS
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Components/Urban Sensor Board/Urban Sensor Board/" title="Urban Sensor Board" class="md-nav__link">
-      Urban Sensor Board
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -691,10 +379,79 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Firmware
+      Components
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Components/" title="Components" class="md-nav__link">
+      Components
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Data Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Data Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Data Board/Data Board/" title="Data Board" class="md-nav__link">
+      Data Board
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Firmware
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
         Firmware
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -721,13 +478,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2" checked>
     
-    <label class="md-nav__link" for="nav-4-2">
+    <label class="md-nav__link" for="nav-4-3-2">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -744,38 +501,47 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Debugging the firmware
+        Debug the firmware
       </label>
     
-    <a href="./" title="Debugging the firmware" class="md-nav__link md-nav__link--active">
-      Debugging the firmware
+    <a href="./" title="Debug the firmware" class="md-nav__link md-nav__link--active">
+      Debug the firmware
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#raspberry-pi-setup" title="Raspberry pi setup" class="md-nav__link">
-    Raspberry pi setup
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#debugger-setup-using-a-raspberry-pi" title="Debugger setup using a Raspberry Pi" class="md-nav__link">
+    Debugger setup using a Raspberry Pi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#openocd-installation" title="Openocd installation" class="md-nav__link">
     Openocd installation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -790,13 +556,6 @@
           <li class="md-nav__item">
   <a href="#uploading-arduino-original-bootloader" title="Uploading Arduino original bootloader" class="md-nav__link">
     Uploading Arduino original bootloader
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixing-usb-native-port-not-detected-after-burn-bootloader-bug" title="Fixing USB Native Port Not Detected After Burn Bootloader bug" class="md-nav__link">
-    Fixing USB Native Port Not Detected After Burn Bootloader bug
   </a>
   
     <nav class="md-nav">
@@ -876,55 +635,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#additional-notes-from-platformio-documentation" title="Additional notes from Platformio documentation" class="md-nav__link">
-    Additional notes from Platformio documentation
+  <a href="#additional-notes-from-platformio-configuration" title="Additional notes from Platformio configuration" class="md-nav__link">
+    Additional notes from Platformio configuration
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notas-a-agregar" title="notas a agregar" class="md-nav__link">
-    notas a agregar
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21" title="Hacer un extracto de la documentación de openocd y de los específicos para samd21:" class="md-nav__link">
-    Hacer un extracto de la documentación de openocd y de los específicos para samd21:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#todo" title="TODO" class="md-nav__link">
-    TODO
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#and-what-about-the-esp8266" title="And what about the ESP8266?" class="md-nav__link">
-    And what about the ESP8266?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-forum-open-debugging-for-the-sck" title="Post Forum - Open Debugging for the SCK" class="md-nav__link">
-    Post Forum - Open Debugging for the SCK
-  </a>
   
 </li>
       
@@ -945,8 +663,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Developers Guide/" title="Developers Guide" class="md-nav__link">
-      Developers Guide
+    <a href="../Edit the Firmware/" title="Edit the Firmware" class="md-nav__link">
+      Edit the Firmware
     </a>
   </li>
 
@@ -957,8 +675,205 @@
 
 
   <li class="md-nav__item">
-    <a href="../Firmware updates/" title="Firmware updates" class="md-nav__link">
-      Firmware updates
+    <a href="../Update the firmware/" title="Update the firmware" class="md-nav__link">
+      Update the firmware
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Gas Pro Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        Gas Pro Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Gas Pro Sensor Board/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Gas Pro Sensor Board/Electrochemical Sensors/" title="Electrochemical Sensors" class="md-nav__link">
+      Electrochemical Sensors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Gas Pro Sensor Board/guides/Advanced setup/" title="Advanced setup" class="md-nav__link">
+      Advanced setup
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      PM Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        PM Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../PM Sensor Board/PM Sensor Board/" title="PM Sensor Board" class="md-nav__link">
+      PM Sensor Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../PM Sensor Board/Plantower PMS/" title="Plantower PMS" class="md-nav__link">
+      Plantower PMS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Urban Sensor Board
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        Urban Sensor Board
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Urban Sensor Board/Audio/" title="Audio" class="md-nav__link">
+      Audio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Urban Sensor Board/MICS/" title="MICS" class="md-nav__link">
+      MICS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Urban Sensor Board/Urban Sensor Board/" title="Urban Sensor Board" class="md-nav__link">
+      Urban Sensor Board
     </a>
   </li>
 
@@ -998,45 +913,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-nav__link">
+    <a href="../../../../Living Lab Station/Living Lab Station/" title="Living Lab Station" class="md-nav__link">
       Living Lab Station
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
-    
-    <label class="md-nav__link" for="nav-5-2">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-2">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Living Lab Station/guides/Installation Guide/" title="Installation Guide" class="md-nav__link">
-      Installation Guide
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -1055,11 +934,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      MK
+      Sensor Analysis Framework
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
-        MK
+        Sensor Analysis Framework
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1070,9 +949,69 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../MK/reference/" title="Welcome to MkDocs" class="md-nav__link">
+    <a href="../../../../Sensor Analysis Framework/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Sensor Analysis Framework/Calibration/" title="Calibration" class="md-nav__link">
+      Calibration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Sensor Analysis Framework/guides/Install the framework/" title="Install the framework" class="md-nav__link">
+      Install the framework
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Sensor Analysis Framework/guides/Stations data post processing/" title="Welcome to MkDocs" class="md-nav__link">
       Welcome to MkDocs
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1091,106 +1030,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
-      Sensor Analysis Framework
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        Sensor Analysis Framework
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Sensor Analysis Framework/" title="Index" class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Sensor Analysis Framework/Calibration/" title="Calibration" class="md-nav__link">
-      Calibration
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
-    
-    <label class="md-nav__link" for="nav-7-3">
-      Guides
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-3">
-        Guides
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Sensor Analysis Framework/guides/Install the framework/" title="Install the framework" class="md-nav__link">
-      Install the framework
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../Sensor Analysis Framework/guides/Stations data post processing/" title="Welcome to MkDocs" class="md-nav__link">
-      Welcome to MkDocs
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
       Sensor Platform
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-7">
         Sensor Platform
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1202,7 +1045,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Sensor Platform/Sensor Platform/" title="Sensors Platform" class="md-nav__link">
+    <a href="../../../../Sensor Platform/Sensor Platform/" title="Sensors Platform" class="md-nav__link">
       Sensors Platform
     </a>
   </li>
@@ -1215,13 +1058,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
     
-    <label class="md-nav__link" for="nav-8-2">
+    <label class="md-nav__link" for="nav-7-2">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-2">
+      <label class="md-nav__title" for="nav-7-2">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1233,7 +1076,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors" class="md-nav__link">
+    <a href="../../../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors" class="md-nav__link">
       Onboarding Sensors
     </a>
   </li>
@@ -1245,7 +1088,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../Sensor Platform/guides/Uploading CSV Data/" title="Uploading CSV Data" class="md-nav__link">
+    <a href="../../../../Sensor Platform/guides/Uploading CSV Data/" title="Uploading CSV Data" class="md-nav__link">
       Uploading CSV Data
     </a>
   </li>
@@ -1275,23 +1118,34 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#raspberry-pi-setup" title="Raspberry pi setup" class="md-nav__link">
-    Raspberry pi setup
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#debugger-setup-using-a-raspberry-pi" title="Debugger setup using a Raspberry Pi" class="md-nav__link">
+    Debugger setup using a Raspberry Pi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#openocd-installation" title="Openocd installation" class="md-nav__link">
     Openocd installation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1306,13 +1160,6 @@
           <li class="md-nav__item">
   <a href="#uploading-arduino-original-bootloader" title="Uploading Arduino original bootloader" class="md-nav__link">
     Uploading Arduino original bootloader
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fixing-usb-native-port-not-detected-after-burn-bootloader-bug" title="Fixing USB Native Port Not Detected After Burn Bootloader bug" class="md-nav__link">
-    Fixing USB Native Port Not Detected After Burn Bootloader bug
   </a>
   
     <nav class="md-nav">
@@ -1392,55 +1239,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#additional-notes-from-platformio-documentation" title="Additional notes from Platformio documentation" class="md-nav__link">
-    Additional notes from Platformio documentation
+  <a href="#additional-notes-from-platformio-configuration" title="Additional notes from Platformio configuration" class="md-nav__link">
+    Additional notes from Platformio configuration
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notas-a-agregar" title="notas a agregar" class="md-nav__link">
-    notas a agregar
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21" title="Hacer un extracto de la documentación de openocd y de los específicos para samd21:" class="md-nav__link">
-    Hacer un extracto de la documentación de openocd y de los específicos para samd21:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#todo" title="TODO" class="md-nav__link">
-    TODO
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#and-what-about-the-esp8266" title="And what about the ESP8266?" class="md-nav__link">
-    And what about the ESP8266?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-forum-open-debugging-for-the-sck" title="Post Forum - Open Debugging for the SCK" class="md-nav__link">
-    Post Forum - Open Debugging for the SCK
-  </a>
   
 </li>
       
@@ -1461,10 +1267,40 @@
               
                 
                 
-                <h1 id="debugging-the-firmware">Debugging the Firmware<a class="headerlink" href="#debugging-the-firmware" title="Permanent link">Link</a></h1>
-<p>These are working notes about the process and the necessary components to work directly with the MCU flash memory and interactively debugging with a toolchain based on open hardware and software.</p>
+                  <h1>Debug the firmware</h1>
+                
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">Link</a></h2>
+<p>Sometimes (many times actually), our code won't do what we want it to do and we need to take a look at what it's doing. By using a <strong>debugger</strong> we will be able to see what is going on <em>inside</em> another program while it executes or even crashes. This is fairly straight forward when you code for a modern day computer, since most IDEs have a proper interface integrated for it. However, debugging a chip like the <em>SAMD21</em> can sometimes be tricky and here is where it's interesting to use a debugging kit.</p>
 <p><img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" /></p>
-<h2 id="raspberry-pi-setup"><img alt="" src="http://www.taranus.es/wp-content/uploads/2013/04/RaspiLogo.png" /> Raspberry pi setup<a class="headerlink" href="#raspberry-pi-setup" title="Permanent link">Link</a></h2>
+<p><em>Image Credit: <a href="https://xkcd.com/">XKCD</a></em></p>
+<p>To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.</p>
+<p>So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.</p>
+<p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
+<p><em>Image Credit: Smart Citizen</em></p>
+<p>These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.</p>
+<pre class="uml-sequence-diagram"><code>GDB-&gt;OpenOCD: Let's debug the SCK
+OpenOCD-&gt;GDB: OK!
+OpenOCD-&gt;SCK: We are debugging you
+Note right of SCK: SCK thinks
+SCK-&gt;OpenOCD: OK!
+GDB-&gt;OpenOCD: Load firmware
+GDB-&gt;OpenOCD: Set Breakpoints
+OpenOCD-&gt;SCK: Do it!
+OpenOCD-&gt;SCK: Run!
+Note right of SCK: SCK runs
+Note right of SCK: SCK hits a breakpoint
+SCK-&gt;GDB: Temperature sensor reading is 500ºC
+Note left of GDB: Oh, oh...</code></pre>
+
+<p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
+<ul>
+<li>Starting our program, specifying anything that might affect its behavior.</li>
+<li>Make our program stop on specified conditions.</li>
+<li>Examine what has happened when our program has stopped.</li>
+<li>Change things in our program, so we can experiment with correcting the effects of one bug and go on to learn about another.</li>
+</ul>
+<p>GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface of the SCK, and we will see what's going on in them from our computer's terminal via SSH. Fairly <em>simple</em>, right? Now, we can make some changes to our code, make GDB flash it to the SCK and keep debugging in a completely open toolchain!</p>
+<h2 id="debugger-setup-using-a-raspberry-pi">Debugger setup using a Raspberry Pi<a class="headerlink" href="#debugger-setup-using-a-raspberry-pi" title="Permanent link">Link</a></h2>
 <ul>
 <li>
 <p>First download and copy <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Lite</a> to your SDcard, here are the installation <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">docs</a>.</p>
@@ -1520,10 +1356,10 @@ sudo apt-get update &amp;&amp; sudo apt-get dist-upgrade
 ```shell=
 sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.0-0-dev telnet sshfs
 </pre></div></p>
-<h2 id="openocd-installation">Openocd installation<a class="headerlink" href="#openocd-installation" title="Permanent link">Link</a></h2>
+<h3 id="openocd-installation">Openocd installation<a class="headerlink" href="#openocd-installation" title="Permanent link">Link</a></h3>
 <ul>
 <li>Clon <strong>openocd</strong> repository and compile:
-<code class="codehilite">shell=git clone git://git.code.sf.net/p/openocd/code openocd-codecd openocd-code./bootstrap./configure --enable-sysfsgpio --enable-bcm2835gpiomakesudo make installwzxhzdk:2You can store this file in OpenOCD scripts dir so it will auto find it</code>shell=
+<code class="codehilite">shell=git clone git://git.code.sf.net/p/openocd/code openocd-codecd openocd-code./bootstrap./configure --enable-sysfsgpio --enable-bcm2835gpiomakesudo make installwzxhzdk:3You can store this file in OpenOCD scripts dir so it will auto find it</code>shell=
 sudo mv sck.cfg /usr/local/share/openocd/scripts/
 <div class="codehilite"><pre><span></span>and then run the OpenOCD server with:
 ```shell=
@@ -1590,58 +1426,28 @@ flash write_image firmware.bin 8192
 verify_image firmware.bin 8192
 reset run
 reset run
-</pre></div></li>
-</ul>
-<h3 id="fixing-usb-native-port-not-detected-after-burn-bootloader-bug">Fixing <em>USB Native Port Not Detected After Burn Bootloader</em> bug<a class="headerlink" href="#fixing-usb-native-port-not-detected-after-burn-bootloader-bug" title="Permanent link">Link</a></h3>
-<p>:::danger
-<strong>ORGANIZAR ESTO!!!*</strong>
-Documentar aqui el bug que deja muerto el bootloader por watchdog loop y cómo arreglarlo
-:::</p>
-<p><a href="https://github.com/arduino/ArduinoCore-samd/issues/137">Hay un bug que deja inutilizable al SCK</a>. El Openocd borra el NVM user row y mete problemas con los fuses del watchDog y otras cosas, creo que la unica manera de reduperarlo sera con atmel studio.</p>
-<p>Un post del que implemento varios comandos especificos para el at91samd, en donde dice que seria facil agregar la capacidad de modificar el user row.
-<a href="http://yurovsky.github.io/2014/10/13/openocd-samd20-improvements/">http://yurovsky.github.io/2014/10/13/openocd-samd20-improvements/</a>
-<a href="http://openocd.zylin.com/#/c/2326/5/src/flash/nor/at91samd.c">y el codigo</a></p>
-<p><strong>Esto lo arregla!!!!!!:</strong></p>
-<p>Esto deshabilita la bootloader protection, borra todo el chip, programa el bootloader, programa un sketch que corrige los fuses cuando corre y vuelve a poner la protección del bootlader <strong>este es el paso importante que no hace la IDE de Arduino</strong> por que si lo haces dos veces seguidas dejas el chip inútil por culpa del fuse de watchdog. Esta solución usa el sketch para corregir el fuse una vez reseteado el SAM y así queda con protección y funcionando.</p>
-<ul>
-<li>Build <a href="https://gist.github.com/vicobarberan/dc336abe61df3134148fad612188d15b">this</a> code and upload it to the SCK like this:
+``
+
+## ![](https://i.imgur.com/0iMkHRt.png)  GDB 
+
+### General description
+
+The purpose of a debugger such as GDB is to allow you to see what is going on “inside” another program while it executes—or what another program was doing at the moment it crashed. 
+
+GDB can do four main kinds of things (plus other things in support of these) to help you catch bugs in the act: 
+* Start your program, specifying anything that might affect its behavior. 
+* Make your program stop on specified conditions. 
+* Examine what has happened, when your program has stopped. 
+* Change things in your program, so you can experiment with correcting the effects of one bug and go on to learn about another. 
+
+### Debugging session with Raspberry Pi as the OpenOCD server
+Once your raspberry pi is setup with above instructions you can just do:
 ```shell=
-reset halt
-at91samd bootloader 0
-at91samd chip-erase
-flash write_image samd21_sam_ba.bin 0
-verify_image samd21_sam_ba.bin 0
-flash write_image unbrickSCK.bin 8192
-verify_image unbrickSCK.bin 8192
-at91samd bootloader 8192
-<div class="codehilite"><pre><span></span><span class="cp">### Working with registers</span>
-<span class="o">*</span> <span class="n">Hay</span> <span class="n">que</span> <span class="n">investigar</span> <span class="n">las</span> <span class="n">posibilidades</span><span class="p">...</span>
-<span class="o">*</span> <span class="n">You</span> <span class="n">can</span> <span class="n">obtain</span> <span class="n">a</span> <span class="k">register</span> <span class="n">description</span> <span class="n">with</span> <span class="n">the</span> <span class="err">`</span><span class="n">reg</span><span class="err">`</span> <span class="n">command</span>
-<span class="o">*</span> <span class="n">Here</span> <span class="n">is</span> <span class="n">a</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span> <span class="n">registers</span> <span class="n">on</span> <span class="p">[</span><span class="n">Atmel</span> <span class="n">datasheet</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//www.atmel.com/Images/Atmel-42181-SAM-D21_Datasheet.pdf#_OPENTOPIC_TOC_PROCESSING_d94e34017)</span>
-
-<span class="p">[</span><span class="n">OpenOCD</span> <span class="n">manual</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//openocd.org/doc/html/index.html)</span>
-
-
-<span class="cp">## ![](https:</span><span class="c1">//i.imgur.com/0iMkHRt.png)  GDB </span>
-
-<span class="cp">### General description</span>
-
-<span class="n">The</span> <span class="n">purpose</span> <span class="n">of</span> <span class="n">a</span> <span class="n">debugger</span> <span class="n">such</span> <span class="n">as</span> <span class="n">GDB</span> <span class="n">is</span> <span class="n">to</span> <span class="n">allow</span> <span class="n">you</span> <span class="n">to</span> <span class="n">see</span> <span class="n">what</span> <span class="n">is</span> <span class="n">going</span> <span class="n">on</span> <span class="err">“</span><span class="n">inside</span><span class="err">”</span> <span class="n">another</span> <span class="n">program</span> <span class="k">while</span> <span class="n">it</span> <span class="n">executes</span><span class="err">—</span><span class="n">or</span> <span class="n">what</span> <span class="n">another</span> <span class="n">program</span> <span class="n">was</span> <span class="n">doing</span> <span class="n">at</span> <span class="n">the</span> <span class="n">moment</span> <span class="n">it</span> <span class="n">crashed</span><span class="p">.</span> 
-
-<span class="n">GDB</span> <span class="n">can</span> <span class="k">do</span> <span class="n">four</span> <span class="n">main</span> <span class="n">kinds</span> <span class="n">of</span> <span class="n">things</span> <span class="p">(</span><span class="n">plus</span> <span class="n">other</span> <span class="n">things</span> <span class="k">in</span> <span class="n">support</span> <span class="n">of</span> <span class="n">these</span><span class="p">)</span> <span class="n">to</span> <span class="n">help</span> <span class="n">you</span> <span class="n">catch</span> <span class="n">bugs</span> <span class="k">in</span> <span class="n">the</span> <span class="nl">act</span><span class="p">:</span> 
-<span class="o">*</span> <span class="n">Start</span> <span class="n">your</span> <span class="n">program</span><span class="p">,</span> <span class="n">specifying</span> <span class="n">anything</span> <span class="n">that</span> <span class="n">might</span> <span class="n">affect</span> <span class="n">its</span> <span class="n">behavior</span><span class="p">.</span> 
-<span class="o">*</span> <span class="n">Make</span> <span class="n">your</span> <span class="n">program</span> <span class="n">stop</span> <span class="n">on</span> <span class="n">specified</span> <span class="n">conditions</span><span class="p">.</span> 
-<span class="o">*</span> <span class="n">Examine</span> <span class="n">what</span> <span class="n">has</span> <span class="n">happened</span><span class="p">,</span> <span class="n">when</span> <span class="n">your</span> <span class="n">program</span> <span class="n">has</span> <span class="n">stopped</span><span class="p">.</span> 
-<span class="o">*</span> <span class="n">Change</span> <span class="n">things</span> <span class="k">in</span> <span class="n">your</span> <span class="n">program</span><span class="p">,</span> <span class="n">so</span> <span class="n">you</span> <span class="n">can</span> <span class="n">experiment</span> <span class="n">with</span> <span class="n">correcting</span> <span class="n">the</span> <span class="n">effects</span> <span class="n">of</span> <span class="n">one</span> <span class="n">bug</span> <span class="n">and</span> <span class="n">go</span> <span class="n">on</span> <span class="n">to</span> <span class="n">learn</span> <span class="n">about</span> <span class="n">another</span><span class="p">.</span> 
-
-<span class="cp">### Debugging session with Raspberry Pi as the OpenOCD server</span>
-<span class="n">Once</span> <span class="n">your</span> <span class="n">raspberry</span> <span class="n">pi</span> <span class="n">is</span> <span class="n">setup</span> <span class="n">with</span> <span class="n">above</span> <span class="n">instructions</span> <span class="n">you</span> <span class="n">can</span> <span class="n">just</span> <span class="k">do</span><span class="o">:</span>
-<span class="err">```</span><span class="n">shell</span><span class="o">=</span>
-<span class="n">ssh</span> <span class="n">pi</span><span class="p">@</span><span class="n">RaspberryAddress</span> <span class="n">sudo</span> <span class="n">openocd</span> <span class="o">-</span><span class="n">f</span> <span class="n">sck</span><span class="p">.</span><span class="n">cfg</span> <span class="o">&amp;</span>
-<span class="n">cd</span> <span class="o">/</span><span class="n">platformio_project</span><span class="o">/</span><span class="n">path</span>
-<span class="n">arm</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">eabi</span><span class="o">-</span><span class="n">gdb</span> <span class="p">.</span><span class="o">/</span><span class="n">pioenvs</span><span class="o">/</span><span class="n">zeroUSB</span><span class="o">/</span><span class="n">firmware</span><span class="p">.</span><span class="n">elf</span>
-<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">target</span> <span class="n">remote</span> <span class="nl">RaspberryAddress</span><span class="p">:</span><span class="mi">3333</span>
-<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">monitor</span> <span class="n">reset</span> <span class="n">run</span>
+ssh pi@RaspberryAddress sudo openocd -f sck.cfg &amp;
+cd /platformio_project/path
+arm-none-eabi-gdb ./pioenvs/zeroUSB/firmware.elf
+(gdb) target remote RaspberryAddress:3333
+(gdb) monitor reset run
 </pre></div></li>
 </ul>
 <p>If you are using <em>platformio</em>, you need to modify the compiling option to avoid optimisation with -0g message to the compiler. In case you are not using <em>platformio</em>, activate verbose compiling output at Arduino IDE and find your compiled .elf directory.</p>
@@ -1824,108 +1630,12 @@ Would be interesting to generate a custom option for production validation and o
 <p><a href="https://sourceware.org/gdb/current/onlinedocs/gdb/Summary.html#Summary">Debugging with GDB - Book</a></p>
 <p><a href="http://openocd.org/doc-release/html/GDB-and-OpenOCD.html#GDB-and-OpenOCD">Debugging example from GDB and OpenOCD</a></p>
 <p><a href="http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/">Arduino zero example</a></p>
-<h3 id="additional-notes-from-platformio-documentation">Additional notes from Platformio documentation<a class="headerlink" href="#additional-notes-from-platformio-documentation" title="Permanent link">Link</a></h3>
+<h3 id="additional-notes-from-platformio-configuration">Additional notes from Platformio configuration<a class="headerlink" href="#additional-notes-from-platformio-configuration" title="Permanent link">Link</a></h3>
 <ol>
 <li>How to set other <a href="http://docs.platformio.org/en/latest/projectconf/section_env_debug.html#projectconf-debug-server">DEBUG FLAGS</a></li>
 <li>About project configuration with <a href="http://docs.platformio.org/en/latest/projectconf.html">Platformio init</a></li>
 <li>Check <a href="https://community.platformio.org/t/confusion-surrounding-preprocessor-build-flags-ifdefs-with-cmake-and-clion/2119"><strong>here</strong></a> for building an *.ini file with custom build target for debugging and production.</li>
 </ol>
-<h2 id="notas-a-agregar">notas a agregar<a class="headerlink" href="#notas-a-agregar" title="Permanent link">Link</a></h2>
-<h3 id="hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21">Hacer un extracto de la documentación de openocd y de los específicos para samd21:<a class="headerlink" href="#hacer-un-extracto-de-la-documentacion-de-openocd-y-de-los-especificos-para-samd21" title="Permanent link">Link</a></h3>
-<p><a href="http://openocd.org/doc-release/html/Flash-Commands.html#flashprotect">http://openocd.org/doc-release/html/Flash-Commands.html#flashprotect</a>
-```=
-Flash Driver: at91samd</p>
-<div class="codehilite"><pre><span></span>All members of the ATSAMD, ATSAMR, ATSAML and ATSAMC microcontroller families from Atmel include internal flash and use ARM’s Cortex-M0+ core. This driver uses the same cmd names/syntax as See at91sam3.
-
-Command: at91samd chip-erase
-
-    Issues a complete Flash erase via the Device Service Unit (DSU). This can be used to erase a chip back to its factory state and does not require the processor to be halted.
-
-Command: at91samd set-security
-
-    Secures the Flash via the Set Security Bit (SSB) command. This prevents access to the Flash and can only be undone by using the chip-erase command which erases the Flash contents and turns off the security bit. Warning: at this time, openocd will not be able to communicate with a secured chip and it is therefore not possible to chip-erase it without using another tool.
-
-    at91samd set-security enable
-
-Command: at91samd eeprom
-
-    Shows or sets the EEPROM emulation size configuration, stored in the User Row of the Flash. When setting, the EEPROM size must be specified in bytes and it must be one of the permitted sizes according to the datasheet. Settings are written immediately but only take effect on MCU reset. EEPROM emulation requires additional firmware support and the minumum EEPROM size may not be the same as the minimum that the hardware supports. Set the EEPROM size to 0 in order to disable this feature.
-
-    at91samd eeprom
-    at91samd eeprom 1024
-
-Command: at91samd bootloader
-
-    Shows or sets the bootloader size configuration, stored in the User Row of the Flash. This is called the BOOTPROT region. When setting, the bootloader size must be specified in bytes and it must be one of the permitted sizes according to the datasheet. Settings are written immediately but only take effect on MCU reset. Setting the bootloader size to 0 disables bootloader protection.
-
-    at91samd bootloader
-    at91samd bootloader 16384
-
-Command: at91samd dsu_reset_deassert
-
-    This command releases internal reset held by DSU and prepares reset vector catch in case of reset halt. Command is used internally in event event reset-deassert-post.
-</pre></div>
-
-
-<p>```
-
-links a revisar de tutoriales para openocd-gdb
-<a href="http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/">http://starter-kit.nettigo.eu/2015/debug-sketch-on-arduino-zero-pro-with-gdb-and-openocd/</a>
-<a href="http://www.blackmesaeast.com.pl/linux/openocd/">http://www.blackmesaeast.com.pl/linux/openocd/</a>
-<a href="http://electronicdesign.com/memory/understanding-onboard-flash-programming">http://electronicdesign.com/memory/understanding-onboard-flash-programming</a>
-<a href="https://learn.adafruit.com/debugging-the-samd21-with-gdb/software-installation">https://learn.adafruit.com/debugging-the-samd21-with-gdb/software-installation</a>
-:::success</p>
-<h3 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">Link</a></h3>
-<ul>
-<li>Preparar una imagen para raspi lo más pequeña posible con todo lo necesario de manera que cada vez que agregue una feature se pueda actualizar automaticamente.</li>
-<li>Poner un lcd a la pi para automatizar todo headless de cara a hacer una estación automatizada de fix/test SCK.</li>
-<li>Pensar como hacer diagnóstico remoto de los kits que requieran support. Una consola a traves de internet, se podría con ssh tunneling? o con una interfaz html? pensarlo...
-:::
-</li>
-</ul>
-<h3 id="and-what-about-the-esp8266">And what about the ESP8266?<a class="headerlink" href="#and-what-about-the-esp8266" title="Permanent link">Link</a></h3>
-<p>Starting to investigate the posiblities of debugging the ESP8266 part of the firmware, still we need to read a lot!.
-Some first clues:
-* <a href="https://hackaday.com/2015/12/12/squash-your-esp-8266-bugs-with-esp-gdbstub/">https://hackaday.com/2015/12/12/squash-your-esp-8266-bugs-with-esp-gdbstub/</a>
-* GDBStub (via serial port) <a href="https://github.com/espressif/esp-gdbstub">https://github.com/espressif/esp-gdbstub</a>
-* <a href="https://github.com/sysprogs/esp8266-openocd">https://github.com/sysprogs/esp8266-openocd</a>
-* <a href="https://github.com/projectgus/openocd">https://github.com/projectgus/openocd</a> (seems dead)
-
-*[SCK]: Smart Citizen Kit
-*[SWD]: Serial Wire Debug
-*[GDB]: The GNU Project Debugger
-*[OpenOCD]: Open On-Chip Debugger
-</p>
-<h2 id="post-forum-open-debugging-for-the-sck">Post Forum - Open Debugging for the SCK<a class="headerlink" href="#post-forum-open-debugging-for-the-sck" title="Permanent link">Link</a></h2>
-<p>Hey everyone!
-
-Today we are going to take a pause on the audio development posts and talk about something we have been working on for a while now: an <strong>open source debugging toolchain</strong> for the Smart Citizen Kit. 
-
-Sometimes (many times actually), our code won't do what we want it to do and we need to take a look at what it's doing. By using a <strong>debugger</strong> we will be able to see what is going on <em>inside</em> another program while it executes or even crashes. This is fairly straight forward when you code for a modern day computer, since most IDEs have a proper interface integrated for it. However, debugging a chip like the <em>SAMD21</em> can sometimes be tricky and here is where it's interesting to use a debugging kit.
-
-<img alt="" src="https://imgs.xkcd.com/comics/fixing_problems.png" />
-
-<em>Image Credit: <a href="https://xkcd.com/">XKCD</a></em>
-
-To keep it simple: our final target is to be able to <strong>interact</strong> with the SAMD21 (or the chip) <strong>while it's executing the program</strong> and tell it to pause the execution, give us the value of some variables and then continue. We will release a fairly extensive report with documentation on this process, but for those interested in reading an overview on how to debug, this post can be a short introduction.
-
-So, here we go! The first item we need is the <a href="http://openocd.org/"><strong>Open On-Chip Debugger</strong> (OpenOCD)</a> which provides debugging with the assistance of a <strong>debug adapter</strong>. This adapter is a small hardware module which helps provide the right kind of electrical signaling to the target being debugged. These are required since the debug host, on which OpenOCD runs (i.e. your computer, a Raspberry PI...) won’t usually have native support for such signaling, or the connector needed to hook up to the target.
-
-<img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" />
-
-<em>Image Credit: Smart Citizen</em>
-
-These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.
-
-<code class="codehilite">sequenceGDB-&gt;OpenOCD: Let&#39;s debug the SCKOpenOCD-&gt;GDB: OK!OpenOCD-&gt;SCK: We are debugging youNote right of SCK: SCK thinksSCK-&gt;OpenOCD: OK!GDB-&gt;OpenOCD: Load firmwareGDB-&gt;OpenOCD: Set BreakpointsOpenOCD-&gt;SCK: Do it!OpenOCD-&gt;SCK: Run!Note right of SCK: SCK runsNote right of SCK: SCK hits a breakpointSCK-&gt;GDB: Temperature sensor reading is 500ºCNote left of GDB: Oh, oh...</code></p>
-<p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
-<ul>
-<li>Starting our program, specifying anything that might affect its behavior.</li>
-<li>Make our program stop on specified conditions.</li>
-<li>Examine what has happened when our program has stopped.</li>
-<li>Change things in our program, so we can experiment with correcting the effects of one bug and go on to learn about another.</li>
-</ul>
-<p>GDB and OpenOCD will be running in a Raspberry Pi hooked up to the SWD interface of the SCK, and we will see what's going on in them from our computer's terminal via SSH. Fairly <em>simple</em>, right? Now, we can make some changes to our code, make GDB flash it to the SCK and keep debugging in a completely open toolchain!</p>
                 
                   
                 
@@ -1996,8 +1706,8 @@ These adapters are sometimes packaged as discrete dongles, which may generically
 
         <!-- Link to next page -->
         
-          <a href="../Developers Guide/"
-              title="Developers Guide"
+          <a href="../Edit the Firmware/"
+              title="Edit the Firmware"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -2006,7 +1716,7 @@ These adapters are sometimes packaged as discrete dongles, which may generically
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Developers Guide
+                Edit the Firmware
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2025,13 +1735,8 @@ These adapters are sometimes packaged as discrete dongles, which may generically
 
       <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
-		        <img style="margin-top: 20px" alt="The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="assets/images/eu-flag.png">
+		        <img style="margin-top: 20px" alt="The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
          		<p class="md-footer-copyright__highlight">The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
-            	<div class="md-source__icon">
-            		<svg viewBox="0 0 24 24" width="24" height="24">
-            			<use xlink:href="#__github" width="24" height="24"></use>
-            		</svg>
-            	</div>
               	Contribute at <a href="https://github.com/fablabbcn/smartcitizen-iscape-docs">smartcitizen-iscape-docs</a>
       </div>
 
@@ -2045,9 +1750,9 @@ These adapters are sometimes packaged as discrete dongles, which may generically
       
     </div>
     
-      <script src="../../../assets/javascripts/application.583bbe55.js"></script>
+      <script src="../../../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0.2",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.0.2",url:{base:"../../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
