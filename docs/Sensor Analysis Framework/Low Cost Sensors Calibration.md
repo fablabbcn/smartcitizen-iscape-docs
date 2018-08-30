@@ -10,13 +10,13 @@ Introduction to Low Cost Air Quality Calibration
 
 Note on **evaluation of calibration method**
 
->The evaluation of sensor performances took into account hourly values. It was carried out using only values predicted by each calibration method. For each one, regression and difference-based analysis were conducted to evaluate their performance. These included the calculation of the coefficient of determination (R2),comparing the slope and intercept of the regression line with objective values of 1 and 0 respectively. The mean bias error (MBE)and the root mean squared error (RMSE) standardized with the standard deviation of the reference measurements were used to draw a target diagram [38].To assess the performance of each calibration method at individual air pollutant levels, we have also calculated the measurement uncertainty using orthogonal regression of the estimated outputs against reference data. This uncertainty was compared to the DQO for indicative method that corresponds to a rela-tive expanded uncertainty of 30% for O3 and 25% for NO2 at the limit value set by the European Directive. The estimation method of the uncertainty, which corresponds to the relative expanded uncertainty Ur, was carried out using Eq. (1) where b0 and b1 are the slope and intercept of the orthogonal regression and RSS the sum of square of residuals is calculated using Eq. (2).
+>The evaluation of sensor performances took into account hourly values. It was carried out using only values predicted by each calibration method. For each one, regression and difference-based analysis were conducted to evaluate their performance. These included the calculation of the coefficient of determination (R2),comparing the slope and intercept of the regression line with objective values of 1 and 0 respectively. The mean bias error (MBE)and the root mean squared error (RMSE) standardized with the standard deviation of the reference measurements were used to draw a target diagram [38].To assess the performance of each calibration method at individual air pollutant levels, we have also calculated the measurement uncertainty using orthogonal regression of the estimated outputs against reference data. This uncertainty was compared to the DQO for indicative method that corresponds to a rela-tive expanded uncertainty of 30% for O3 and 25% for NO~2~ at the limit value set by the European Directive. The estimation method of the uncertainty, which corresponds to the relative expanded uncertainty Ur, was carried out using Eq. (1) where b0 and b1 are the slope and intercept of the orthogonal regression and RSS the sum of square of residuals is calculated using Eq. (2).
 >
 >![](https://i.imgur.com/fNjTyC6.png)
 
 Note on **correlation**:
 
-> An important aspect of the dataset is the lack of independence between parameters. Usually, O3 is highly correlated with temperature and anti-correlated with relative humidity and CO2 and to alower extent with CO and NO2. As a consequence, it will be difficult to estimate O3 correctly using temperature, relative humidity and CO2 as estimators.
+> An important aspect of the dataset is the lack of independence between parameters. Usually, O3 is highly correlated with temperature and anti-correlated with relative humidity and CO2 and to alower extent with CO and NO~2~. As a consequence, it will be difficult to estimate O3 correctly using temperature, relative humidity and CO2 as estimators.
 
 Note on **field deployment**
 
@@ -27,7 +27,7 @@ Note on **drift over time**
 >
 Note for **number of sensors**:
 
-> One shall remember that implementing the ANN-MLR requires a set of 7 sensors, of which 2 NO2 MOx and 2 NO2 electrochemical sensors, 1 O3 electrochemical sensor, 1 CO electrochemical sensor and absolute humidity(therefore temperature and relative humidity sensor). Moreover,all gas sensors were previously calibrated using correction models (Table 2) including reference measurements for O3.
+> One shall remember that implementing the ANN-MLR requires a set of 7 sensors, of which 2 NO~2~ MOx and 2 NO~2~ electrochemical sensors, 1 O3 electrochemical sensor, 1 CO electrochemical sensor and absolute humidity(therefore temperature and relative humidity sensor). Moreover,all gas sensors were previously calibrated using correction models (Table 2) including reference measurements for O3.
 
 **1.2. Field calibration of a cluster of low-cost commercially availablesensors for air quality monitoring. Part B: NO, CO and CO2 - [Link](https://www.sciencedirect.com/science/article/pii/S092540051631070X)**
 
@@ -55,7 +55,7 @@ Notes on **cross-sensitivity**
 
 Notes on **target accuracy**
 
-> The target accuracy at 95% confidence is 20μg/m3 for both $NO_2$ European directives define target and absolute maximum thresholds for the concentration of both these gases. For $NO_2$, the maximum average yearly concentration is 40 μg/m3 and hourly concentrations must not exceed 200 μg/m3 more than eighteen times a year. For $O_3$, the daily 8-h mean must not exceed 120 μg/m3 more than 25 times over three years. Urban environments frequently experience NO2 levels that exceed the yearly target. An accuracy of 20μg/m3 would provide enough resolution to make these sensors a useful supplement to modelling and satellite campaigns, in the context of these targets.
+> The target accuracy at 95% confidence is 20μg/m3 for both $NO_2$ European directives define target and absolute maximum thresholds for the concentration of both these gases. For $NO_2$, the maximum average yearly concentration is 40 μg/m3 and hourly concentrations must not exceed 200 μg/m3 more than eighteen times a year. For $O_3$, the daily 8-h mean must not exceed 120 μg/m3 more than 25 times over three years. Urban environments frequently experience NO~2~ levels that exceed the yearly target. An accuracy of 20μg/m3 would provide enough resolution to make these sensors a useful supplement to modelling and satellite campaigns, in the context of these targets.
 
 Notes on **mounting and flow** (we have reproduced this issue)
 
@@ -81,14 +81,14 @@ Note on **packaging testing**
 
 **3. Christian Kjær Jensen - Assessing the applicability of low-cost electrochemical gas sensors for urban air quality monitoring. Master’s thesis. January 2016**
 
-**4. Practical field calibration of electrochemical NO2 sensors for urban
+**4. Practical field calibration of electrochemical NO~2~ sensors for urban
 air quality applications**
 
 Note on influence of **T-H O3 on AlphaSense**
 
-> As all electrochemical NO2 sensors, the Alphasense NO2-B4 sensor is not very selective to the target gas. The sensor response can best be explained as a linear combination of NO2, O3, temperature and humidity signals ($R^2≈ 0.9$). As a consequence, a linear combination of the Working Electrode and the Auxiliary Electrode alone give poor indication of ambient NO2 concentrations. The accuracy varies greatly between different sensors ($R^2$ between 0.3 and 0.7). For the Urban AirQ campaign, temperature and relative humidity were included in a multilinear regression approach. The results improve significantly with $R^2$ values typically around 0.8. This corresponds well with the findings of Jiao et al. (2016), who find an adjusted $R^2=0.82$ for the best performing electrochemical NO2 sensor in their evaluation, when including T and RH.
+> As all electrochemical NO~2~ sensors, the Alphasense NO~2~-B4 sensor is not very selective to the target gas. The sensor response can best be explained as a linear combination of NO~2~, O3, temperature and humidity signals ($R^2≈ 0.9$). As a consequence, a linear combination of the Working Electrode and the Auxiliary Electrode alone give poor indication of ambient NO~2~ concentrations. The accuracy varies greatly between different sensors ($R^2$ between 0.3 and 0.7). For the Urban AirQ campaign, temperature and relative humidity were included in a multilinear regression approach. The results improve significantly with $R^2$ values typically around 0.8. This corresponds well with the findings of Jiao et al. (2016), who find an adjusted $R^2=0.82$ for the best performing electrochemical NO~2~ sensor in their evaluation, when including T and RH.
 
-> Best results are obtained by also including ozone measurements in the calibration model: R2 increases to 0.9. Spinelle et al. (2015b) used a similar regression and found $R^2$ ranging from 0.35 to 0.77 for 4 electrochemical NO2 sensors during a two week calibration period, but dropping to 0.03—0.08 when applied to a successive 5-month validation period. Low NO2 values at their semi-rural site partly explains this poor performance, but most likely also unaccounted effects such as changing sensor sensitivity and signal drift.
+> Best results are obtained by also including ozone measurements in the calibration model: R2 increases to 0.9. Spinelle et al. (2015b) used a similar regression and found $R^2$ ranging from 0.35 to 0.77 for 4 electrochemical NO~2~ sensors during a two week calibration period, but dropping to 0.03—0.08 when applied to a successive 5-month validation period. Low NO~2~ values at their semi-rural site partly explains this poor performance, but most likely also unaccounted effects such as changing sensor sensitivity and signal drift.
 >
 **5. Mobile sensor network noise reduction and recalibration using a Bayesian network**
 
@@ -185,11 +185,11 @@ Where:
 - Ro is the baseline resistance, normally at Zero air
 - $\beta$s are log linear correlation coefficients (from SGX AAN)
 
-:::info
-This is based on SGX datasheet:
+!!! info
+	This is based on SGX datasheet:
 
-![](https://i.imgur.com/Z8HOaKM.jpg)
-:::
+	![](https://i.imgur.com/Z8HOaKM.jpg)
+
 
 The _f_ function must be calibrated and the baseline resistance needs to be monitored through the sensor sensitivity. **SGX** defines the sensitivity as:
 
@@ -201,7 +201,7 @@ $$
 Sensitivity_{NO_2} = {Rs_{0.25ppm-NO_2} \over Ro_{pure-air}}
 $$
 
-With **CO** measured at 23ºC 50%RH and **NO2** at 23ºC and <5%RH.
+With **CO** measured at 23ºC 50%RH and **NO~2~** at 23ºC and <5%RH.
 
 However, due to hardware and testing limitations, we could monitor our own sensitivity defined as:
 
@@ -266,7 +266,7 @@ For the outdoor exposure time, we need to understand how the sensor is exposed i
 
 - **Are the readings *multicollinear*?**: do several sensor readings could be correlated with others and therefore not prioritised in our model?
 - **Are the readings *heteroscedastic***: does the sensor reading vary in the different measurement conditions? Is it likely that we will overfit data? Is it likely that sensor readings in different conditions would have different variabilities?
-- Are we going to be calibrate with a **small amount of observations** vs **number of variables** (T, H, sensor readings mics (CO, NO2), aS (O3 + NO2, NO2, CO))?
+- Are we going to be calibrate with a **small amount of observations** vs **number of variables** (T, H, sensor readings mics (CO, NO~2~), aS (O3 + NO~2~, NO~2~, CO))?
 
 If so, we should then use reference sensors:
 

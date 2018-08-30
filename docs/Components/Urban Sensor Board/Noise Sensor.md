@@ -1,10 +1,17 @@
 Inside the Noise Sensor
 =======================
 
+## Source files
+
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
+
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a>
+
+
 ## Basic Concepts and theory
 
 ### Basics of MEMs I2S Microphone
-The new Smart Citizen Kit 2.0 comes with a digital **MEMs I2S microphone**. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/ics-43432/): a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.
+The new Urban Sensor Board SCK 2.0 comes with a digital **MEMs I2S microphone**. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/ics-43432/): a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.
 
 <div style="text-align:center">
 <img src ="https://i.imgur.com/ZbkN4aj.png" alt="Invensense ICS43432" class="cover"/>
@@ -170,10 +177,10 @@ _Image credit: Smart Citizen_
 There is a wide range of functions to use and the decision depends on your application. For audio applications, the most common ones are the Hann, Hamming, and Blackmann. We chose the Hamming because it's trend is to stabilise a bit more quickly than the rest, although the differencies are minimal. For your reference, there is a very interesting description of all these phenomena in this [article](http://www.ni.com/white-paper/4278/en/), where you'll find a more mathematical approach.
 
 #### Equalisation
-:::info
-Talk about the microphone response and how to correct it.
-:::
-### 1.5 Filtering and convolution
+!!! info
+	Talk about the microphone response and how to correct it.
+
+### Filtering and convolution
 
 In this section we are going to talk about a different approach to the FFT Analysis we have seen in previous sections. _What if_ we don't like the FFT algorithm and we only want to obtain a dBA or dBC results? There is a fairly simple solution to this problem, and it's called **filtering**.
 
@@ -254,39 +261,8 @@ _Image credit: [Martin Melhus](https://martinmelhus.com/)_
 
 The emitter could be based on the Web Audio API, as the example from Martin Melhus above from his project on a Web Audio Modem. Finally, the receiver would be our beloved I2S Mems microphone that we have been talking about for so long now, doing a FFT algorithm and detecting the peaks in it, identifying the carrier frequencies activation.
 
-### Configuration via sound
+## Source files
 
-:::info
-*   [Reverse engineering the amazon dash](http://www.blog.jay-greco.com/wp/?p=116)
-    *   [MATLAB CODE](https://github.com/jaygreco/Amazon-Dash-Decoder/tree/master/MATLAB)
-*   [Web-based modem](https://hackaday.com/2017/10/18/a-web-based-modem/)
-*    [ASK - Amplitude Shift Keying](https://en.wikipedia.org/wiki/Amplitude-shift_keying)
-*    [DSP fundamentals](http://www.dspguide.com/ch26/1.htm)
-*    [Hilbert transform](https://en.wikipedia.org/wiki/Hilbert_transform)
-:::
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
 
-## Firmware implementation
-
-### SAMD21 Cortex M0+ implementation
-
-Two libraries:
-
-**[AudioI2S](https://github.com/oscgonfer/AudioI2S)**
-Base library, intented to be generic purpose audio analysis library for an I2S Microphone on the SAMD21 with:
-
-* FFT Analysis
-* FIR Analysis
-* Custom window selection
-* Custom weighting function selection
-* Custom buffer size and custom fft bin size (in case of FFT analyser)
-* Custom equalisation
-* Octave auto generation of .h files for coefficients and so on
-
-**[smartcitizen-kit-audio](https://github.com/fablabbcn/smartcitizen-kit-audio)**
-Library intented for firmware implementation in the SmartCitizen kit 2.0, with a better usage of memory and SCK related functionalities:
-
-* FFT analysis
-* Selection of A or C weighting through LUT
-* Two user cases:
-    * General audio analysis (sensorRead) with fixed buffer size and fixed FFT bins size (fs = 44,1kHz)
-    * Audio Communication with FSK - with information transfer via audio
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-audio" aria-label="Check the source code">Check the source code</a>

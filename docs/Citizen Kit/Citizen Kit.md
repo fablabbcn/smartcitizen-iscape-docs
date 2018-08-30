@@ -1,9 +1,0 @@
-## What it is?
-
-The Citizen Kit, formerly known as the Low-Cost Sensor, is aimed at providing a low-cost environmental sensor solution non-technical users can easily deploy. The design developed for the project is a complete reiteration of the  Smart Citizen Kit, a piece of hardware for citizen sensing already tested in other projects for more than five years. On this iteration, new sensors had been added, and all the electronic design has been redone from the ground up to improve the data accuracy and reduce the manufacturing costs.
-
-The design is built around two boards the Smart Citizen Data Board and the Smart Citizen Urban Sensor Board. The first board contains the data acquisition, the power management, and the communication unit. The second contains a set of sensors aimed at the outdoor urban environment including: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Air Particles, a Carbon Monoxide, and a Dioxide Nitrogen detectors. This sensor while not capable of offering precise measurements can be used to understand the behavior of different urban locations especially when they are calibrated on the field using certified equipment. Both boards are later described in detail on the Sensor Components section.
-
-From the non-technical user side, the sensor includes an easy to follow online setup process that guides the users on the whole install procedure: The Smart Citizen Onboarding.
-
-The sensor does not require to stay always powered but requires charging at least every two days. The charging is done using a standard USB adapter like on any Smartphone; a process already by many users familiar.

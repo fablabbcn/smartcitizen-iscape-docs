@@ -1,10 +1,6 @@
-Building and flashing the Smartcitizen Kit firmware
-===================================================
-
-The data board of your Smartcitizen Kit is runned by **two microcontrolers**:
+The data board of your Smartcitizen Kit is has two **two microcontrollers**:
 
 ![](https://i.imgur.com/wYoz4G8.png)
-
 
 The main one is an **Atmel SAMD21**, this chip is in charge of all the normal tasks like reading the sensors, saving data, interacting with the user, etc. For this chip we need two software components the bootloader and the main firmware.
 
@@ -23,15 +19,15 @@ For bootloader upload you also need [OpenOCD](http://openocd.org/) somewhere in 
 ## Getting the firmware
 
 To get the firmware just run:
-```=bash
+
+```bash
 git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-20
 ```
 
 The bootloader repository is a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of the main firmware so you must do a `--recursive` clone to get it.
 
-:::info
-I you download manually (with the _clone or download_ button on github) you will **not** get the bootloader code, but you can get it from [here](https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24).
-:::
+!!! info
+	I you download manually (with the _clone or download_ button on github) you will **not** get the bootloader code, but you can get it from [here](https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24).
 
 ## SAMD21 bootloader
 
@@ -43,7 +39,7 @@ Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your compute
 
 Open a terminal, go to the folder where you cloned the firmware repository and run:
 
-```=bash
+```bash
 cd smartcitizen-kit-20
 ./build.sh boot
 ```
@@ -65,7 +61,7 @@ The bootloader we just flashed allows a very simple way of uploading the SCK fir
 ### Build script
 You can use the same script used to flash the bootloader (`build.sh`) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:
 
-```=bash
+```bash
 ./build.sh sam
 ```
 
@@ -82,7 +78,7 @@ The script will leave a copy of the compiled software in UF2 format called _SAM_
 
 If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:
 
-```=bash
+```bash
 cd sam
 pio run
 ```
@@ -93,7 +89,7 @@ At the end you should see some output similar to this:
 
 then do:
 
-```=bash
+```bash
 cd ..
 tools/uf2conv.py -o SAM_firmware.uf2 sam/.pioenvs/sck2/firmware.bin
 ```
@@ -107,15 +103,14 @@ Now **double-click the reset button of your kit** open your favorite file browse
 
 ![](https://i.imgur.com/AbYTUjc.png)
 
-:::info
-Keep in mind that if your computer is not configured to automount new drives you will need to mount your sck manually ([as any other USB drive](https://linuxconfig.org/howto-mount-usb-drive-in-linux)).
-:::
+!!! info
+	Keep in mind that if your computer is not configured to automount new drives you will need to mount your sck manually ([as any other USB drive](https://linuxconfig.org/howto-mount-usb-drive-in-linux)).
 
 ## ESP8266 firmware
 
 Just like the other parts of the process this is also covered by our `build.sh` script. So you can just do:
 
-```=bash
+```bash
 ./build.sh esp
 ```
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.
@@ -125,22 +120,14 @@ Our [upload script](https://github.com/fablabbcn/smartcitizen-kit-20/blob/master
 
 ![](https://i.imgur.com/dT1QTJa.png)
 
-:::info
-Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work.
-:::
+!!! info
+	Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work.
 
 ## ESP8266 filesystem
 
 This process is very similar to the previous one you just need to add the letters _fs_, and wait a little longer ;)
 
-```=bash
+```bash
 ./build.sh espfs
 ```
 ![](https://i.imgur.com/z3BjMJw.png)
-
-**that's all!**
-
-###### tags: `guides` `devdocs` `docs`
-*[SCK]: Smartcitizen Kit
-*[SWD]: Serial Wire Debug
-*[MSD]: Massive Storage Device

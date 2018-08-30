@@ -83,23 +83,18 @@
 
       <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
-  	    {%- if config.footer.license %}
-            <div class="md-footer-copyright__highlight">{{ config.footer.license }}</div>
+  	    {%- if config.extra.license %}
+            <div class="md-footer-copyright__highlight">{{ config.extra.license }}</div>
         {%- endif %}
-        {%- if config.footer.project %}
-	        {%- if config.footer.footer_logo %}
-		        <img style="margin-top: 20px" alt="{{config.footer.project}}" src="{{config.footer.footer_logo}}">
+        {%- if config.extra.project %}
+	        {%- if config.extra.footer_logo %}
+		        <img style="margin-top: 20px" alt="{{config.extra.project}}" src="{{config.extra.footer_logo}}">
 	        {%- endif %}
-         		<p class="md-footer-copyright__highlight">{{ config.footer.project }}</p>
+         		<p class="md-footer-copyright__highlight">{{ config.extra.project }}</p>
         {%- endif %}
-        {%- if config.footer.project %}
-            {%- if config.footer.footer_logo %}
-            	<div class="md-source__icon">
-            		<svg viewBox="0 0 24 24" width="24" height="24">
-            			<use xlink:href="#__github" width="24" height="24"></use>
-            		</svg>
-            	</div>
-              	Contribute at <a href="{{ config.footer.repo_url }}">{{ config.footer.repo_name }}</a>
+        {%- if config.extra.project %}
+            {%- if config.extra.footer_logo %}
+                <a class="github-button" href="{{ config.extra.repo_url }}" aria-label="Check the source code">Check the documentation source code</a>
             {%- endif %}
         {%- endif %}
       </div>

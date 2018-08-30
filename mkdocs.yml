@@ -9,8 +9,7 @@ site_url: https://docs.iscape.smartcitizen.me/
 #   -  Home: index.md
 
 # nav:
-#     - 'Citize Kit': '/Citizen Kit/'
-#     - 'Components': '/Components/'
+#     - Home: index.md
 
 theme:
   name: 'material'
@@ -23,12 +22,18 @@ theme:
   favicon: 'assets/images/favicon.ico'
   feature:
     tabs: true
-footer:
-    project: 'The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
-    footer_logo: 'assets/images/eu-flag.png'
-    license: ''
-    repo_name: smartcitizen-iscape-docs
-    repo_url: https://github.com/fablabbcn/smartcitizen-iscape-docs
+
+extra:
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/iSCAPEproject'
+    - type: 'facebook'
+      link: 'https://www.facebook.com/iSCAPEproject/'
+  project: 'The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
+  footer_logo: '/assets/images/eu-flag.png'
+  license: ''
+  repo_name: smartcitizen-iscape-docs
+  repo_url: https://github.com/fablabbcn/smartcitizen-iscape-docs
 
 markdown_extensions:
   - admonition
@@ -54,3 +59,4 @@ markdown_extensions:
   - pymdownx.tilde
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'https://buttons.github.io/buttons.js'
