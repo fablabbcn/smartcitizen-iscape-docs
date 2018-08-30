@@ -1,8 +1,16 @@
 site_name: iSCAPE Sensors Documentation
 site_description: iSCAPE Projects Air Pollution Sensors Technical Documentation
 site_author: Smart Citizen Team
-site_url: https://github.com/fablabbcn/smartcitizen-iscape-docs
+site_url: https://docs.iscape.smartcitizen.me/
 
+# https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
+
+# pages:
+#   -  Home: index.md
+
+# nav:
+#     - 'Citize Kit': '/Citizen Kit/'
+#     - 'Components': '/Components/'
 
 theme:
   name: 'material'
@@ -13,7 +21,8 @@ theme:
     accent: 'green'
   logo: 'assets/images/logo.svg'
   favicon: 'assets/images/favicon.ico'
-
+  feature:
+    tabs: true
 footer:
     project: 'The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.'
     footer_logo: 'assets/images/eu-flag.png'
