@@ -254,7 +254,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Sensor Platform/Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+        <a href="../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
           Sensor Platform
         </a>
       
@@ -430,9 +430,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../mk-ref/" title="MK reference"
+    <a href="../_FAQ/" title=" FAQ"
         class="md-nav__link">
-      MK reference
+       FAQ
     </a>
   </li>
 
@@ -537,12 +537,95 @@
 
     <!-- Render table of contents, if not empty -->
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Index
+      </label>
+    
     <a href="./" title="Index"
         class="md-nav__link md-nav__link--active">
       Index
     </a>
 
     <!-- Show table of contents -->
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-more-sensors" title="Adding More Sensors" class="md-nav__link">
+    Adding More Sensors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aux-connector" title="AUX Connector" class="md-nav__link">
+    AUX Connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-sensor-boards" title="Other Sensor Boards" class="md-nav__link">
+    Other Sensor Boards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-customization" title="Firmware Customization" class="md-nav__link">
+    Firmware Customization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcus" title="MCUs" class="md-nav__link">
+    MCUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-development" title="Firmware development" class="md-nav__link">
+    Firmware development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source" title="Open Source" class="md-nav__link">
+    Open Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1816,9 +1899,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../Sensor Platform/Sensor Platform/" title="Sensors Platform"
+    <a href="../Sensor Platform/" title="Index"
         class="md-nav__link">
-      Sensors Platform
+      Index
     </a>
   </li>
 
@@ -1982,6 +2065,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-more-sensors" title="Adding More Sensors" class="md-nav__link">
+    Adding More Sensors
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aux-connector" title="AUX Connector" class="md-nav__link">
+    AUX Connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-sensor-boards" title="Other Sensor Boards" class="md-nav__link">
+    Other Sensor Boards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-customization" title="Firmware Customization" class="md-nav__link">
+    Firmware Customization
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcus" title="MCUs" class="md-nav__link">
+    MCUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-development" title="Firmware development" class="md-nav__link">
+    Firmware development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-source" title="Open Source" class="md-nav__link">
+    Open Source
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1998,6 +2151,25 @@
 <p><img alt="" src="https://i.imgur.com/qTh4CpB.jpg" /></p>
 <p>We believe building modular and reusable hardware is critical towards optimizing the research and development effort. By increasing the technology readiness levels of existing technologies, we can drastically improve the project exploitation strategy.</p>
 <p>The sensor hardware operates as a platform where new sensor modules can be shipped and deployed by the Living Labs themselves when they are finished enabling faster iterations and upgrades even after the project finishes.</p>
+<h2 id="adding-more-sensors">Adding More Sensors<a class="headerlink" href="#adding-more-sensors" title="Permanent link">Link</a></h2>
+<h4 id="aux-connector">AUX Connector<a class="headerlink" href="#aux-connector" title="Permanent link">Link</a></h4>
+<p>The Data Board features and independent configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART port. It can supply power up to 750mA, and it can be enabled or disabled by software.</p>
+<h4 id="other-sensor-boards">Other Sensor Boards<a class="headerlink" href="#other-sensor-boards" title="Permanent link">Link</a></h4>
+<p>The All the iSCAPE sensor feature a modular architecture where sensors can be updated independently by replacing any individual Sensor Board. The Sensor Boards features GPIO, ADC, I2C, UART and I2S connections at 3.3V. Currently, we only offer the Urban Sensor Board, but more boards are on the way, and you can even design and build a custom one. </p>
+<p>More information will be available soon on our documentation page.</p>
+<h3 id="firmware-customization">Firmware Customization<a class="headerlink" href="#firmware-customization" title="Permanent link">Link</a></h3>
+<h4 id="mcus">MCUs<a class="headerlink" href="#mcus" title="Permanent link">Link</a></h4>
+<p>Main MCU: ARM M0+ from Atmel, the SAM D21 has 32kB RAM, 256 kB of program memory and operates at 3.3V. It is the same chip used by the Arduino Zero and MKR boards. It also includes 4MB of extra Flash Memory for offline data storage.</p>
+<p>Wi-Fi Module: Espressif ESP8266 IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage. </p>
+<h4 id="firmware-development">Firmware development<a class="headerlink" href="#firmware-development" title="Permanent link">Link</a></h4>
+<p>The firmware is built using the Arduino Zero with a custom variant for the Data Board main MCU. The ESP is also built using the Arduino ESP Core. Both firmwares are built and managed with Platform IO, an open-source IDE for embedded development. Platform IO features built-in dependency management and allows you to compile and upload both processors with a single command. Using the SWD ARM connector you can change the MCU bootloader and debug the firmware using Open Source tools.</p>
+<h3 id="open-source">Open Source<a class="headerlink" href="#open-source" title="Permanent link">Link</a></h3>
+<p>We're against black boxes! That’s why the entire project it is released under open source licenses: </p>
+<ul>
+<li>Hardware: CERN Open Hardware License v1.2 </li>
+<li>Firmware: GNU GPL v3.0</li>
+<li>Platform: GNU AGLP v3.0</li>
+</ul>
                 
                   
                 
@@ -2046,8 +2218,8 @@
 
         <!-- Link to previous page -->
         
-          <a href="../mk-ref/"
-              title="MK reference"
+          <a href="../_FAQ/"
+              title=" FAQ"
               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
               rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2060,7 +2232,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MK reference
+                 FAQ
               </span>
             </div>
           </a>

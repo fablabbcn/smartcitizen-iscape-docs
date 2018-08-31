@@ -252,7 +252,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Sensor Platform/Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
+        <a href="../Sensor Platform/" title="Sensor Platform" class="md-tabs__link">
           Sensor Platform
         </a>
       
@@ -467,19 +467,6 @@
     Sensor data collection
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sd-card-file-description" title="SD card file description" class="md-nav__link">
-    SD card file description
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -511,6 +498,13 @@
         <li class="md-nav__item">
   <a href="#setup-the-internal-power-supply" title="Setup the internal power supply" class="md-nav__link">
     Setup the internal power supply
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-colors" title="LED colors" class="md-nav__link">
+    LED colors
   </a>
   
 </li>
@@ -559,9 +553,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../mk-ref/" title="MK reference"
+    <a href="../_FAQ/" title=" FAQ"
         class="md-nav__link">
-      MK reference
+       FAQ
     </a>
   </li>
 
@@ -1923,9 +1917,9 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
-    <a href="../Sensor Platform/Sensor Platform/" title="Sensors Platform"
+    <a href="../Sensor Platform/" title="Index"
         class="md-nav__link">
-      Sensors Platform
+      Index
     </a>
   </li>
 
@@ -2133,19 +2127,6 @@
     Sensor data collection
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sd-card-file-description" title="SD card file description" class="md-nav__link">
-    SD card file description
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -2177,6 +2158,13 @@
         <li class="md-nav__item">
   <a href="#setup-the-internal-power-supply" title="Setup the internal power supply" class="md-nav__link">
     Setup the internal power supply
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-colors" title="LED colors" class="md-nav__link">
+    LED colors
   </a>
   
 </li>
@@ -2307,7 +2295,7 @@
 <p><img alt="" src="https://i.imgur.com/QUYkFfo.jpg" /></p>
 <p>The Living Labs Station is a modular system based on different sensor board that connected to a central datalogger.</p>
 <div class="admonition info">
-<p class="admonition-title">Living Lab Stations Configuration</p>
+<p class="admonition-title">Living Lab Stations Components Setup</p>
 <p><img alt="" src="https://i.imgur.com/vh4OLFX.png" /></p>
 </div>
 <p>The station operates as a platform where new sensor modules can be shipped and deployed by the Living Labs themselves when they are finished enabling faster iterations and upgrades even after the project finishes.</p>
@@ -2427,28 +2415,10 @@
 </div>
 <h3 id="sensor-data-collection">Sensor data collection<a class="headerlink" href="#sensor-data-collection" title="Permanent link">Link</a></h3>
 <p>The data will be collected in <strong>SD card mode</strong> during this deployment.</p>
-<p>::: tips "Upload data from the SD card manually"
-    Read the documentation on <a href=""><strong>Manual CSV data upload</strong></a></p>
-<h4 id="sd-card-file-description">SD card file description<a class="headerlink" href="#sd-card-file-description" title="Permanent link">Link</a></h4>
-<p>The data logged to sdcard will be saved in a CSV <a href="https://en.wikipedia.org/wiki/Comma-separated_values"><em>comma separated value</em></a> file.</p>
-<p>The header of the data will be written at the top of the file and every time a sensor is <em>enabled</em> or <em>disabled</em>. The posible values are:</p>
-<ul>
-<li><strong>Time</strong> The time at wich the readings were taken in <a href="https://en.wikipedia.org/wiki/ISO_8601#UTC">ISO UTC Combined date and time</a> format. Each sensor could have its own reading interval and they are grouped in 15 seconds intervals, so it is posible (if a sensor has longer reading interval) that there are some columns without a reading for each line.</li>
-<li><strong>Battery-%</strong></li>
-<li><strong>Noise-dBc</strong></li>
-<li><strong>Humidity-%</strong></li>
-<li><strong>Temperature-C</strong></li>
-<li><strong>Light-Lux</strong></li>
-<li><strong>Gases Board 1A-mV</strong> Gas Pro Board <strong>Carbon Monoxide</strong> auxilliary electrode.</li>
-<li><strong>Gases Board 1W-mV</strong> Gas Pro Board <strong>Carbon Monoxide</strong> working electrode.</li>
-<li><strong>Gases Board 2A-mV</strong> Gas Pro Board <strong>Nitrogen Dioxide</strong> auxilliary electrode.</li>
-<li><strong>Gases Board 2W-mV</strong> Gas Pro Board <strong>Nitrogen Dioxide</strong> working electrode.</li>
-<li><strong>Gases Board 3A-mV</strong> Gas Pro Board <strong>Ozone + Nitrogen Dioxide</strong> auxilliary electrode.</li>
-<li><strong>Gases Board 3W-mV</strong> Gas Pro Board <strong>Ozone + Nitrogen Dioxide</strong> working electrode.</li>
-<li><strong>PM1.0</strong> PM1.0 in ug/m3</li>
-<li><strong>PM2.5</strong> PM2.5 in ug/m3</li>
-<li><strong>PM10.0</strong> PM10.0 in ug/m3</li>
-</ul>
+<div class="admonition tips">
+<p class="admonition-title">Upload data from the SD card manually</p>
+<p>Read the documentation on <a href=""><strong>Manual CSV data upload</strong></a></p>
+</div>
 <h3 id="sensor-considerations">Sensor considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">Link</a></h3>
 <p><strong>Electrochemical sensor</strong></p>
 <p>The electrochemical sensors <strong>need stabilisation time under the testing conditions</strong> they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.</p>
@@ -2458,11 +2428,12 @@ Do not extract/attach the sensor capsule from the base board while powered, this
 :::</p>
 <p><strong>Particle Sensor</strong></p>
 <p>The particle sensors measurements are delivered as averages of the two sensors with periodic validity checks. We are currently developing one-shot strategies for battery life improvement, but in the meantime, please make sure the sensor has reliable energy supply if you will use these sensors permanently.</p>
-<p><img alt="📧" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f4e7.svg" title=":email:" /> For more information about the working principle of the alphasense electrochemical sensors, please email <a href="mailto:oscar@smartcitizen.me">oscar@smartcitizen.me</a>.</p>
 <h3 id="sensor-data-processing">Sensor data processing<a class="headerlink" href="#sensor-data-processing" title="Permanent link">Link</a></h3>
 <p>We have developed an algorithm that ingests the data from either the platform or the local csv and processes electrochemical sensor sensor data. This algorithm is <strong>in validation stage</strong> and will be included in the online platform flow from Smart Citizen once validated.</p>
-<p><strong>For this deployment</strong>, we would require you to send the data from reference sensor and the SmartCitizen sensors for us to process them and validate the workflow. If the above mentioned algorithm is sucessful, it will be included in the online data processing flow and, obviously, shared with the processed data.</p>
-<p><img alt="📧" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f4e7.svg" title=":email:" /> <em>Please, send the data back to <a href="mailto:oscar@smartcitizen.me">oscar@smartcitizen.me</a> and we will postprocess the readings for you.</em></p>
+<div class="admonition info">
+<p class="admonition-title">Sensor Analysis Framework</p>
+<p>Learn more about the sensors calibration on the <a href="../Sensor Analysis Framework">Sensor Analysis Framework</a> section.</p>
+</div>
 <h2 id="outdoor-installation">Outdoor installation<a class="headerlink" href="#outdoor-installation" title="Permanent link">Link</a></h2>
 <p>Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench.</p>
 <p><img alt="" src="https://i.imgur.com/36El7ds.jpg" /></p>
@@ -2504,7 +2475,7 @@ Do not extract/attach the sensor capsule from the base board while powered, this
 </li>
 </ul>
 </div>
-<h1 id="understanding-led-colors">Understanding LED colors<a class="headerlink" href="#understanding-led-colors" title="Permanent link">Link</a></h1>
+<h2 id="led-colors">LED colors<a class="headerlink" href="#led-colors" title="Permanent link">Link</a></h2>
 <p><img alt="" src="https://i.imgur.com/nIUBtbj.png" /></p>
 <ul>
 <li>
@@ -2608,8 +2579,8 @@ Do not extract/attach the sensor capsule from the base board while powered, this
 
         <!-- Link to next page -->
         
-          <a href="../mk-ref/"
-              title="MK reference"
+          <a href="../_FAQ/"
+              title=" FAQ"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -2618,7 +2589,7 @@ Do not extract/attach the sensor capsule from the base board while powered, this
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MK reference
+                 FAQ
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
