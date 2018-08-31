@@ -888,6 +888,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#samd21-bootloader" title="SAMD21 bootloader" class="md-nav__link">
+    SAMD21 bootloader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#samd21-firmware" title="SAMD21 firmware" class="md-nav__link">
     SAMD21 firmware
   </a>
@@ -902,8 +909,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#manual-install" title="Manual install" class="md-nav__link">
+    Manual install
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-firmware" title="ESP8266 firmware" class="md-nav__link">
+    ESP8266 firmware
+  </a>
   
 </li>
       
@@ -2061,6 +2082,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#samd21-bootloader" title="SAMD21 bootloader" class="md-nav__link">
+    SAMD21 bootloader
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#samd21-firmware" title="SAMD21 firmware" class="md-nav__link">
     SAMD21 firmware
   </a>
@@ -2075,8 +2103,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#manual-install" title="Manual install" class="md-nav__link">
+    Manual install
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-firmware" title="ESP8266 firmware" class="md-nav__link">
+    ESP8266 firmware
+  </a>
   
 </li>
       
@@ -2115,29 +2157,24 @@
 <p>To build the Smartcitizen Kit firmware you need a linux computer with <a href="https://platformio.org/">platformio</a> installed, you don't need the full IDE installation (Atom). You can follow <a href="http://docs.platformio.org/en/latest/installation.html#super-quick-mac-linux">this instructions</a> to install only the console version.</p>
 <p>For bootloader upload you also need <a href="http://openocd.org/">OpenOCD</a> somewhere in your PATH. You can use platformIO provided binary, normally it is located in <code class="codehilite">~/.platformio/packages/tool-openocd</code>.</p>
 <h2 id="getting-the-firmware">Getting the firmware<a class="headerlink" href="#getting-the-firmware" title="Permanent link">Link</a></h2>
-<p>To get the firmware just run:
-```=bash
-git clone --recursive <a href="https://github.com/fablabbcn/smartcitizen-kit-20">https://github.com/fablabbcn/smartcitizen-kit-20</a>
-<div class="codehilite"><pre><span></span>The bootloader repository is a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) of the main firmware so you must do a `--recursive` clone to get it.
+<p>To get the firmware just run:</p>
+<div class="codehilite"><pre><span></span>git clone --recursive https://github.com/fablabbcn/smartcitizen-kit-20
+</pre></div>
 
-:::info
-I you download manually (with the _clone or download_ button on github) you will **not** get the bootloader code, but you can get it from [here](https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24).
-:::
-
-## SAMD21 bootloader
-
-If your kit doesn&#39;t have the bootloader already flashed (all the kits that we ship come with it) you will need an [ATMEL-ICE](https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger) programmer. This process can also be done with a Raspberry Pi computer and the proper [connector](https://www.adafruit.com/product/2094) and cables, we are preparing the documentation for this process.
-
-![](https://i.imgur.com/wSVxBMB.png)
-
-Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your computer. Power the SCK via USB, you can use any USB charger or even your computer.
-
-Open a terminal, go to the folder where you cloned the firmware repository and run:
-
-```=bash
-cd smartcitizen-kit-20
+<p>The bootloader repository is a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">submodule</a> of the main firmware so you must do a <code class="codehilite">--recursive</code> clone to get it.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>I you download manually (with the <em>clone or download</em> button on github) you will <strong>not</strong> get the bootloader code, but you can get it from <a href="https://github.com/fablabbcn/uf2-samdx1/tree/88aa54c1afab2647904aaccbe1a6b960c02fdb24">here</a>.</p>
+</div>
+<h2 id="samd21-bootloader">SAMD21 bootloader<a class="headerlink" href="#samd21-bootloader" title="Permanent link">Link</a></h2>
+<p>If your kit doesn't have the bootloader already flashed (all the kits that we ship come with it) you will need an <a href="https://www.digikey.es/en/product-highlight/a/atmel/atmel-ice-programmer-debugger">ATMEL-ICE</a> programmer. This process can also be done with a Raspberry Pi computer and the proper <a href="https://www.adafruit.com/product/2094">connector</a> and cables, we are preparing the documentation for this process.</p>
+<p><img alt="" src="https://i.imgur.com/wSVxBMB.png" /></p>
+<p>Connect the Atmel-ICE programmer to the 10 pin SWD connector and to your computer. Power the SCK via USB, you can use any USB charger or even your computer.</p>
+<p>Open a terminal, go to the folder where you cloned the firmware repository and run:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> smartcitizen-kit-20
 ./build.sh boot
-</pre></div></p>
+</pre></div>
+
 <p><img alt="" src="https://i.imgur.com/NheZe6j.png" /></p>
 <p>If you have everything connected click any key to continue, you will see a lot of output when compiling, the led on the SCK should <em>breath</em> in <strong>green</strong> and you should see an output similar to this:</p>
 <p><img alt="" src="https://i.imgur.com/Oxze8uh.png" /></p>
@@ -2147,63 +2184,53 @@ cd smartcitizen-kit-20
 <p><img alt="" src="https://i.imgur.com/tAofJ0g.png" /></p>
 <h3 id="build-script">Build script<a class="headerlink" href="#build-script" title="Permanent link">Link</a></h3>
 <p>You can use the same script used to flash the bootloader (<code class="codehilite">build.sh</code>) that will do everything for you: compile the firmware, convert the binary to UF2 format and upload it to the kit:</p>
-<p>```=bash
-./build.sh sam
-<div class="codehilite"><pre><span></span>![](https://i.imgur.com/OtsQ3WZ.png)
+<div class="codehilite"><pre><span></span>./build.sh sam
+</pre></div>
 
-If you haven&#39;t already, **double-click the reset button of your kit** an click any key.
-If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:
-
-![](https://i.imgur.com/dojcKGy.png)
-
-The script will leave a copy of the compiled software in UF2 format called _SAM_firmware.uf2_ you can use this file to reflash your kit without compiling it again.
-
-### Manual install
-
-If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:
-
-```=bash
-cd sam
+<p><img alt="" src="https://i.imgur.com/OtsQ3WZ.png" /></p>
+<p>If you haven't already, <strong>double-click the reset button of your kit</strong> an click any key.
+If this is your first time building the software, platformio will take a while installing all the needed dependencies, be patient. If there are no errors you should see an output similar to this:</p>
+<p><img alt="" src="https://i.imgur.com/dojcKGy.png" /></p>
+<p>The script will leave a copy of the compiled software in UF2 format called <em>SAM_firmware.uf2</em> you can use this file to reflash your kit without compiling it again.</p>
+<h3 id="manual-install">Manual install<a class="headerlink" href="#manual-install" title="Permanent link">Link</a></h3>
+<p>If you want to install the firmware manually (or you had some problem with the build script) just follow this steps:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> sam
 pio run
-</pre></div></p>
+</pre></div>
+
 <p>At the end you should see some output similar to this:</p>
 <p><img alt="" src="https://i.imgur.com/gLjCqzW.png" /></p>
 <p>then do:</p>
-<p>```=bash
-cd ..
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ..
 tools/uf2conv.py -o SAM_firmware.uf2 sam/.pioenvs/sck2/firmware.bin
-<div class="codehilite"><pre><span></span>you should see:
+</pre></div>
 
-![](https://i.imgur.com/O148osW.png)
-
-don&#39;t worry about the _NO DEVICE WAS FLASHED_ message, we are doing it manually.
-Now **double-click the reset button of your kit** open your favorite file browser and drag the file you just created to the _SCK-2.0_ drive. The kit will reset and run the new firmware.
-
-![](https://i.imgur.com/AbYTUjc.png)
-
-:::info
-Keep in mind that if your computer is not configured to automount new drives you will need to mount your sck manually ([as any other USB drive](https://linuxconfig.org/howto-mount-usb-drive-in-linux)).
-:::
-
-## ESP8266 firmware
-
-Just like the other parts of the process this is also covered by our `build.sh` script. So you can just do:
-
-```=bash
-./build.sh esp
+<p>you should see:</p>
+<p><img alt="" src="https://i.imgur.com/O148osW.png" /></p>
+<p>don't worry about the <em>NO DEVICE WAS FLASHED</em> message, we are doing it manually.
+Now <strong>double-click the reset button of your kit</strong> open your favorite file browser and drag the file you just created to the <em>SCK-2.0</em> drive. The kit will reset and run the new firmware.</p>
+<p><img alt="" src="https://i.imgur.com/AbYTUjc.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Keep in mind that if your computer is not configured to automount new drives you will need to mount your sck manually (<a href="https://linuxconfig.org/howto-mount-usb-drive-in-linux">as any other USB drive</a>).</p>
+</div>
+<h2 id="esp8266-firmware">ESP8266 firmware<a class="headerlink" href="#esp8266-firmware" title="Permanent link">Link</a></h2>
+<p>Just like the other parts of the process this is also covered by our <code class="codehilite">build.sh</code> script. So you can just do:</p>
+<p><div class="codehilite"><pre><span></span>./build.sh esp
 </pre></div>
 As before, if this is the first time you do it, it will take a while on downloading dependecies and building the firmware.</p>
 <p>In this case the upload process is different, since the ESP8266 chip is not connected to the USB interface the data must be uploadded through the SAMD21 chip.
 Our <a href="https://github.com/fablabbcn/smartcitizen-kit-20/blob/master/esp/uploadESP.py">upload script</a> takes care of searching for a SCK on the USB bus, sending a command to the kit so it put's himself in what we call <em>bridge mode</em> (white led) and uploading the firmware. This is the expected output:</p>
 <p><img alt="" src="https://i.imgur.com/dT1QTJa.png" /></p>
-<p>:::info
-Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work.
-:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Sometimes the ESP8266 and the uploader software don't get synced and the upload fails. Normally if you try again it will work.</p>
+</div>
 <h2 id="esp8266-filesystem">ESP8266 filesystem<a class="headerlink" href="#esp8266-filesystem" title="Permanent link">Link</a></h2>
 <p>This process is very similar to the previous one you just need to add the letters <em>fs</em>, and wait a little longer ;)</p>
-<p><code class="codehilite">=bash./build.sh espfs</code>
+<p><div class="codehilite"><pre><span></span>./build.sh espfs
+</pre></div>
 <img alt="" src="https://i.imgur.com/z3BjMJw.png" /></p>
-<p><strong>that's all!</strong></p>
                 
                   
                 

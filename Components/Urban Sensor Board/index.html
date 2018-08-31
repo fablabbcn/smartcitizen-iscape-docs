@@ -1434,6 +1434,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sensors-selection" title="Sensors selection" class="md-nav__link">
+    Sensors selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source-files" title="Source files" class="md-nav__link">
     Source files
   </a>
@@ -2115,6 +2122,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sensors-selection" title="Sensors selection" class="md-nav__link">
+    Sensors selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source-files" title="Source files" class="md-nav__link">
     Source files
   </a>
@@ -2143,7 +2157,11 @@
 <p><img alt="" src="https://i.imgur.com/Xk2Gkeo.jpg" /></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a></p>
 <p>A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particles Matter, a Carbon Monoxide and a Dioxide Nitrogen detectors. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.</p>
-<p><img alt="" src="https://i.imgur.com/6mgROjt.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Board assembly</p>
+<p>The Urban Sensor Board connect to the Data Board connector named <strong>Sensor Board</strong></p>
+<p><img alt="" src="https://i.imgur.com/IqLEbIr.png" /></p>
+</div>
 <table>
 <thead>
 <tr>
@@ -2196,7 +2214,7 @@
 </tbody>
 </table>
 <h2 id="metal-oxide-no2-and-co-sensor">Metal Oxide NO<sub>2</sub> and CO Sensor<a class="headerlink" href="#metal-oxide-no2-and-co-sensor" title="Permanent link">Link</a></h2>
-<p>The SGX Sensortech (formerly e2v) MICS 4514 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">1</a></sup>is a dual, robust MEMS sensor for the detection of pollution from automobile exhausts. It integrates on a single SMD package the more well-known SGX MICS 5525 for Carbon Monoxide detection and the SGX MICS 2710 for Dioxide Nitrogen detection. The sensor includes two sensor chips with independent heaters and sensitive layers. One sensor chip detects Oxidizing gases (OX) primarily NO<sub>2</sub> in a 0.05-10ppm, and the other sensor detects reducing gases (RED) primarily NO<sub>2</sub> in a 1-1000ppm. </p>
+<p>The SGX Sensortech (formerly e2v) MICS 4514 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">1</a></sup>is a dual, robust MEMS sensor for the detection of pollution from automobile exhausts. It integrates on a single SMD package the more well-known SGX MICS 5525 for Carbon Monoxide detection and the SGX MICS 2710 for Dioxide Nitrogen detection. The sensor includes two sensor chips with independent heaters and sensitive layers. One sensor chip detects Oxidizing gases (OX) primarily NO<sub>2</sub> in a 0.05-10ppm, and the other sensor detects reducing gases (RED) primarily NO<sub>2</sub> in a 1-1000ppm.</p>
 <p>The following characteristics have been considered for the sensor choice:</p>
 <ul>
 <li>
@@ -2215,14 +2233,26 @@
 <p>Robust to vibrations and shocks.</p>
 </li>
 </ul>
-<p>The MICS-4514 Carbon Monoxide detection performance was tested by <a href="https://paperpile.com/c/WVaCTB/5h3e+FQ2B">(Rai et al. 2017; Spinelle et al. 2017)</a> under field conditions. They reported good agreement (R2 = 0.76--0.78) between sensor response and reference measurements when it was calibrated by using simple or multiple linear regression models <a href="https://paperpile.com/c/WVaCTB/5h3e">(Rai et al. 2017)</a></p>
-<p>The sensor integration on the Urban Sensor Board features an analog front-end different than those used by other products using the same sensor to achieve more precise and stable readings. That includes a dynamic gaining circuit and an adjustable heating system designed from the ground up for this application. </p>
-<p>However, the baseline resistance can vary a lot from sensor to sensor, and according to the measuring conditions, which is why the manufacturer recommends monitoring the sensitivity periodically. That mean re-calibration of the device after a few months might be required because the pairs of metal-oxide on the surface of the captor change their physical properties when exposed to the detectable gases. That is the primary reason the Living Lab Station include an extra Gas Sensor Board featuring three pre calibrated EC gas sensors to provide more precise and meaningful air quality data. </p>
-<p>:::info
-<a href="https://hackmd.io/RJNiO-LtSL6bxzo_qo7z_A#0101-MiCs">MICS Working principle</a>
-:::</p>
+<p>The MICS-4514 Carbon Monoxide detection performance was tested by <em>(Rai et al. 2017; Spinelle et al. 2017)</em> under field conditions. They reported good agreement (R2 = 0.76--0.78) between sensor response and reference measurements when it was calibrated by using simple or multiple linear regression models <em>(Rai et al. 2017)</em></p>
+<p>The sensor integration on the Urban Sensor Board features an analog front-end different than those used by other products using the same sensor to achieve more precise and stable readings. That includes a dynamic gaining circuit and an adjustable heating system designed from the ground up for this application.</p>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><strong>Main Sensor Interface</strong></p>
+<p><img alt="" src="https://i.imgur.com/iH5WUQ6.png" /></p>
+<p><strong>Filters</strong></p>
+<p><img alt="" src="https://i.imgur.com/MU7zFMC.png" /></p>
+<p><strong>Analog to Digital Converter</strong></p>
+<p><img alt="" src="https://i.imgur.com/BQONoBI.png" /></p>
+<p><strong>Digital Potentiometer for heater control</strong></p>
+<p><img alt="" src="https://i.imgur.com/k1db1nl.png" /></p>
+</div>
+<p>However, the baseline resistance can vary a lot from sensor to sensor, and according to the measuring conditions, which is why the manufacturer recommends monitoring the sensitivity periodically. That mean re-calibration of the device after a few months might be required because the pairs of metal-oxide on the surface of the captor change their physical properties when exposed to the detectable gases. That is the primary reason the Living Lab Station include an extra Gas Sensor Board featuring three pre calibrated EC gas sensors to provide more precise and meaningful air quality data.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Check the <a href="Inside the Metal Oxide sensors">MICS working principle full documentation</a></p>
+</div>
 <h2 id="noise-level-sensor">Noise Level Sensor<a class="headerlink" href="#noise-level-sensor" title="Permanent link">Link</a></h2>
-<p>The noise sensor is based on the INVENSENSE ICS-43432<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">2</a></sup> high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port and I2S interface. The sensors are similar to the one found on some high-end smartphones. It delivers the information directly in a digital format to the MCU where a custom library has been developed to provide noise data in dB scales A, C and Z. The raw FFT is also accessible to support characterization of specific noise frequencies. The sensor has been calibrated specifically for the project on an anechoic chamber using standard microphone calibration procedures. A final performance and calibration report will be released as part of the T3.1 documentation. </p>
+<p>The noise sensor is based on the INVENSENSE ICS-43432<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">2</a></sup> high-performance, low power, digital output, omnidirectional MEMS microphone with a bottom port and I2S interface. The sensors are similar to the one found on some high-end smartphones. It delivers the information directly in a digital format to the MCU where a custom library has been developed to provide noise data in dB scales A, C and Z. The raw FFT is also accessible to support characterization of specific noise frequencies. The sensor has been calibrated specifically for the project on an anechoic chamber using standard microphone calibration procedures.</p>
 <p>The following characteristics have been considered for the sensor choice</p>
 <ul>
 <li>
@@ -2241,18 +2271,27 @@
 <p>Low Power</p>
 </li>
 </ul>
-<p>:::info
-<a href="https://hackmd.io/a5HcdBHORsq5Hh9ROOTLDw">Audio analysis full documentation</a>
-:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Check the <a href="Inside the Noise Sensor">Noise sensor implementation full documentation</a></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><img alt="" src="https://i.imgur.com/KHkyHEX.png" /></p>
+</div>
 <h2 id="relative-humidity-and-air-temperature-sensor">Relative Humidity and Air Temperature Sensor<a class="headerlink" href="#relative-humidity-and-air-temperature-sensor" title="Permanent link">Link</a></h2>
-<p>Relative Humidity and Air Temperature Sensor are provided by a SENSIRION SHT21<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">3</a></sup> module. </p>
+<p>Relative Humidity and Air Temperature Sensor are provided by a SENSIRION SHT31<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">3</a></sup> module.</p>
+<div class="admonition info">
+<p class="admonition-title">Sensor upgrade</p>
+<p>Preliminary tests during the project shown a absolute calibration issues affecting the previously selected sensor, the SENSIRION SHT31. Those we updated the sensor to the newest SHT 31 with a PTFE layer for protection obtaining better results.</p>
+</div>
 <p>The following characteristics have been considered for the sensor choice</p>
 <ul>
 <li>
-<p>Calibrated, linearized sensor signals in digital, I2C format straight to the MCU where data is provided in degrees Celsius and Relative Humidity. </p>
+<p>Calibrated, linearized sensor signals in digital, I2C format straight to the MCU where data is provided in degrees Celsius and Relative Humidity.</p>
 </li>
 <li>
-<p>Wide measurement range with high resolution. The relative humidity range of 0-100% RH with a 0.03% resolution and a repeatability of 0.1%, together with a temperature operating range from -40 to +125°C with a temperature resolution of 0.01 ºC and a repeatability of 0.1%. </p>
+<p>Wide measurement range with high resolution. The relative humidity range of 0-100% RH with a 0.03% resolution and a repeatability of 0.1%, together with a temperature operating range from -40 to +125°C with a temperature resolution of 0.01 ºC and a repeatability of 0.1%.</p>
 </li>
 <li>
 <p>No need for calibration and long-term stability.</p>
@@ -2264,9 +2303,13 @@
 <p>Commonly found in many commercial weather stations as the Davis Vantage Pro.</p>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><img alt="" src="https://i.imgur.com/xoF233L.png" /></p>
+</div>
 <h2 id="ambient-light-sensor">Ambient Light Sensor<a class="headerlink" href="#ambient-light-sensor" title="Permanent link">Link</a></h2>
-<p>The Ambient Light Sensors is based around the ROHM BH1721FVC<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">4</a></sup> which uses an LDR10 combined with an ADC and the corresponding circuit that allows communicating with the device with the I2C protocol. </p>
-<p>The following characteristics have been considered for the sensor choice: </p>
+<p>The Ambient Light Sensors is based around the ROHM BH1721FVC<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">4</a></sup> which uses an LDR10 combined with an ADC and the corresponding circuit that allows communicating with the device with the I2C protocol.</p>
+<p>The following characteristics have been considered for the sensor choice:</p>
 <ul>
 <li>
 <p>No need of external ADC or linearization circuits uses the well-known I2C protocol</p>
@@ -2284,6 +2327,10 @@
 <p>50Hz/60Hz (electric network frequency) light rejection. Filtering the interference of most artificial light sources.</p>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><img alt="" src="https://i.imgur.com/vYPNdcC.png" /></p>
+</div>
 <h2 id="barometric-pressure">Barometric Pressure<a class="headerlink" href="#barometric-pressure" title="Permanent link">Link</a></h2>
 <p>The Barometric Pressure sensor is based around the NXP MPL3115A2<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">5</a></sup> is
 a compact, piezoresistive, absolute pressure sensor with an I2C digital
@@ -2307,8 +2354,16 @@ choice:</p>
 <p>Low power consumption.</p>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><img alt="" src="https://i.imgur.com/5g64P7r.png" /></p>
+</div>
 <h2 id="dust-particles-sensor">Dust Particles Sensor<a class="headerlink" href="#dust-particles-sensor" title="Permanent link">Link</a></h2>
-<p>The MAXIM MAX30105<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">6</a></sup> is an integrated particle-sensing module. Is a high Sensitivity Optical Reflective Solution for detection of wide  a variety of particle sizes. This sensor is aimed at measuring relative air dust levels. However, an algorithm is being developed to support PM 2.5 or PM 10 measurements. At the time the document is being written no data on the sensor lab tests can be provided.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following sensor might be replaced in future iterations as it gets replaced by the <strong>External PM Sensor connector</strong> supporting a Plantowe PMS5003 or PMS7003</p>
+</div>
+<p>The MAXIM MAX30105<sup id="fnref:7"><a class="footnote-ref" href="#fn:7" rel="footnote">6</a></sup> is an integrated particle-sensing module. Is a high Sensitivity Optical Reflective Solution for detection of wide a variety of particle sizes. This sensor is aimed at measuring relative air dust levels. However, an algorithm is being developed to support PM 2.5 or PM 10 measurements. At the time the document is being written no data on the sensor lab tests can be provided.</p>
 <p>The following characteristics have been considered for the sensor
 choice:</p>
 <ul>
@@ -2328,7 +2383,38 @@ choice:</p>
 <p>Low power consumption</p>
 </li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><img alt="" src="https://i.imgur.com/E4FhioM.png" /></p>
+</div>
 <h2 id="external-pm-sensor">External PM Sensor<a class="headerlink" href="#external-pm-sensor" title="Permanent link">Link</a></h2>
+<p>An external connector on the board supports the connection of a Plantower PMS 5003 or PMS 7003<sup id="fnref:11"><a class="footnote-ref" href="#fn:11" rel="footnote">10</a></sup>. The device is a digital particle concentration sensor that uses the Laser Scattering principle to obtain the number of suspended particles in the air. The sensor can be fully enable or disable in software to save energy when not in use.</p>
+<h2 id="sensors-selection">Sensors selection<a class="headerlink" href="#sensors-selection" title="Permanent link">Link</a></h2>
+<p>The following characteristics have been considered for the sensor
+choice:</p>
+<ul>
+<li>
+<p>Provides PM 2.5 and PM 10 measurements in ug/m³</p>
+</li>
+<li>
+<p>Minimal distinguishable particle diameter of 0.3 am</p>
+</li>
+<li>
+<p>No need for external ADC or linearization circuits. The sensor includes an internal MCU capable of dealing with all the light emitting and sensing processing. All the communication is done using the I2C protocol. A dedicated driver has been designed for this.</p>
+</li>
+<li>
+<p>Ultra Low Cost when compared to other commercial solutions with similar performance</p>
+</li>
+<li>
+<p>Low Power</p>
+</li>
+</ul>
+<p>The selection is based on the academic references selected above. For a complete Low-Cost Sensors Evaluation see ISCAPE D1.5 Summary of air quality sensors and recommendations for application and the subsequent publication <em>(Rai et al. 2017)</em>.</p>
+<p>Compliance with the NAAQS (US National Ambient Air Quality Standards) is based on 24-h PM mass concentrations [...] Both of the FEM instruments correlate with the 24-h PM2.5 mass measurements with an R2 > 0.99. The PMS PM2.5 concentrations are also well correlated with the 24-h mass average concentration (R2 > 0.88), which is slightly better than the GRIMM research-grade instrument (R2 1⁄4 0.7.). South Coast Air Quality Management District (SCAQMD) recently published preliminary comparisons of the PM2.5 measurements from three PMS 1003s and two FEMs, with high correlations (R2 > 0.9) over a 2-month period. This study demonstrated that the PMS 1003/3003 correlates well with FRMs, FEMs, and research-grade instrumentation under ambient conditions during a series of cold-air pools and in a wind-tunnel environment. Under ambient conditions, this sensor correlates better with an FRM than other low-cost sensors in similar studies. [...] these sensors are a promising tool for identifying relative increases or decreases in PM concentration, complementing sparsely distributed monitoring stations and for assessing and minimizing exposure to PM <em>(Kelly et al. 2017)</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Sensor integration</p>
+<p><img alt="" src="https://i.imgur.com/vyLMF07.png" /></p>
+</div>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">Link</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a></p>
@@ -2372,8 +2458,7 @@ choice:</p>
 <p><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf">http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf</a>&#160;<a class="footnote-backref" href="#fnref:10" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:11">
-<p>PLANTOWER PMS1003 Technical Datasheet</p>
-<p><a href="http://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms1003-manual_v2-5.pdf?sfvrsn=2">http://www.aqmd.gov/docs/default-source/aq-spec/resources-page/plantower-pms1003-manual_v2-5.pdf?sfvrsn=2</a>&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>PLANTOWER PMS5003 Technical Datasheet <a href="https://aqicn.org/air/view/sensor/spec/pms5003.pdf">https://aqicn.org/air/view/sensor/spec/pms5003.pdf</a>&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

@@ -1524,13 +1524,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#equalisation" title="Equalisation" class="md-nav__link">
-    Equalisation
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2202,13 +2195,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#equalisation" title="Equalisation" class="md-nav__link">
-    Equalisation
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2407,10 +2393,10 @@ st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e</code></pre>
 
 <p><em>Image credit: Smart Citizen</em></p>
 <p>There is a wide range of functions to use and the decision depends on your application. For audio applications, the most common ones are the Hann, Hamming, and Blackmann. We chose the Hamming because it's trend is to stabilise a bit more quickly than the rest, although the differencies are minimal. For your reference, there is a very interesting description of all these phenomena in this <a href="http://www.ni.com/white-paper/4278/en/">article</a>, where you'll find a more mathematical approach.</p>
-<h4 id="equalisation">Equalisation<a class="headerlink" href="#equalisation" title="Permanent link">Link</a></h4>
-<p>:::info
-Talk about the microphone response and how to correct it.
-:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Talk about the microphone response and how to correct it.</p>
+</div>
 <h3 id="15-filtering-and-convolution">1.5 Filtering and convolution<a class="headerlink" href="#15-filtering-and-convolution" title="Permanent link">Link</a></h3>
 <p>In this section we are going to talk about a different approach to the FFT Analysis we have seen in previous sections. <em>What if</em> we don't like the FFT algorithm and we only want to obtain a dBA or dBC results? There is a fairly simple solution to this problem, and it's called <strong>filtering</strong>.</p>
 <p>Filtering is a very common technique in signal acquisition that eliminates some frequency components of the raw signal. Examples of filters you very likely have heard of are <em>low-pass, high-pass  and band-pass filters</em>. These only <em>let pass</em> the low, high or a defined interval range of frequencies, mostly cancelling out the rest. In the frequency domain, they basicly multiply the spectrum of our signal with its filter spectrum. Exactly what we have done with the weighting.</p>
@@ -2468,14 +2454,19 @@ Talk about the microphone response and how to correct it.
 <p><em>Image credit: <a href="https://martinmelhus.com/">Martin Melhus</a></em></p>
 <p>The emitter could be based on the Web Audio API, as the example from Martin Melhus above from his project on a Web Audio Modem. Finally, the receiver would be our beloved I2S Mems microphone that we have been talking about for so long now, doing a FFT algorithm and detecting the peaks in it, identifying the carrier frequencies activation.</p>
 <h3 id="configuration-via-sound">Configuration via sound<a class="headerlink" href="#configuration-via-sound" title="Permanent link">Link</a></h3>
-<p>:::info
-*   <a href="http://www.blog.jay-greco.com/wp/?p=116">Reverse engineering the amazon dash</a>
-    *   <a href="https://github.com/jaygreco/Amazon-Dash-Decoder/tree/master/MATLAB">MATLAB CODE</a>
-*   <a href="https://hackaday.com/2017/10/18/a-web-based-modem/">Web-based modem</a>
-*    <a href="https://en.wikipedia.org/wiki/Amplitude-shift_keying">ASK - Amplitude Shift Keying</a>
-*    <a href="http://www.dspguide.com/ch26/1.htm">DSP fundamentals</a>
-*    <a href="https://en.wikipedia.org/wiki/Hilbert_transform">Hilbert transform</a>
-:::</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li><a href="http://www.blog.jay-greco.com/wp/?p=116">Reverse engineering the amazon dash</a><ul>
+<li><a href="https://github.com/jaygreco/Amazon-Dash-Decoder/tree/master/MATLAB">MATLAB CODE</a></li>
+</ul>
+</li>
+<li><a href="https://hackaday.com/2017/10/18/a-web-based-modem/">Web-based modem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amplitude-shift_keying">ASK - Amplitude Shift Keying</a></li>
+<li><a href="http://www.dspguide.com/ch26/1.htm">DSP fundamentals</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hilbert_transform">Hilbert transform</a></li>
+</ul>
+</div>
 <h2 id="firmware-implementation">Firmware implementation<a class="headerlink" href="#firmware-implementation" title="Permanent link">Link</a></h2>
 <h3 id="samd21-cortex-m0-implementation">SAMD21 Cortex M0+ implementation<a class="headerlink" href="#samd21-cortex-m0-implementation" title="Permanent link">Link</a></h3>
 <p>Two libraries:</p>

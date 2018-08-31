@@ -651,16 +651,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#led-color-codes" title="LED Color codes" class="md-nav__link">
-    LED Color codes
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinout" title="Pinout" class="md-nav__link">
+    Pinout
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#normal-operation" title="Normal operation" class="md-nav__link">
-    Normal operation
+  <a href="#sensor-boards-connector" title="Sensor Boards connector" class="md-nav__link">
+    Sensor Boards connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-connector" title="Auxiliary connector" class="md-nav__link">
+    Auxiliary connector
   </a>
   
 </li>
@@ -675,12 +689,18 @@
     Power management
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#user-feedback" title="User feedback" class="md-nav__link">
     User feedback
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2078,16 +2098,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#led-color-codes" title="LED Color codes" class="md-nav__link">
-    LED Color codes
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinout" title="Pinout" class="md-nav__link">
+    Pinout
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#normal-operation" title="Normal operation" class="md-nav__link">
-    Normal operation
+  <a href="#sensor-boards-connector" title="Sensor Boards connector" class="md-nav__link">
+    Sensor Boards connector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auxiliary-connector" title="Auxiliary connector" class="md-nav__link">
+    Auxiliary connector
   </a>
   
 </li>
@@ -2102,12 +2136,18 @@
     Power management
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#user-feedback" title="User feedback" class="md-nav__link">
     User feedback
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2168,8 +2208,8 @@
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a></p>
 <p>The Data Board connects to the sensor board providing power, analog and digital communications (12 bits ADC, GPIO, I2C, I2S, VCC). Moreover, it includes a Seeed Studio standard Grove connector where off the shelf modules from the same manufacturer can be connected. The external add-ons can be enabled or disabled from the board to save power. The connector supports an independent I2C bus by default, but it can be configured in software to support other uses (GPIO, I2C and UART). The Smart Citizen Gas and Smart Citizen PM sensor boards described above use this bus receive power and communications from the board.</p>
 <p>The board includes a battery management controller with a 2000mAh Lithium polymer cell capable of powering the device in standby for more than two weeks. On a normal operation, the battery will last for more than a week to one day, when all the sensors are enabled and recording every minute. The controller allows the batteries to be easily charged using the boards micro USB connector using any standard USB power adapter like the ones used on Smartphones. On remote areas, it can also be powered using a selection of PV Panels like Voltaics Systems 6W panel.</p>
-<h3 id="led-color-codes">LED Color codes<a class="headerlink" href="#led-color-codes" title="Permanent link">Link</a></h3>
-<h4 id="normal-operation">Normal operation<a class="headerlink" href="#normal-operation" title="Permanent link">Link</a></h4>
+<div class="admonition tips">
+<p class="admonition-title">Light color codes</p>
 <ul>
 <li><strong><font color="#FFF" style="BACKGROUND-COLOR: #FF0015; padding: 4px;">Red soft pulsing</font></strong> &gt;&gt; Apmode</li>
 <li><strong><font color="#FFF" style="BACKGROUND-COLOR: #0099FF; padding: 4px;">Blue soft pulsing</font></strong> &gt;&gt; wifi.</li>
@@ -2177,6 +2217,124 @@
 <li><strong>Other color + <font color="#FFF" style="BACKGROUND-COLOR: #FF9100; padding: 4px;">Orange soft pulsing</font></strong> &gt;&gt; on battery.</li>
 <li><strong>Other color + <font color="#FFF" style="BACKGROUND-COLOR: #47D847; padding: 4px;">Green soft pulsing</font></strong> &gt;&gt; battery charging.</li>
 </ul>
+</div>
+<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">Link</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Software guides</p>
+<p>Check the firmware guides and learn how to update and even modify the software:</p>
+<ul>
+<li><a href="../Firmware/Guides/Debug the firmware">Debug the Firmware</a></li>
+<li><a href="../Firmware/Guides/Edit the Firmware">Edit the Firmware</a></li>
+<li><a href="../Firmware/Guides/Update the firmware">Update the Firmware</a></li>
+</ul>
+</div>
+<h2 id="pinout">Pinout<a class="headerlink" href="#pinout" title="Permanent link">Link</a></h2>
+<h3 id="sensor-boards-connector">Sensor Boards connector<a class="headerlink" href="#sensor-boards-connector" title="Permanent link">Link</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Example of a Sensor Board</p>
+<p><img alt="" src="https://i.imgur.com/IqLEbIr.png" /></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>SAMD21 Pins</th>
+<th>Arduino Zero Pin</th>
+<th>SCK Pins</th>
+<th>SCK Conector</th>
+<th>SCK Conector</th>
+<th>SCK Pins</th>
+<th>Arduino Zero Pin</th>
+<th>SAMD21 Pins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GND</td>
+<td>GND</td>
+<td>GND</td>
+<td>16</td>
+<td>15</td>
+<td>GND</td>
+<td>GND</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>GND</td>
+<td>GND</td>
+<td>14</td>
+<td>13</td>
+<td>GND</td>
+<td>GND</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>PA11</td>
+<td>0</td>
+<td>I2S_FS</td>
+<td>12</td>
+<td>11</td>
+<td>TX</td>
+<td>A5</td>
+<td>PB2</td>
+</tr>
+<tr>
+<td>PA7</td>
+<td>9</td>
+<td>I2S_SD</td>
+<td>10</td>
+<td>9</td>
+<td>RX</td>
+<td>25</td>
+<td>PB3</td>
+</tr>
+<tr>
+<td>PA10</td>
+<td>1</td>
+<td>I2S_SCK</td>
+<td>8</td>
+<td>7</td>
+<td>VBAT</td>
+<td>VBAT</td>
+<td>VBAT</td>
+</tr>
+<tr>
+<td>PA22</td>
+<td>20</td>
+<td>SDA</td>
+<td>6</td>
+<td>5</td>
+<td>PWM_CO</td>
+<td>13</td>
+<td>PA9</td>
+</tr>
+<tr>
+<td>PA23</td>
+<td>21</td>
+<td>SCL</td>
+<td>4</td>
+<td>3</td>
+<td>PWM_NOX</td>
+<td>14</td>
+<td>PA8</td>
+</tr>
+<tr>
+<td>VCC</td>
+<td>VCC</td>
+<td>VCC</td>
+<td>2</td>
+<td>1</td>
+<td>VCC</td>
+<td>VCC</td>
+<td>VCC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auxiliary-connector">Auxiliary connector<a class="headerlink" href="#auxiliary-connector" title="Permanent link">Link</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Example of devices connected via the <strong>AUX connector.</strong></p>
+<p><img alt="" src="https://i.imgur.com/RRu8MiV.jpg" /></p>
+</div>
 <h2 id="power-management">Power management<a class="headerlink" href="#power-management" title="Permanent link">Link</a></h2>
 <p>The power infrastructure of the Smart Citizen Kit 2.0 give us the possibility of running directly from a USB power source with or without lithium battery, it is composed by:
 * <a href="http://www.ti.com/lit/ds/symlink/bq24259.pdf">BQ24259 USB Charger</a> that manages external power regulation, battery fast charging (up to 2Ah) and USB OTG that allow us powering other devices from the SCK.
@@ -2186,7 +2344,7 @@
 <p>The most problematic sensors in terms of power consumption are the MICS gas sensors (NO2 and CO) which needs an always-on heater with a permanent consumption of around 50 mAh (35 hours per charge) and the PM sensor which needs a fan with a consumption of 35 mAh (50 hours per charge). We are working on <em>pulse modes</em> for both sensors that will allow us to turn them on for short periods take a reading and turn them off instantly.</p>
 <p>Without those sensors enabled the SCK can operate around a month posting data to sdcard every minute with one charge of 2000 mAh.</p>
 <p>The kit will operate normally: read sensors, post, got to sleep. Until the battery charge is below 3% when that threshold is passed it will enter an emergency sleep mode and interrupt all the normal functions until the charge goes over 5%.</p>
-<h2 id="user-feedback">User feedback<a class="headerlink" href="#user-feedback" title="Permanent link">Link</a></h2>
+<h3 id="user-feedback">User feedback<a class="headerlink" href="#user-feedback" title="Permanent link">Link</a></h3>
 <p>The charging and battery state information is showed through the led, with small flashes of different color depending on the state:</p>
 <ul>
 <li>USB cable connected<ul>
