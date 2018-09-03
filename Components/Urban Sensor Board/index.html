@@ -1536,6 +1536,44 @@
   </li>
 
         
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
+    <a href="MICS Driver Implementation/" title="MICS Driver Implementation"
+        class="md-nav__link">
+      MICS Driver Implementation
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2273,6 +2311,7 @@
 </ul>
 <p>The MICS-4514 Carbon Monoxide detection performance was tested by <em>(Rai et al. 2017; Spinelle et al. 2017)</em> under field conditions. They reported good agreement (R2 = 0.76--0.78) between sensor response and reference measurements when it was calibrated by using simple or multiple linear regression models <em>(Rai et al. 2017)</em></p>
 <p>The sensor integration on the Urban Sensor Board features an analog front-end different than those used by other products using the same sensor to achieve more precise and stable readings. That includes a dynamic gaining circuit and an adjustable heating system designed from the ground up for this application.</p>
+<p>However, the baseline resistance can vary a lot from sensor to sensor, and according to the measuring conditions, which is why the manufacturer recommends monitoring the sensitivity periodically. That mean re-calibration of the device after a few months might be required because the pairs of metal-oxide on the surface of the captor change their physical properties when exposed to the detectable gases. That is the primary reason the Living Lab Station include an extra Gas Sensor Board featuring three pre calibrated EC gas sensors to provide more precise and meaningful air quality data.</p>
 <div class="admonition tip">
 <p class="admonition-title">Sensor integration</p>
 <p><strong>Main Sensor Interface</strong></p>
@@ -2283,8 +2322,11 @@
 <p><img alt="" src="https://i.imgur.com/BQONoBI.png" /></p>
 <p><strong>Digital Potentiometer for heater control</strong></p>
 <p><img alt="" src="https://i.imgur.com/k1db1nl.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Heater design</p>
+<p>Check the <a href="MICS Driver Implementation">MICS implementation document</a> to learn more about the brand new heating stage.</p>
 </div>
-<p>However, the baseline resistance can vary a lot from sensor to sensor, and according to the measuring conditions, which is why the manufacturer recommends monitoring the sensitivity periodically. That mean re-calibration of the device after a few months might be required because the pairs of metal-oxide on the surface of the captor change their physical properties when exposed to the detectable gases. That is the primary reason the Living Lab Station include an extra Gas Sensor Board featuring three pre calibrated EC gas sensors to provide more precise and meaningful air quality data.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Check the <a href="Inside the Metal Oxide sensors">MICS working principle full documentation</a></p>
