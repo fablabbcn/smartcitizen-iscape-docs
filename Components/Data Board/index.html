@@ -651,9 +651,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#software" title="Software" class="md-nav__link">
-    Software
+  <a href="#firmware-customization" title="Firmware Customization" class="md-nav__link">
+    Firmware Customization
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcus" title="MCUs" class="md-nav__link">
+    MCUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-development" title="Firmware development" class="md-nav__link">
+    Firmware development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2018,6 +2038,44 @@
 <!-- Main navigation item with nested items -->
 
   <li class="md-nav__item">
+    <a href="../../Sensor Platform/guides/Downloading the Data/" title="Downloading the Data"
+        class="md-nav__link">
+      Downloading the Data
+    </a>
+  </li>
+
+        
+          
+          
+          <!--
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to level -->
+
+
+
+<!-- Main navigation item with nested items -->
+
+  <li class="md-nav__item">
     <a href="../../Sensor Platform/guides/Onboarding Sensors/" title="Onboarding Sensors"
         class="md-nav__link">
       Onboarding Sensors
@@ -2098,9 +2156,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#software" title="Software" class="md-nav__link">
-    Software
+  <a href="#firmware-customization" title="Firmware Customization" class="md-nav__link">
+    Firmware Customization
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcus" title="MCUs" class="md-nav__link">
+    MCUs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-development" title="Firmware development" class="md-nav__link">
+    Firmware development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2218,7 +2296,18 @@
 <li><strong>Other color + <font color="#FFF" style="BACKGROUND-COLOR: #47D847; padding: 4px;">Green soft pulsing</font></strong> &gt;&gt; battery charging.</li>
 </ul>
 </div>
-<h2 id="software">Software<a class="headerlink" href="#software" title="Permanent link">Link</a></h2>
+<h2 id="firmware-customization">Firmware Customization<a class="headerlink" href="#firmware-customization" title="Permanent link">Link</a></h2>
+<h3 id="mcus">MCUs<a class="headerlink" href="#mcus" title="Permanent link">Link</a></h3>
+<ul>
+<li>
+<p><em>Main MCU:</em> ARM M0+ from Atmel, the SAM D21 has 32kB RAM, 256 kB of program memory and operates at 3.3V. It is the same chip used by the Arduino Zero and MKR boards. It also includes 4MB of extra Flash Memory for offline data storage.</p>
+</li>
+<li>
+<p><em>Wi-Fi Module:</em> Espressif ESP8266 IEEE 802.11 b/g/n Wi-Fi with 4MB Internal Flash for web content storage.</p>
+</li>
+</ul>
+<h3 id="firmware-development">Firmware development<a class="headerlink" href="#firmware-development" title="Permanent link">Link</a></h3>
+<p>The firmware is built using the Arduino Zero with a custom variant for the Data Board main MCU. The ESP is also built using the Arduino ESP Core. Both firmwares are built and managed with Platform IO, an open-source IDE for embedded development. Platform IO features built-in dependency management and allows you to compile and upload both processors with a single command. Using the SWD ARM connector you can change the MCU bootloader and debug the firmware using Open Source tools.</p>
 <div class="admonition info">
 <p class="admonition-title">Software guides</p>
 <p>Check the firmware guides and learn how to update and even modify the software:</p>
@@ -2230,6 +2319,7 @@
 </div>
 <h2 id="pinout">Pinout<a class="headerlink" href="#pinout" title="Permanent link">Link</a></h2>
 <h3 id="sensor-boards-connector">Sensor Boards connector<a class="headerlink" href="#sensor-boards-connector" title="Permanent link">Link</a></h3>
+<p>The iSCAPE sensor feature a modular architecture where sensors can be updated independently by replacing any individual Sensor Board. The Sensor Boards features GPIO, ADC, I2C, UART and I2S connections at 3.3V. Currently, we only offer the Urban Sensor Board, but more boards are on the way, and you can even design and build a custom one.</p>
 <div class="admonition info">
 <p class="admonition-title">Example of a Sensor Board</p>
 <p><img alt="" src="https://i.imgur.com/IqLEbIr.png" /></p>
@@ -2331,6 +2421,7 @@
 </tbody>
 </table>
 <h3 id="auxiliary-connector">Auxiliary connector<a class="headerlink" href="#auxiliary-connector" title="Permanent link">Link</a></h3>
+<p>The Data Board features and independent configurable auxiliary bus at 3.3V with a SEEED Grove connector. The Bus has native support for I2C, but it can also be setup on firmware as a GPIO or UART port. It can supply power up to 750mA, and it can be enabled or disabled by software.</p>
 <div class="admonition info">
 <p class="admonition-title">Example of devices connected via the <strong>AUX connector.</strong></p>
 <p><img alt="" src="https://i.imgur.com/RRu8MiV.jpg" /></p>
