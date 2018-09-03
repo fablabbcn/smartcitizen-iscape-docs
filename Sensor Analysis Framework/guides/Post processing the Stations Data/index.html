@@ -2134,37 +2134,37 @@
 <p><div class="codehilite"><pre><span></span><span class="c1">## This will output the devices we have in the selected test</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 </pre></div>
-<strong>Output</strong>: 
+<strong>Output</strong>:
 <div class="codehilite"><pre><span></span>[u&#39;4748&#39;]
 </pre></div></p>
 <p>If we want to have access to the actual data, we can go under:</p>
 <p><div class="codehilite"><pre><span></span><span class="c1">## This will output the dataframe&#39;s first 4 lines</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
-<strong>Output</strong>: 
+<strong>Output</strong>:
 <div class="codehilite"><pre><span></span>                           BATT  CO_MICS_RAW    EXT_HUM   EXT_TEMP     GB_1A  \
-2018-08-24 17:00:00+02:00   0.0    73.441111  47.652222  30.663333  4.517778   
-2018-08-24 17:10:00+02:00   0.0   129.049000  46.632000  31.209000  3.905000   
-2018-08-24 17:20:00+02:00   0.0    53.738333  45.901667  31.616667  3.808333   
-2018-08-24 17:30:00+02:00  74.5   122.405000  45.655000  31.810000  3.925000 ...  
+2018-08-24 17:00:00+02:00   0.0    73.441111  47.652222  30.663333  4.517778
+2018-08-24 17:10:00+02:00   0.0   129.049000  46.632000  31.209000  3.905000
+2018-08-24 17:20:00+02:00   0.0    53.738333  45.901667  31.616667  3.808333
+2018-08-24 17:30:00+02:00  74.5   122.405000  45.655000  31.810000  3.925000 ...
 </pre></div></p>
 <p>Or if we want to see the available recordings:
 <div class="codehilite"><pre><span></span><span class="c1">## This will output the dataframe columns</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span>
 </pre></div>
-<strong>Output</strong>: 
+<strong>Output</strong>:
 <div class="codehilite"><pre><span></span>Index([u&#39;BATT&#39;, u&#39;CO_MICS_RAW&#39;, u&#39;EXT_HUM&#39;, u&#39;EXT_TEMP&#39;, u&#39;GB_1A&#39;, u&#39;GB_1W&#39;,
        u&#39;GB_2A&#39;, u&#39;GB_2W&#39;, u&#39;GB_3A&#39;, u&#39;GB_3W&#39;, u&#39;HUM&#39;, u&#39;LIGHT&#39;,
        u&#39;NO2_MICS_RAW&#39;, u&#39;PM_1&#39;, u&#39;PM_10&#39;, u&#39;PM_25&#39;, u&#39;PM_DALLAS_TEMP&#39;,
        u&#39;PRESS&#39;, u&#39;TEMP&#39;],
       dtype=&#39;object&#39;)
 </pre></div></p>
-<p>For more information about the <strong>test structure</strong>, all the fields are detailed in <a href="https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/#loading-in-the-data">here</a>. </p>
+<p>For more information about the <strong>test structure</strong>, all the fields are detailed in <a href="https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/#loading-in-the-data">here</a>.</p>
 <p>If the device is an station, we will have to input the sensor references for the alphasense devices. We have prepared the framework to input this easily:</p>
 <p><div class="codehilite"><pre><span></span><span class="c1">## This will output the structure for inputing the alphasense sensor refs</span>
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;alphasense&#39;</span><span class="p">]</span>
 </pre></div>
-<strong>Output</strong>: 
+<strong>Output</strong>:
 <div class="codehilite"><pre><span></span>{&#39;O3&#39;: &#39;TEMPORARY_O3&#39;, &#39;SLOTS&#39;: &#39;TEMPORARY_SLOTS&#39;, &#39;CO&#39;: &#39;TEMPORARY_CO&#39;, &#39;NO2&#39;: &#39;TEMPORARY_NO2&#39;}
 </pre></div></p>
 <p>As you can see, we have no data in this struct, but we can easily fill it put by:</p>
@@ -2175,7 +2175,7 @@
 
 <span class="k">print</span> <span class="n">readings</span><span class="p">[</span><span class="s1">&#39;STATION_FABLAB_BCN&#39;</span><span class="p">][</span><span class="s1">&#39;devices&#39;</span><span class="p">][</span><span class="s1">&#39;4748&#39;</span><span class="p">][</span><span class="s1">&#39;alphasense&#39;</span><span class="p">]</span>
 </pre></div>
-<strong>Output</strong>: 
+<strong>Output</strong>:
 <div class="codehilite"><pre><span></span>{&#39;O3&#39;: 204560316, &#39;SLOTS&#39;: (&#39;NO2&#39;, &#39;CO&#39;, &#39;O3&#39;), &#39;CO&#39;: 162031257, &#39;NO2&#39;: 202160413}
 </pre></div></p>
 <p>Note that each of these fields is necessary for our posterior calculations. Each of the <code class="codehilite">O3</code>, <code class="codehilite">NO2</code>, <code class="codehilite">CO</code> fields relate to the manufacturer's reference of each of the sensors, whilst the <code class="codehilite">SLOTS</code> field relates to the order at which the sensors are placed. <strong>Normally</strong>, the stations are delivered with the SLOTS field as: <code class="codehilite">(&#39;CO&#39;, &#39;NO2&#39;, &#39;O3&#39;)</code>, meaning that the <em>CO sensor</em> is in the slot #1, the <em>NO2 sensor</em> in the slot #2 and the <em>O3 sensor</em> in the slot #3.</p>
@@ -2231,7 +2231,7 @@ P^*_{H2O} (mbar) = (1,0007+3,46x10^{-6}xP)x6.1121e^{17,520T/(240,97+T)}
 <p>Where <span><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> is the absolute pressure in mbar and <span><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> is the temperature in degC. Having the partial vapour pressure, we can then calculate both values in the implemented calculator in our notebook:</p>
 <p><img alt="" src="https://i.imgur.com/iz29E8Y.png" /></p>
 <p>Here, the formula is:</p>
-<div class="codehilite"><pre><span></span><span class="c1">## Calculate equilibrium vapour pressure </span>
+<div class="codehilite"><pre><span></span><span class="c1">## Calculate equilibrium vapour pressure</span>
 <span class="n">P_H2O_EQ</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0007</span> <span class="o">+</span> <span class="mf">3.46</span><span class="o">*</span><span class="mf">1e-6</span><span class="o">*</span><span class="n">PRESS</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="mf">6.1121</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">17.502</span><span class="o">*</span><span class="n">TEMP</span><span class="o">/</span><span class="p">(</span><span class="mf">240.97</span><span class="o">+</span><span class="n">TEMP</span><span class="p">))</span>
 </pre></div>
 
@@ -2242,7 +2242,7 @@ P^*_{H2O} (mbar) = (1,0007+3,46x10^{-6}xP)x6.1121e^{17,520T/(240,97+T)}
 </div>
 <p>Now, we can calculate de partial vapour pressure as, since it's available within our channels:</p>
 <p><img alt="" src="https://i.imgur.com/uqVhEkR.png" /></p>
-<p><div class="codehilite"><pre><span></span><span class="c1">## Calculate partial vapour pressure </span>
+<p><div class="codehilite"><pre><span></span><span class="c1">## Calculate partial vapour pressure</span>
 <span class="n">P_H2O_VAP</span><span class="o">=</span> <span class="n">HUM</span><span class="o">*</span><span class="n">P_H2O_EQ</span><span class="o">/</span><span class="mi">100</span>
 </pre></div>
 We can now verify that the partial pressure is not constant and plotting it with the other channels:</p>
@@ -2271,6 +2271,29 @@ We can now verify that the partial pressure is not constant and plotting it with
 <li><em>Print Stats</em>: prints interesting statistics about the dataset for later use</li>
 </ul>
 <p>Now, let's calculate the pollutants. We don't need to worry about the manufacturer data, since it will automatically retrieved during the process.</p>
+<p><strong>CO results</strong></p>
+<p>The methodology used here is not the baseline model, but the application of this formula, as explained in <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#application-on-4-electrode-sensors">here</a>:</p>
+<div>
+<div class="MathJax_Preview">
+Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
+</div>
+<script type="math/tex; mode=display">
+Concentration \ [ppm] = {I_{WE}-n(I_{AE}) \ [nA] \over Sensitivity \ [nA/ ppm]}
+</script>
+</div>
+<p><img alt="" src="https://i.imgur.com/5EmpUhK.png" /></p>
+<p>As we can see, the initial data is not to be considered due to the sensor stabilisation time. If we focus on the usable data, we can already get some insights about what hours are more polluted and the difference between working days and weekends:</p>
+<p><img alt="" src="https://i.imgur.com/H9suXGA.jpg" /></p>
+<p><strong>NO2 results</strong></p>
+<p>For this metric, we will be using the above mentioned baseline methodology</p>
+<p>If we have a look at the data, we see that the sensor still requires stabilisation, as the CO electrode:</p>
+<p><img alt="" src="https://i.imgur.com/CVIYfua.jpg" /></p>
+<p>Zooming in, we can see the most polluted hours are those in the morning:</p>
+<p><img alt="" src="https://i.imgur.com/p0zohNs.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>OX sensor in this station is not giving good results (probably it's ageing has provoked a sensitivity loss), and therefore, the data will not be shown here.</p>
+</div>
                 
                   
                 
@@ -2372,7 +2395,7 @@ We can now verify that the partial pressure is not constant and plotting it with
       <div class="md-footer-copyright">
 		        <img style="margin-top: 20px" alt="The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
          		<p class="md-footer-copyright__highlight">The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
-              	Contribute at <a href="https://github.com/fablabbcn/smartcitizen-iscape-docs">smartcitizen-iscape-docs</a>
+                <a class="github-button" href="https://github.com/fablabbcn/smartcitizen-iscape-docs" aria-label="Check the source code">Check the documentation source code</a>
       </div>
 
       <!-- Social links -->
@@ -2381,7 +2404,9 @@ We can now verify that the partial pressure is not constant and plotting it with
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/fablabbcn?utf8=%E2%9C%93&q=smartcitizen&type=source" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://twitter.com/iSCAPEproject" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/iSCAPEproject/" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 

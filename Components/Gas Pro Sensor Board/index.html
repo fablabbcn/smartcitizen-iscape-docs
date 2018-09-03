@@ -1032,6 +1032,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#field-validation" title="Field validation" class="md-nav__link">
+    Field validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source-files" title="Source files" class="md-nav__link">
     Source files
   </a>
@@ -2083,6 +2090,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#field-validation" title="Field validation" class="md-nav__link">
+    Field validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source-files" title="Source files" class="md-nav__link">
     Source files
   </a>
@@ -2158,6 +2172,13 @@
 </ul>
 <p>The Alphasense EC Sensors were selected to provide a higher linearity, repeatability and resolution than the SGX MICS MO Gas Sensors found on the Urban Sensor Board.</p>
 <p>The final EC sensors selected were Alphasense Ltd. NO2B4<sup id="fnref:8"><a class="footnote-ref" href="#fn:8" rel="footnote">1</a></sup> (Nitrogen Dioxide Sensor), O3B4<sup id="fnref:9"><a class="footnote-ref" href="#fn:9" rel="footnote">2</a></sup> (Oxidising Gas Sensor Ozone + Nitrogen Dioxide) and COB4<sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">3</a></sup> (Carbon Monoxide). This selection was based on the academic references selected above. For a complete Low-Cost Sensors Evaluation see ISCAPE D1.5 Summary of air quality sensors and recommendations for application and the subsequent publication <em>(Rai et al. 2017</em>. Both <em>(Penza and EuNetAir Consortium 2014)</em> and <em>(Mead et al. 2013)</em> test the Alphasense Ltd (UK) NO2A1-A3 against reference instruments, both in the laboratory and in the field, with well-correlated results. The former concluded that the Data Quality Objective for "indicative measurements" (European Parliament and Council of the European Union, 2008) are fulfilled, and the latter report sensitivity in the low ppb region with high linearity. <em>(Jensen 2016)</em> <em>(Spinelle et al. 2015)</em> tested the Alphasense NO2B4 and O3B4 in a field experiment, with various calibration approaches. The correlation with reference measurements was poor (R2 \&lt; 0.1 and R2 \&lt; 0.5 for NO<sub>2</sub> and O<sub>3</sub>, respectively) when using linear and multivariate linear calibration, and good (R2 around 0.9 and 0.6 for NO<sub>2</sub> and O<sub>3</sub>, respectively) when using artificial neural networks. The poor results for NO<sub>2</sub> are likely due to the experiments being in a rural setting with quite low NO<sub>2</sub> concentrations. <em>(Jensen 2016)</em>.  A performance evaluation of the same sensors was performed later including a test on a wide range of performance parameters (e.g. response time, calibration function, repeatability, drift, hysteresis effect and matrix effect) <em>(Spinelle et al. 2015)</em>. The experiment gave very good correlation with reference instruments (R2 > 0.99) and identifies some cases with major hysteresis effect related to humidity. <em>(Spinelle et al. 2014)</em> did a detailed laboratory and field study of the Alphasense Ltd (UK) O3B4 O<sub>3</sub> sensor, reporting good linearity, while uncertainty is adequately low to meet the requirements for \"indicative measurements\" by the Data Quality Objective (European Parliament and Council of the European Union, 2008). <em>(Jensen 2016)</em>. In chamber conditions, the performances of the Alphasense CO-B4 was found to be excellent, with the R2 values being greater than 0.99 <em>(Castell et al. 2017; Mead et al. 2013; Sun et al. 2016</em>. However, the field investigations report significant deterioration and variations in sensor performances as given in Table 6. Two field studies reported moderate to excellent R2 values (0.53--0.97) for the CO-B4 sensor <em>(Borrego et al. 2016)</em>; <em>(Castell et al. 2017; Mead et al. 2013; Sun et al. 2016)</em>. However, two other field studies have reported significantly lower R2 values (0.17--0.45) for the CO-B4, when calibrating them with reference measurements  <em>Castell et al. 2017; Mead et al. 2013; Sun et al. 2016)</em> <em>(Spinelle et al. 2017)</em> <em>(Rai et al. 2017)</em> <em>(Spinelle et al. 2017)</em>.</p>
+<h2 id="field-validation">Field validation<a class="headerlink" href="#field-validation" title="Permanent link">Link</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following section is work in progress and the sensors are being test by different partners.</p>
+</div>
+<p>A comparaison of the NO2 measurements taken by the Gas Pro Board Alphasense NO2-B43F and a <a href="http://www.teledyne-ml.com/pdf/TML41MHmanual.pdf">Teledyne TML-41</a> used by <a href="https://www.ucd.ie/">UCD</a> as the reference equipment.</p>
+<p><img alt="" src="https://i.imgur.com/DbCuX0g.jpg" /></p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">Link</a></h2>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a></p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-gases-pro-board" aria-label="Check the source code">Check the source code</a></p>
@@ -2279,7 +2300,7 @@
       <div class="md-footer-copyright">
 		        <img style="margin-top: 20px" alt="The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954." src="/assets/images/eu-flag.png">
          		<p class="md-footer-copyright__highlight">The iSCAPE project has received funding from the European Community’s H2020 Programme under Grant Agreement No. 689954.</p>
-              	Contribute at <a href="https://github.com/fablabbcn/smartcitizen-iscape-docs">smartcitizen-iscape-docs</a>
+                <a class="github-button" href="https://github.com/fablabbcn/smartcitizen-iscape-docs" aria-label="Check the source code">Check the documentation source code</a>
       </div>
 
       <!-- Social links -->
@@ -2288,7 +2309,9 @@
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/fablabbcn?utf8=%E2%9C%93&q=smartcitizen&type=source" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://twitter.com/iSCAPEproject" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/iSCAPEproject/" class="md-footer-social__link fa fa-facebook"></a>
     
   </div>
 
