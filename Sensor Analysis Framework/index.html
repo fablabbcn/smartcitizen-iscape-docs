@@ -2186,6 +2186,7 @@
                 
                 <h1 id="sensor-analysis-framework">Sensor Analysis Framework<a class="headerlink" href="#sensor-analysis-framework" title="Permanent link">Link</a></h1>
 <p>The following section details the framework used for post processing the data in the iScape project. Based on <a href="http://jupyter.org/">Jupyter Notebooks</a> and running <a href="http://www.python.org">Python</a> and <a href="https://www.r-project.org/">R</a>, it is intended to provide a state-of-the-art data handling and analysis framework, which can be easily expanded due to it's flexibility and ease of use.</p>
+<p>All the files and notebooks related to this document can be found online in our Github repository:</p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data" aria-label="Check the source code">Check the source code</a></p>
 <h2 id="framework-structure">Framework structure<a class="headerlink" href="#framework-structure" title="Permanent link">Link</a></h2>
 <p>The structure of this framework can be split between two main areas: one dedicated to sensor data analysis and model generation; and an automated sensor correction script that recovers sensor data from the API, processes it, and posts it back to the API with the use of the results obtained in the data analysis. This structure is decribed in the following diagram:</p>
@@ -2203,17 +2204,19 @@
 </ul>
 <p>The framework also provides several functionalities within signal analysis field using numpy and scipy frameworks. </p>
 <p>An example of the workflow can be seen below:</p>
-<p><img alt="" src="https://i.imgur.com/UbvGQ3o.png" /></p>
+<p><img alt="" src="https://i.imgur.com/bAtUNFf.png" /></p>
 <h4 id="loading-in-the-data">Loading in the data<a class="headerlink" href="#loading-in-the-data" title="Permanent link">Link</a></h4>
-<p>As mentioned, data can be downloaded from the SmartCitizen API with the KITs IDs or using local csvs. The recordings can be grouped and, in order to tidy up the data, they are organised around the concept of <strong>test</strong>, an entity containing all the Kit references, sensors and general information regarding the conditions, grouping and, in general, all necessary information that the devices:</p>
+<p>As mentioned, data can be downloaded from the SmartCitizen API with the KIT IDs or using local csv. In order to tidy up the data, the recordings are organised around the concept of <strong>test</strong>, an entity containing all the kits' references, sensors and general information regarding the conditions at which the measurements were carried out:</p>
 <ul>
 <li>Test Location, date and author</li>
 <li>Kit type and reference</li>
 <li>Sensor calibration data or reference</li>
 <li>Availability of reference equipment measurement and type</li>
 </ul>
-<p>All this structure is filled up initially with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.</p>
-<p>Finally, the devices' data is stored as Time Series data, with DateTime index in ISO6001 format. This is an important consideration for data visualisation and posterious modelling.</p>
+<p>A brief schema of the test structure is specified below:</p>
+<p><img alt="" src="https://i.imgur.com/LkKgC9D.png" /></p>
+<p>All this structure is filled up at the test creation  with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.</p>
+<p>Finally, the devices' data is stored as Time Series data, with DateTime index in ISO8601 format. This is an important consideration for data visualisation and posterious modelling.</p>
 <p>An example from the API download can be seen in the below's image:</p>
 <p><img alt="" src="https://i.imgur.com/xJnWWf7.png" /></p>
 <h4 id="exploratory-data-analysis-wip">Exploratory data analysis (WIP)<a class="headerlink" href="#exploratory-data-analysis-wip" title="Permanent link">Link</a></h4>
@@ -2224,7 +2227,7 @@
 <li>Correlogram</li>
 <li>Heatmaps for geospatial data</li>
 </ul>
-<p>This section uses interactive plotting frameworks as <a href="http://plot.ly">Plotly</a> and well know <a href="http://matplotlib.org/">matplotlib</a> to serve differente exploratory analysis tools:</p>
+<p>This section uses interactive plotting frameworks as <a href="www.plot.ly">Plotly</a> and well know <a href="http://matplotlib.org/">matplotlib</a> to serve differente exploratory analysis tools:</p>
 <h4 id="data-models-wip">Data models (WIP)<a class="headerlink" href="#data-models-wip" title="Permanent link">Link</a></h4>
 <p>The data models section includes an easy to use and full interface to select data from different devices within a test in order to calibrate different models. Since the data is mainly based on Time Series analysis, it interfaces with common statistics and machine learning frameworks such as <a href="http://scikit-learn.org/">sci-kit learn</a>, <a href="https://www.tensorflow.org">tensorflow</a>, <a href="http://keras.io/">keras</a>, and <a href="http://www.statsmodels.org/dev/tsa.html#module-statsmodels.tsa">stats models</a>. These frameworks provide tools to perform:</p>
 <p><strong>Pre-processing stage:</strong></p>
@@ -2248,6 +2251,7 @@
 <p>An example of the model is shown below for the estimation of the SGX4514 CO with the use of the rest of the Kit's available sensor, using a single layer LSTM network only two weeks of training:</p>
 <p><img alt="" src="https://i.imgur.com/aoX2GcF.png" /></p>
 <p>Depending on the model selected, different validation techniques are implemented, in order to verify models' assumptions and avoid data misinterpretation (i.e. <em>Durbin Watson</em> or <em>Jacque Bera</em> test for linear regression). Finally, it is important to follow carefully the instructions as stated in the notebook, in order to avoid low model quality.</p>
+<p><img alt="" src="https://i.imgur.com/2RsSdik.png" /></p>
 <h4 id="model-importexport-and-storage">Model import/export and storage<a class="headerlink" href="#model-importexport-and-storage" title="Permanent link">Link</a></h4>
 <p>Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with <a href="https://docs.python.org/2/library/pickle.html">Pickle</a> and can be uploaded to a git repository for later use.</p>
 <h2 id="source-files">Source files<a class="headerlink" href="#source-files" title="Permanent link">Link</a></h2>

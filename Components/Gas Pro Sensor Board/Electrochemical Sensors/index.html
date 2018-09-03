@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../../#electrochemical-sensors-baseline-correction-methodology" tabindex="1" class="md-skip">
+      <a href="../../../#inside-the-electrochemical-sensors" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -1083,8 +1083,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-description" title="Model description" class="md-nav__link">
-    Model description
+  <a href="#sensor-calibration" title="Sensor Calibration" class="md-nav__link">
+    Sensor Calibration
   </a>
   
     <nav class="md-nav">
@@ -1119,6 +1119,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -2142,8 +2149,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-description" title="Model description" class="md-nav__link">
-    Model description
+  <a href="#sensor-calibration" title="Sensor Calibration" class="md-nav__link">
+    Sensor Calibration
   </a>
   
     <nav class="md-nav">
@@ -2181,6 +2188,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
       
       
       
@@ -2198,12 +2212,11 @@
               
                 
                 
-                <h1 id="electrochemical-sensors-baseline-correction-methodology">Electrochemical Sensors - Baseline Correction Methodology<a class="headerlink" href="#electrochemical-sensors-baseline-correction-methodology" title="Permanent link">Link</a></h1>
-<p>This section describes the electrochemical sensors used in the iScape project and the algorithm used for the calculation of the gas measurements with a baseline correction methodology.</p>
+                <h1 id="inside-the-electrochemical-sensors">Inside the Electrochemical Sensors<a class="headerlink" href="#inside-the-electrochemical-sensors" title="Permanent link">Link</a></h1>
 <h2 id="sensor-working-principle">Sensor working principle<a class="headerlink" href="#sensor-working-principle" title="Permanent link">Link</a></h2>
 <p>The electrochemical cells used are toxic gas sensors from alphasense that operate in an amperometric mode. That is, they generate a current that is linearly proportional to the fractional volume of the toxic gas in the environment:</p>
-<p><img alt="" src="https://i.imgur.com/K0yeMN0.png" />
-<em>Image Source: Alphasense Ltd.</em></p>
+<p><img alt="" src="https://i.imgur.com/K0yeMN0.png" /></p>
+<p><em>Image Source: Alphasense Ltd.</em></p>
 <p>These electrochemical sensors are comprised of four electrodes:</p>
 <ul>
 <li>Working electrode</li>
@@ -2212,9 +2225,9 @@
 <li>Reference electrode</li>
 </ul>
 <p>The <strong>working electrode</strong> is where the oxidation (CO, H2S, NO, SO2) or reduction (NO2, Cl2) of the toxic gas to be measured takes place. This electrode is exposed to the outside air and  directly exposed to all gases in the air including the gas to be measured. This electrode may as well be <strong>poisoned</strong> if it is exposed to certain gases that either adsorb onto the catalyst (such as acetylene onto CO sensors), or react, creating by-products which inhibit the catalyst (NO2 or aromatics onto H2S sensors).</p>
-<p>The <strong>auxiliary electrode</strong> is an electrode of the same characteristics to those of the working electrode, but it is buried inside an electrolite and, hence, it is not in contact with the target gas. Since it is isolated from external conditions that could affect the <strong>working electrode</strong>, it serves as a reference to the measurements provided by the latter. </p>
-<p>The <strong>counter electrode</strong> balances the reaction of the working electrode – if the working electrode oxidises the gas, then the counter electrode must reduce some other molecule to generate an equivalent current, in the opposite sense. For example, where carbon monoxide will be oxidised on the working electrode, oxygen will be reduced on the counter electrode. </p>
-<p>The <strong>reference electrode</strong> anchors the working electrode potential to ensure that it is always working in the right conditions. It is important that the reference electrode has a stable potential, keeping the working electrode at the right electrochemical potential to maintain a constant sensitivity, good linearity and minimum sensitivity to interfering gases. </p>
+<p>The <strong>auxiliary electrode</strong> is an electrode of the same characteristics to those of the working electrode, but it is buried inside an electrolite and, hence, it is not in contact with the target gas. Since it is isolated from external conditions that could affect the <strong>working electrode</strong>, it serves as a reference to the measurements provided by the latter.</p>
+<p>The <strong>counter electrode</strong> balances the reaction of the working electrode – if the working electrode oxidises the gas, then the counter electrode must reduce some other molecule to generate an equivalent current, in the opposite sense. For example, where carbon monoxide will be oxidised on the working electrode, oxygen will be reduced on the counter electrode.</p>
+<p>The <strong>reference electrode</strong> anchors the working electrode potential to ensure that it is always working in the right conditions. It is important that the reference electrode has a stable potential, keeping the working electrode at the right electrochemical potential to maintain a constant sensitivity, good linearity and minimum sensitivity to interfering gases.</p>
 <p>Therefore, while the sensor response is exposed to the target gas, it creates a current flowing from the working to the counter electrode or viceversa (depending on the oxidative or reductive nature of the target gas). This relationship can be characterised and follows a curve such as:</p>
 <p><img alt="" src="https://i.imgur.com/nIgeTRr.png" />
 <em>Image source: Alphasense Ltd.</em></p>
@@ -2228,7 +2241,7 @@ I_L = k C_T
 </script>
 </div>
 <p>where k is a proportionality constant. This constant is provided by the manufacturer as Sensitivity and is explained below.</p>
-<div class="admonition note">
+<div class="admonition warning">
 <p class="admonition-title">Electronics design considerations</p>
 <p>A potentiostat circuit is built in order to ensure that the counter electrode is provided with as much current as it needs, also maintaining the working electrode at a fixed potential, irrespective of how hard it is working.</p>
 </div>
@@ -2236,7 +2249,8 @@ I_L = k C_T
 <p>The manufacturer provides the calibration data in laboratory conditions for each of the electrochemical cells used. This data is listed below:
 - <strong>Sensor sensitivity</strong>: the sensor response in nA per each ppm of target pollutant in <em>nominal</em> conditions
 - <strong>Electrode zero current</strong>: the electrode reading in nA to zero air (pure air at 25degC). This is provided for both, working and auxiliary electrodes, in the case of 4-electrode sensors
-- <strong>Sensor response</strong> (<span><span class="MathJax_Preview">t_{90}</span><script type="math/tex">t_{90}</script></span>)</p>
+- <strong>Sensor response</strong> (<span><span class="MathJax_Preview">t_{90}</span><script type="math/tex">t_{90}</script></span>)
+- <strong>Sensor range</strong></p>
 <p>The manufacturer suggests using the following equation in order to determine the sensor's corrected reading in the presence of target gas:</p>
 <div>
 <div class="MathJax_Preview">
@@ -2267,10 +2281,17 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 * <span><span class="MathJax_Preview">I_{PCBWE}</span><script type="math/tex">I_{PCBWE}</script></span> and <span><span class="MathJax_Preview">I_{PCBAE}</span><script type="math/tex">I_{PCBAE}</script></span> are the electronic offsets for each electrode
 * <span><span class="MathJax_Preview">n  = {I_{0WE} \over I_{0AE}}</span><script type="math/tex">n  = {I_{0WE} \over I_{0AE}}</script></span>, the ratio between alphasense's zero currents
 * k is a <strong>constant convertion factor</strong> (<em>~ 6.36</em> in the case of the SCK Gas Pro Board electronics)</p>
-<h3 id="reduction-vs-oxidation-electrochemical-sensor">Reduction vs Oxidation Electrochemical Sensor<a class="headerlink" href="#reduction-vs-oxidation-electrochemical-sensor" title="Permanent link">Link</a></h3>
-<p>As mentioned above, the <strong>counter electrode</strong> is meant to balance the reaction of the working electrode. This determines the current direction within the board: whether it <em>goes from the working electrode to the counter electrode</em> or viceversa. </p>
+<p>With regards to <strong>sensor ranges</strong>, the following are available from the manufacture:</p>
 <ul>
-<li>Oxidation sensors, such as CO, provoke a positive current <strong>out of the working electrode</strong> and the larger the amount of CO present, the larger (positive) is this current. </li>
+<li><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/NO2B43F.pdf"><strong>NO2</strong></a>: 20ppm</li>
+<li><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/OX-B431.pdf"><strong>O3 + NO2</strong></a>: 20ppm both</li>
+<li><a href="http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf"><strong>CO</strong></a>: 1000ppm</li>
+</ul>
+<p>Finally, toxic gas sensors' sensitivity will <strong>drift downwards with time, typically 0.5% to 2% per month</strong>, depending on the sensor type, relative humidity and gas concentration/temperature conditions.</p>
+<h3 id="reduction-vs-oxidation-electrochemical-sensor">Reduction vs Oxidation Electrochemical Sensor<a class="headerlink" href="#reduction-vs-oxidation-electrochemical-sensor" title="Permanent link">Link</a></h3>
+<p>As mentioned above, the <strong>counter electrode</strong> is meant to balance the reaction of the working electrode. This determines the current direction within the board: whether it <em>goes from the working electrode to the counter electrode</em> or viceversa.</p>
+<ul>
+<li>Oxidation sensors, such as CO, provoke a positive current <strong>out of the working electrode</strong> and the larger the amount of CO present, the larger (positive) is this current.</li>
 <li>Reduction sensors, such as NO2, provoke a negative current, i.e: <strong>going into the sensor</strong> and the larger the amount of NO2 present, the larger (negative) is this current</li>
 </ul>
 <p>As an example, this is reflected in the different signs of the sensor sensitivity:</p>
@@ -2281,10 +2302,10 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 <p>Although this is in principle directly related with the sensor itself, there are further signal transformations to be taken into account.  For instance, the currents seen in the electrodes, if comparing between CO and NO2, should be different in sign, however, for both, CO and NO2 sensors, we see positive currents which grow positively with higher CO and NO2 concentrations:</p>
 <p><img alt="" src="https://i.imgur.com/DSpt0p4.png" /></p>
 <p>Hence, the sensor senstivity provided by the manufacturer should be considered in absolute terms (<span><span class="MathJax_Preview">abs(Sensitvity)</span><script type="math/tex">abs(Sensitvity)</script></span>) for the calculations to yield always positive results in pollutant fractional volumes.</p>
-<h2 id="model-description">Model description<a class="headerlink" href="#model-description" title="Permanent link">Link</a></h2>
+<h2 id="sensor-calibration">Sensor Calibration<a class="headerlink" href="#sensor-calibration" title="Permanent link">Link</a></h2>
 <p>The model described in the following section is based on the findings of <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>. This study uses alphasense's 3-electrode sensors, and here it is further extended to the case of 4-electrode sensors, taking into account the auxiliary electrode.</p>
 <h3 id="baseline-correction-based-on-temperature">Baseline correction based on temperature<a class="headerlink" href="#baseline-correction-based-on-temperature" title="Permanent link">Link</a></h3>
-<p>The mentioned work described the  correction method based on temperature using a baseline correction algorithm which is described in [2]. This is summarised below:</p>
+<p>The mentioned work described the  correction method based on temperature using a baseline correction algorithm which is described in <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>. This is summarised below:</p>
 <ol>
 <li>For each day of gas working electrode readings, and for each point in the time series (i), the minimum value of the working electrode value that is contained within the interval (i-<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> &lt; i &lt; i+<span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span>) is determined, where <span><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> is an interval ranging from 0 to a day length. The outcome of this procedure is an array where each column is a vector of minimum working electrode values calculated for each <span><span class="MathJax_Preview">\delta_i</span><script type="math/tex">\delta_i</script></span> value (this is, from now on, <span><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span>).</li>
 <li>The correlation between each <span><span class="MathJax_Preview">baseline_{\delta_i}</span><script type="math/tex">baseline_{\delta_i}</script></span> and the temperature is calculated. Relative humidity is not considered in this study since it's generaly inversely correlated with the temperature.</li>
@@ -2294,9 +2315,9 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 <li>The final pollutant concentration is calculated based on the corrected working electrode reading and the manufacturer's data.</li>
 </ol>
 <p>The readings are treated in a day-to-day basis in order to avoid non-stationary temperature trends over several days, but still to account for temperature variations within each day.</p>
-<p>Finally, a background pollutant concentration is assumed from [3] which is also summarised below for each pollutant. This background concentration is added to the final result.</p>
+<p>Finally, a background pollutant concentration is assumed from <sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup> which is also summarised below for each pollutant. This background concentration is added to the final result.</p>
 <p><img alt="" src="https://i.imgur.com/qDp2cED.png" />
-<strong>Background concentrations</strong>. <em>Source <sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup></em></p>
+<strong>Background concentrations</strong>. <em>Source <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup></em></p>
 <h4 id="application-on-4-electrode-sensors">Application on 4-electrode sensors<a class="headerlink" href="#application-on-4-electrode-sensors" title="Permanent link">Link</a></h4>
 <p>This algorithm can be used to correct temperature effects on the working electrode based on the temperature in 4-electrode sensors. The results are discussed below for tests validation campaigns performed  within the iScape project. These tests are summarized below:</p>
 <ul>
@@ -2381,7 +2402,7 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 <p>As well, the results from UCD that are used as a reference for NO2, suggest a poor zero/span calibration of the equipment as it yields negative results that could spoil the NO2 correlation/model errors from those tests:</p>
 <p><img alt="" src="https://i.imgur.com/DbCuX0g.jpg" /></p>
 <h3 id="baseline-correction-based-on-auxiliary-electrode">Baseline correction based on auxiliary electrode<a class="headerlink" href="#baseline-correction-based-on-auxiliary-electrode" title="Permanent link">Link</a></h3>
-<p>As seen above, the results from applying this methodology to a low concentration, urban environment measurement with 4-electrode sensors yield significantly correlated results in the case of the reductive sensors. It was also seen that oxidation measurements are significantly correlated with the reference measurements while using the manufacturer's suggested method. </p>
+<p>As seen above, the results from applying this methodology to a low concentration, urban environment measurement with 4-electrode sensors yield significantly correlated results in the case of the reductive sensors. It was also seen that oxidation measurements are significantly correlated with the reference measurements while using the manufacturer's suggested method.</p>
 <p>However, as detailed in the following section, the use of the auxiliary electrode as the source of the correction yields better results due to:</p>
 <ul>
 <li>The auxiliary electrode is accounting for both, temperature and absolute humidity. The latter could be discarded if the relative humidity is not considered.</li>
@@ -2425,6 +2446,7 @@ I_{AE} (nA) = K (nA/mV) V_{AE} (mV)
 </tr>
 </tbody>
 </table>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">Link</a></h2>
 <div class="footnote">
 <hr />
 <ol>
@@ -2438,7 +2460,7 @@ electrochemical sensors and its implications for long-term stability - <em>Olale
 </li>
 <li id="fn:3">
 <p><a href="https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/wea.781">Modelling atmospheric composition
-in urban street canyons - <em>Vivien Bright, William Bloss and Xiaoming Cai</em></a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+in urban street canyons - <em>Vivien Bright, William Bloss and Xiaoming Cai</em></a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

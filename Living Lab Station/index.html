@@ -456,8 +456,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#assembly" title="Assembly" class="md-nav__link">
-    Assembly
+  <a href="#assembly-and-configuration" title="Assembly and configuration" class="md-nav__link">
+    Assembly and configuration
   </a>
   
 </li>
@@ -2154,8 +2154,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#assembly" title="Assembly" class="md-nav__link">
-    Assembly
+  <a href="#assembly-and-configuration" title="Assembly and configuration" class="md-nav__link">
+    Assembly and configuration
   </a>
   
 </li>
@@ -2330,13 +2330,14 @@
 </tbody>
 </table>
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">Link</a></h2>
-<p><img alt="" src="https://i.imgur.com/QUYkFfo.jpg" /></p>
-<p>The Living Labs Station is a modular system based on different sensor board that connected to a central datalogger.</p>
+<p>The Living Labs Station is a modular system based on different sensor board that connected to a central datalogger. </p>
+<p><img alt="" src="https://i.imgur.com/n5oiMwY.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Living Lab Stations Components Setup</p>
 <p><img alt="" src="https://i.imgur.com/vh4OLFX.png" /></p>
 </div>
 <p>The station operates as a platform where new sensor modules can be shipped and deployed by the Living Labs themselves when they are finished enabling faster iterations and upgrades even after the project finishes.</p>
+<p><img alt="" src="https://i.imgur.com/FFUvfR6.jpg" /></p>
 <p><img alt="" src="https://i.imgur.com/RRu8MiV.jpg" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Learn more</p>
@@ -2369,8 +2370,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="assembly">Assembly<a class="headerlink" href="#assembly" title="Permanent link">Link</a></h3>
-<p>The sensors are already assembled and <strong>we strongly require to not swap</strong> any of the sensors among them. We keep track internally of all sensor deployments and it is very important to keep the KITS as they are in order to avoid calibration data mismatch.</p>
+<h3 id="assembly-and-configuration">Assembly and configuration<a class="headerlink" href="#assembly-and-configuration" title="Permanent link">Link</a></h3>
+<p>The sensors are already assembled and <strong>we strongly require to not swap</strong> any of the sensors among them. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We keep track internally of all sensor deployments and it is very important not to swap the internal components between Station to avoid mismatchs on the calibration data.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Step by step</p>
 <p>You have to follow some simple <strong>steps</strong> to setup your SCK to capture data and store it on an SD card:</p>
@@ -2461,9 +2466,10 @@
 <p><strong>Electrochemical sensor</strong></p>
 <p>The electrochemical sensors <strong>need stabilisation time under the testing conditions</strong> they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.</p>
 <p>Humidity and temperature extremes will require of further sensor adaptation, in order to dry out or absorb the necessary humidity for their proper functioning.</p>
-<p>:::danger
-Do not extract/attach the sensor capsule from the base board while powered, this could irreversibly damage the sensor.
-:::</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Do not extract/attach the sensor capsule from the base board while powered, this could irreversibly damage the sensor.</p>
+</div>
 <p><strong>Particle Sensor</strong></p>
 <p>The particle sensors measurements are delivered as averages of the two sensors with periodic validity checks. We are currently developing one-shot strategies for battery life improvement, but in the meantime, please make sure the sensor has reliable energy supply if you will use these sensors permanently.</p>
 <h3 id="sensor-data-processing">Sensor data processing<a class="headerlink" href="#sensor-data-processing" title="Permanent link">Link</a></h3>
@@ -2486,8 +2492,8 @@ Do not extract/attach the sensor capsule from the base board while powered, this
 <div class="admonition info">
 <p class="admonition-title">Solar Panel</p>
 <p>Unfortunately, we are having some problems with the PV Solar Panel system to power the Station independently. The system is currently under tests, and it will be available in the next few months.</p>
-</div>
 <p><img alt="" src="https://i.imgur.com/vfp6nB5.jpg" /></p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Step by step</p>
 <ul>
