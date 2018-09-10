@@ -29,14 +29,14 @@ The firmware is built using the Arduino Zero with a custom variant for the Data 
 
 !!! info
 
-	Learn more about the software running inside the Data Board on the [Firmware section](../Firmware). 
+	Learn more about the software running inside the Data Board on the [Firmware section](/Components/Firmware). 
 
 !!! tips "Software guides"
 	Check the firmware guides and learn how to update and even modify the software:
 
-	* [Debug the Firmware](../Firmware/Guides/Debug the firmware)
-	* [Edit the Firmware](../Firmware/Guides/Edit the Firmware)
-	* [Update the Firmware](../Firmware/Guides/Update the firmware)
+	* [Debug the Firmware](/Components/Firmware/Guides/Debug the firmware)
+	* [Edit the Firmware](/Components/Firmware/Guides/Edit the Firmware)
+	* [Update the Firmware](/Components/Firmware/Guides/Update the firmware)
 
 ## Buses
 

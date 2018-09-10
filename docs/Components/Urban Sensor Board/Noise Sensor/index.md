@@ -1,16 +1,7 @@
-Inside the Noise Sensor
-=======================
+Introduction to Noise Sensor Design
+===================================
 
-## Source files
-
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download from GitHub">Download</a>
-
-<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a>
-
-
-## Basic Concepts and theory
-
-### Basics of MEMs I2S Microphone
+## Basics of MEMs I2S Microphone
 The new Urban Sensor Board SCK 2.0 comes with a digital **MEMs I2S microphone**. There is a wide range of possibilities in the market, and our pick was the INVENSENSE (now TDK) [ICS43432](https://www.invensense.com/products/digital/ics-43432/): a tiny digital MEMs microphone with I2S output. There is an extensive documentation at TDK's website coming from the former and we would recommend to review the nicely put documents for those interested in the topic.
 
 <div style="text-align:center">
@@ -27,7 +18,7 @@ To begin with, we'll talk about the microphone itself. The **MEMs microphone** c
 
 _Image credit: [ICS43432 Datasheet - TDK Invensense](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf)_
 
-#### I2S Protocol
+### I2S Protocol
 The **[I2S protocol](https://www.sparkfun.com/datasheets/BreakoutBoards/I2SBUS.pdf)** (*Inter-IC-Sound*) is a serial bus interface which consists of: a bit clock line or Serial Clock (*SCK*), a word clock line or Word Select (*WS*) and a multiplexed Serial Data line (*SD*). The SD is transmitted in two’s complement with MSB first, with a 24-bit word length in the microphone we picked. The *WS* is used to indicate which channel is being transmitted (left or right). In the case of the ICS43432, there is an additional pin which corresponds with the L/R, allowing to use the left or right channel to output the signal and the use of stereo configurations. When set to left, the data follows WS’s falling edge and when set to right, the WS’s rising edge. For the SAMD21 processor, there is a well developed [I2S library](https://github.com/arduino/ArduinoCore-samd/tree/master/libraries/I2S) that will take control of this configuration. 
 
 <div style="text-align:center">
@@ -38,7 +29,7 @@ _Image credit: [I2S bus specification - Philips Semiconductors](https://www.spar
 
 To finalise, we would like to highlight that the SD line of the I2S protocol is quite delicate at high frequencies and it is largely affected by noise in the path the line follows. If you want to try this at home (for example with an Arduino Zero and an I2S microphone like [this one](https://www.tindie.com/products/onehorse/ics43432-i2s-digital-microphone/), it is important not to use cables in this line and to connect the output pin directly to the board, to avoid having interfaces throughout the SD line. One interesting way to see this is that every time the line sees a medium change, part of it will be reflected and part will be transmitted, just like any other wave. This means that introducing a cable for the line will provoke at least three medium changes and a potential signal quality loss much higher than a direct connection. Apart from this point, the I2S connection is pretty straight forward and it is reasonably easy to retrieve data from the line and start playing around with some FFT analysis.
 
-### Basics of weighting and human hearing
+## Basics of weighting and human hearing
 
 The world of acoustics and signal processing for audio analysis is worth several book-length discussions. We might as well try to give an insight of our intentions within this world since we introduced ourselves in it by picking a digital microphone with a quite nice range of capabilities. 
 
@@ -61,6 +52,8 @@ _Image credit: [A-weighting - Wikipedia](https://en.wikipedia.org/wiki/A-weighti
 This means that, even if the are high sound pressure levels floating around in the air, we might not hear them just because of the frequency they are at. Normally humans can hear from something around 20Hz to 20kHz, although most adults might not hear anything in out-of-laboratory conditions above 15kHz. Some animals though, can perceive a [great range of frequencies](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Animal_hearing_frequency_range.svg/512px-Animal_hearing_frequency_range.svg.png), and for example mouses can hear up to 80kHz! So, now we know what this all is about, the I2S microphone is going to help us understand better how [_beluga whales_ communicate among themselves](http://www.bbc.com/earth/story/20150120-mystery-squeaks-of-beluga-whales)... 
 
 But also! The I2S microphone is interesting in order to **understand sources of urban noise pollution** since it provides us with a raw SPL buffer we can play with. As well, we can obtain dBA levels (SPL with a-weighting correction) by processing this buffer in several ways and calculate the RMS level of the resulting signal. In the **Part II** we will go through the mathematics of the signal processing itself and talk a bit about FFT, signal filtering and some other geeky stuff!
+
+## Signal postprocessing
 
 ### RMS and FFT algorithm simplified
 
@@ -260,6 +253,27 @@ Then, the idea is to implement an algorithm that is able to identify if the soun
 _Image credit: [Martin Melhus](https://martinmelhus.com/)_
 
 The emitter could be based on the Web Audio API, as the example from Martin Melhus above from his project on a Web Audio Modem. Finally, the receiver would be our beloved I2S Mems microphone that we have been talking about for so long now, doing a FFT algorithm and detecting the peaks in it, identifying the carrier frequencies activation.
+
+## Field Evaluation
+
+The sensor is calibrated in an anechoic chamber with a reference microphone to obtain sensor characteristics for spectrum equalisation. The TDK ICS43432 (former Invensense) has a clear non-linear response, which is specified in it's datasheet and is characterised in an anechoic chamber as specified above:
+
+![](https://i.imgur.com/FYxxWxB.jpg)
+_Image credit: [Invensense ICS43432](https://www.invensense.com/products/digital/ics-43432)_
+
+The results for this characterisation, for different SPLs are shown below:
+
+![](https://i.imgur.com/P3co21a.png)
+
+The microphone's spectrum response is not dependent on the SPL, but only on the frequency. The above response is corrected in the Citizen Kit on real time. A double point validation is performed on both microphones, from the SCK1.5 and the SCK2.0, yielding the following results:
+
+![](https://i.imgur.com/wf7ZWzg.png)
+
+Finally, if comparing these with the thresholds, in dBA scale [IEC 61672-1](https://webstore.iec.ch/preview/info_iec61672-1{ed1.0}en_d.pdf), without accounting for the previous equalisation:
+
+![](https://i.imgur.com/rRMGL7N.png)
+
+Which yields a very good linearity off-the-shelf over the common urban frequency range (below 2000Hz) and needs to be equalised over this value.
 
 ## Source files
 

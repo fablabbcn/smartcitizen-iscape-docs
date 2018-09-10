@@ -1,275 +1,74 @@
-Introduction to Low Cost Air Quality Calibration
-================================================
+Low Cost Sensors Calibration
+============================
 
-!!! note "Section under development"
-    The following section is currently a work in progress.
+## Principles
 
-## Testing methodologies and calibration models
+The **sensor calibration procedure** for the iScape sensor solution can be split into three stages:
 
-**1.1. Field calibration of a cluster of low-cost available sensors for air quality monitoring. Part A: Ozone and nitrogen dioxide - [Link](https://www.sciencedirect.com/science/article/pii/S092540051500355X#fig0010)**
+1. **Behaviour assesment**: Base testing for assessing general sensor response, stabilisation time or operational modes. Pulse mode operation is also explored in this stage for energy saving purposes.
 
-Note on **evaluation of calibration method**
+2. **Characterisation**: Laboratory condisiorAssess generic sensor parameters sensitivity, zero and span.
 
->The evaluation of sensor performances took into account hourly values. It was carried out using only values predicted by each calibration method. For each one, regression and difference-based analysis were conducted to evaluate their performance. These included the calculation of the coefficient of determination (R2),comparing the slope and intercept of the regression line with objective values of 1 and 0 respectively. The mean bias error (MBE)and the root mean squared error (RMSE) standardized with the standard deviation of the reference measurements were used to draw a target diagram [38].To assess the performance of each calibration method at individual air pollutant levels, we have also calculated the measurement uncertainty using orthogonal regression of the estimated outputs against reference data. This uncertainty was compared to the DQO for indicative method that corresponds to a rela-tive expanded uncertainty of 30% for O3 and 25% for NO~2~ at the limit value set by the European Directive. The estimation method of the uncertainty, which corresponds to the relative expanded uncertainty Ur, was carried out using Eq. (1) where b0 and b1 are the slope and intercept of the orthogonal regression and RSS the sum of square of residuals is calculated using Eq. (2).
->
->![](https://i.imgur.com/fNjTyC6.png)
+3. **Modelisation**: Include other variables such as environmental factors and sensor cross-sensitivity.
 
-Note on **correlation**:
+Each of these stages apply differently depending on the type of sensor, for instance the electrochemical sensors present in the *Station* are already characterised by the manufacturer, while the Metal Oxyde Sensors in the *Urban Board* of the *Citizen Kit* are not. The different characteristics of these sensors make different calibration approaches to be carried out.
 
-> An important aspect of the dataset is the lack of independence between parameters. Usually, O3 is highly correlated with temperature and anti-correlated with relative humidity and CO2 and to alower extent with CO and NO~2~. As a consequence, it will be difficult to estimate O3 correctly using temperature, relative humidity and CO2 as estimators.
+An **initial behaviour assessment** is to be carried out in laboratory conditions in order to determine the optimal operational modes. This includes basic parameters such as sensor response, heating time and temperature as well as more advanced ones such as heating pulse mode operation. For this purpose, a portable, open source, reproducible **test cell** has been developed for controlled testing with a web based acquisition interface.
 
-Note on **field deployment**
+Secondly, **base calibration parameters** need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:
 
-> Theses multi-sensors were either calibrated against standard gas mixtures or using artificial neural network under field conditions. The latter method resulted in mixed results **either satisfactory for short periods or generally weak for longer data series**.
+- **Sensor sensitivity**: the sensor response per each ppm of target pollutant in _nominal_ conditions
+- **Zero**: the sensor reading in zero air (pure air at 25degC).
+- **Sensor response** (t<sub>90</sub>)
+- **Sensor range**: maximum and minimum readings for the sensor
 
-Note on **drift over time**
->Finally the drift over time of each calibration methods was plot-ted in order to evidence general trends. To ease the detection ofpossible patterns by filtering noise, the daily residuals were plottedbetween reference measurements and sensor predictions ratherthan the hourly ones.
->
-Note for **number of sensors**:
+Finally, after this initial calibration assessment, it is critical to gather as much data as possible from **long term sensor deployments**. These deployments should aim to cover the widest range of sensor exposure conditions, in order to generate robust models. While dealing with low cost sensors this stage is very important, as it is detailed in the sections below.
 
-> One shall remember that implementing the ANN-MLR requires a set of 7 sensors, of which 2 NO~2~ MOx and 2 NO~2~ electrochemical sensors, 1 O3 electrochemical sensor, 1 CO electrochemical sensor and absolute humidity(therefore temperature and relative humidity sensor). Moreover,all gas sensors were previously calibrated using correction models (Table 2) including reference measurements for O3.
+These sensor deployments serve for two main purposes: to generate **quantitative classification methods** that can classify the air quality in predefined ranges (i.e. 'poor', 'fair', good'); and to generate **predictive qualitative models** for more accurate values. Either of them need large amounts of data if the models are aimed to be representative. Additionally, by the mere nature of the data and the sensors themselves, these models would need to be capable of:
 
-**1.2. Field calibration of a cluster of low-cost commercially availablesensors for air quality monitoring. Part B: NO, CO and CO2 - [Link](https://www.sciencedirect.com/science/article/pii/S092540051631070X)**
+- Robust to noise
+- Learn non-linear relationships
+- Multivariate inputs
+- Learned temporal dependence
 
-Note on **target diagram and stats**
+These needs make **machine learning** methods great canditates for modeling the data. Traditionally, time series forecasting has been dominated by linear methods because they are well understood and effective on many simpler forecasting problems. However, deep learning neural networks are able to automatically learn arbitrary complex mappings from inputs to outputs and support multiple inputs and outputs. Therefore, deep learning methods such as MLPs and LSTMs offer a lot of promise for the type of problem presented in the iScape project. The combination of these algorithms with large amounts of data gathered during the iScape project offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.
 
-Better explained below (06)
+These deployments should at least guarantee the following needs:
 
->Fig. 3 gives the target diagram for LR, MLR and ANNs calibration methods for NO (green), CO (red) and CO2(black). The target diagram is used for evaluating sensor data against reference measurements. This diagram is an evolution of the Taylor diagram, which was based on the geometrical relation between the Centred Root Mean Square Error (CRMSE) and the standard deviation of both reference (RM) and sensor data (S). The target diagram allows to extend the notion of the Taylor diagram by distinguishing the root Mean Square Error (RMSE) within the contributions from (a) the Mean Bias Error (MBE) and (b) the CRMSE (see Eqs. (1)–(3)).MBE and CRMSE values are gathered in Tables 4 and 5. This plot represents the normalised RMSE as the quadratic sum of the normalised MBE on the Y-axis versus the normalised CRMSE on the x-axis. The distance between each point and the origin represents the normalised RMSE for each platform sensor. Furthermore, target scores are plotted in the left quadrant of the diagram when the standard deviation of the sensor responses is lower than the one of the references measurements and conversely. In the original approach of the target diagram, RMSE, MBE and CRMSE can be normalised using the standard deviation of the reference measurements (RM). Sensors with random error equivalent to the variance of the observations stand in the circle area of radius 1. Target scores inside this circle indicate a variance of the residuals between sensor and reference measurement equal or lower than the variance of the reference measurements. In fact, sensors within the target circle are better predictors for the reference measurements than mean concentrations over the whole sampling period.
->
->![](https://i.imgur.com/NUXh8Fj.png)
+- A checked reference measurement for the sensors to be compared against it
+- Sufficient sensor stabilisation time and varied operational conditions
+- Careful monitoring of the sensor correct operation: connectivity and power supply, among others
 
-Note on **measurement span**
+## Metal Oxyde Sensors
 
->For the CO sensors, even though ANNs methods were found by far to be the most efficient methods, all calibration methods produced RMSEs falling outside the target circle. This evidenced a **lack of agreement between CO sensor values and reference measurements**. Our first guess is that this situation was primarily caused by the limited range of CO level at the test site (50% of data in a range of less than 0.2 umol/mol) which did not allow a correct fit of the calibration function.
->
-**2. Sensors 2017, 17, 1653 - [Link](http://www.mdpi.com/1424-8220/17/7/1653)**
+Due to their construction, low cost metal oxyde sensors suffer from high levels of spread for their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. Therefore, metal oxyde sensors require a careful characterisation and modelisation in both, laboratory and open air conditions.
 
-Notes on **baseline resistance spread**
+Furthermore, metal oxyde sensors show short and long term drifts in their calibrations. For this reason, a **recursive calibration** approach is proposed. This procedure would comprise:
 
-> The consequence of this model is that the sensor’s response is only partially a function of the amount of gas to which the surface is exposed. Instead, **the sensor will have a baseline resistance that is related to the bulk and particle boundary resistance. Because of the random geometry of the granular sensor surface, the baseline resistance will vary between individual sensors**.
+![](https://i.imgur.com/TELqobn.png)
 
-Notes on **cross-sensitivity**
+- **Sensor characterisation** in laboratory conditions to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors
+- **Sensor collocation** with reference equipment for model development, accounting for the laboratory factors obtained in the previous stage and in order to include more complex environmental factors
+- **Sensor deployment** stage with independent measurement
+- **Sensor re-assessment** by either laboratory characterisation or collocation with reference equipment. This could serve for correction for the model parameters used during the deployment and to assess the sensor reliability and need for replacement
 
-> Although the deployment of multiple different sensors can compensate for the cross-sensitivity issues in calibration, it cannot eliminate it. **MOS sensors can thus be used only in situations where any interfering species can either be measured by other means, or they must be calibrated regularly and used in locations where the background varies in concentration slowly compared with the target gases**.
+Further to the sensor re-assessment, other deployments could be explored should there not be sensor breakdown.
 
-Notes on **target accuracy**
+!!! info "SGX MICS-4514 implementation"
+	Read more on the SGX MICS-4514 implementation on the [**Urban Sensor Board**](/Components/Urban%20Sensor%20Board/#metal-oxide-no2-and-co-sensor).
 
-> The target accuracy at 95% confidence is 20μg/m3 for both $NO_2$ European directives define target and absolute maximum thresholds for the concentration of both these gases. For $NO_2$, the maximum average yearly concentration is 40 μg/m3 and hourly concentrations must not exceed 200 μg/m3 more than eighteen times a year. For $O_3$, the daily 8-h mean must not exceed 120 μg/m3 more than 25 times over three years. Urban environments frequently experience NO~2~ levels that exceed the yearly target. An accuracy of 20μg/m3 would provide enough resolution to make these sensors a useful supplement to modelling and satellite campaigns, in the context of these targets.
+## Electrochemical Sensors
 
-Notes on **mounting and flow** (we have reproduced this issue)
+The **electrochemical sensor** manufacturer keeps a database of the sensor sensitivities and zero currents (baseline response) of each individual sensor. Therefore, the calibration approach for the electrochemical sensors is reduced to an in-field validation of their behaviour and a model proposal that is described in the [*Electrochemical sensor baseline methodology* Section](https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration).
 
-> An important practical consideration with any in situ air quality sensor design is ensuring adequate flow of sampling air through the device. **Stale air inside a casing will produce unrepresentative results**, and even sensors mounted outside a casing might not get a properly-mixed sample.
->
-> ![](https://i.imgur.com/wKuthZo.png)
+Surely, further models developed after long term data collection with field deployments are to be considered in order to improve sensor readings.
 
+!!! info "Alphasense Series B implementation"
+	Read more on the Alphasense Series B implementation on the [**Gas Pro Sensor Board**](/Components/Gas%20Pro%20Sensor%20Board/).
 
-Note on **calibration time and fit selection**
+## PM Sensors
 
->Even with the use of these techniques, the phenomenon of sensor drift was not corrected for here, and it truncated trustworthy results to data to within four months from calibration. This is a similar scale as has been reported by Spinelle et al. and Masson et al. and somewhat of an improvement over the results described in the former. An analytical approach to counteracting this drift might be "merging calibrations", where a sensor is calibrated at the start and end of a four-month campaign, and the coefficients gradually change from one end of the experiment run to the other.
->
->![](https://i.imgur.com/QL6RTmS.png)
+The selected PM sensor is as well, characterised by the manufacturer and it provides an accurate measurement with it's calibration. As with the above mentioned electrochemical sensors, a long term field deployment with reference equipment is to considered in order to develop more complex models including environmental features such as humidity, which has been demonstrated to have an influence on PM readings.
 
-Notes on **ageing**
-
-> Further to this, it is clear that there are two major factors in the longevity of a sensor’s calibration. The first is the natural degradation of the heater element, which becomes hotter over prolonged use [15] and causes the sensor’s response profile to vary. The second is the effect of slowly-varying interfering gases, which over the course of months shift the sensor’s baseline. The first problem may have an engineering solution, but the second will involve taking the results of the tests in an artificial atmosphere, identifying the most critical species and either measuring or possibly modelling their likely concentrations during deployments.
->
-
-Note on **packaging testing**
-
-> The calibration setup for the sensors is not currently optimal, but the strong correlation of sensor voltages within the same housing suggests a solution in **ensuring that the same packet of air reaches the MOS sensors as the reference instrument, in as little time as possible**. The rapid rate at which NOx compounds evolve and the sensitivity of the Leighton system to sunlight means that the representativity of the calibration environment is even more critical than it would be for more specific sensors.
-
-**3. Christian Kjær Jensen - Assessing the applicability of low-cost electrochemical gas sensors for urban air quality monitoring. Master’s thesis. January 2016**
-
-**4. Practical field calibration of electrochemical NO~2~ sensors for urban
-air quality applications**
-
-Note on influence of **T-H O3 on AlphaSense**
-
-> As all electrochemical NO~2~ sensors, the Alphasense NO~2~-B4 sensor is not very selective to the target gas. The sensor response can best be explained as a linear combination of NO~2~, O3, temperature and humidity signals ($R^2≈ 0.9$). As a consequence, a linear combination of the Working Electrode and the Auxiliary Electrode alone give poor indication of ambient NO~2~ concentrations. The accuracy varies greatly between different sensors ($R^2$ between 0.3 and 0.7). For the Urban AirQ campaign, temperature and relative humidity were included in a multilinear regression approach. The results improve significantly with $R^2$ values typically around 0.8. This corresponds well with the findings of Jiao et al. (2016), who find an adjusted $R^2=0.82$ for the best performing electrochemical NO~2~ sensor in their evaluation, when including T and RH.
-
-> Best results are obtained by also including ozone measurements in the calibration model: R2 increases to 0.9. Spinelle et al. (2015b) used a similar regression and found $R^2$ ranging from 0.35 to 0.77 for 4 electrochemical NO~2~ sensors during a two week calibration period, but dropping to 0.03—0.08 when applied to a successive 5-month validation period. Low NO~2~ values at their semi-rural site partly explains this poor performance, but most likely also unaccounted effects such as changing sensor sensitivity and signal drift.
->
-**5. Mobile sensor network noise reduction and recalibration using a Bayesian network**
-
-The related work can be placed in three categories: colocated sensor calibration, sensor abnormality detection, and Bayesian network based approaches.
-
-**Colocated**: Those techniques require that the co-located sensors are of the same type and thus should have the same response from the physical environment. In contrast to the previous work, our technique can work on mobile sensing devices containing various types of metal oxide sensors.
-
-**Sensor Abnormality**: crap
-
-**Bayesian Networks**: Mola
-
-
-### Other readings
-
-* Masson, N.; Piedrahita, R.; Hannigan, M. Approach for quantification of metal oxide type semiconductor gas sensors used for ambient air quality monitoring. Sens. Actuators B Chem. 2015, 208, 339–345.
-
-* Piedrahita, R.; Xiang, Y.; Masson, N.; Ortega, J.; Collier, A.; Jiang, Y.; Li, K.; Dick, R.; Lv, Q.; Hannigan, M.; et al. The next generation of low-cost personal air quality sensors for quantitative exposure monitoring. Atmos. Meas. Tech. 2014, 7, 3325–3336.
-
-* Assessment of air quality microsensors versus reference methods: The EuNetAir joint exercise - [Link](https://ac.els-cdn.com/S1352231016307610/1-s2.0-S1352231016307610-main.pdf?_tid=d8c22a86-0506-11e8-a86b-00000aacb35d&acdnat=1517238940_360f2c53828a1084c70bedb5d76219ae)
-
-*  GUIDE TO THE DEMONSTRATION OF EQUIVALENCE  OF AMBIENT AIR MONITORING METHODS - [Link](http://ec.europa.eu/environment/air/quality/legislation/pdf/equivalence.pdf)
-
-## Testing and calibration
-
-We can split the sensor testing into this sequence (for both **mics** and **alphasense**):
-
-**1. Characterisation**: Base testing for assessing general sensor response, stabilisation time or operational modes
-
-**2. Calibration**: Assess actual concentration functions once we know how to operate the sensor itself. Include other factors such as environmental effects, cross-sensitivity, etc.
-
-**Note**: sensor calibrations from alphasense is [all in here](https://drive.google.com/drive/folders/10ekx0_KFzeYvsL9WS5DWXQeoQy2rGcJW).
-
-### Characterisation Testing
-
-#### Mics
-**Basic**
-- Sensor response
-- Sensor limits (baseline and max reading)
-- Heating time and stabilisation time
-
-**Advanced**
-- Humidity and temperature (probably not to be donee on the chamber)
-- Pulse Mode operation
-
-<div style="text-align:center">
-<img src="https://i.imgur.com/Na3ZCYp.png" width="500px">
-</div>
-
-
-#### Alphasense
-
-Questions to answer:
-
-- Is the Sensitivity varying with temperature (YES) - Ask alphasense for data.
-- Is the reading varying with temperature (WDK) - Ask alphasense and calibrate on our own
-- Do we want to input the zero currents measured as offset on our boards?
-    - Furthermore - Do they change with time / temperature / humidity? (NO/NO/NO)
-**Basic**
-- Measure Zero currents and check if n is the same with what alphasense's giving us
-- Measure convertion factor between nA/mV with Jano's tester board
-- Ask alphasense for:
-    - Sensitivity variation over time
-    - Sensitvity variation with temperature/humidity
-    - Zero currents / offset variation with temperature/humidity
-
-**Advanced**
-- Long term deployment with colocation in:
-    - Barcelona?
-    - Alphasense?
-    - iScape?
-
-### Calibration
-
-We could divide it in two stages, depending on how the results turn out to be:
-1. chamber testing* for determining *f* functions and
-2. outdoor testing* for checking *g* and *h* functions:
-
-$$
-Concentration = f(SensorParams, T, H) + g(T,H) + h(Others)
-$$
-
-#### Chamber testing
-
-**Mics**
-
-We need to characterise several sensor parameters. The sensor response is apparently something like:
-
-$$
-log_{10}(Concentration) = f(Rs, Ro) = \beta_1+\beta_2 log_{10}(Rs/Ro)
-$$
-
-Where:
-- Rs is the sensor response
-- Ro is the baseline resistance, normally at Zero air
-- $\beta$s are log linear correlation coefficients (from SGX AAN)
-
-!!! info
-	This is based on SGX datasheet:
-
-	![](https://i.imgur.com/Z8HOaKM.jpg)
-
-
-The _f_ function must be calibrated and the baseline resistance needs to be monitored through the sensor sensitivity. **SGX** defines the sensitivity as:
-
-$$
-Sensitivity_{CO}  = {Ro_{pure-air} \over Rs_{60ppm-CO}}
-$$
-
-$$
-Sensitivity_{NO_2} = {Rs_{0.25ppm-NO_2} \over Ro_{pure-air}}
-$$
-
-With **CO** measured at 23ºC 50%RH and **NO~2~** at 23ºC and <5%RH.
-
-However, due to hardware and testing limitations, we could monitor our own sensitivity defined as:
-
-$$
-Sensitivity_{CO}  = {Rs_{pure-air} \over Rs_{50ppm-CO}}
-$$
-
-$$
-Sensitivity_{NO_2} = {Rs_{10ppm-NO_2} \over Rs_{pure-air}}
-$$
-
-_Both at 23ºC and 50%RH._
-
-With this, we should be able to monitor the sensor sensitivity in controlled conditions so that we can assess the shape of the f(Rs,Ro) component of the calibration. Define pre and post exposure tests in order to find what the Sensitivity variation is and re-calculate gas concentrations based on Rs readings.
-
-**Alphasense**
-
-**NA**: If alphasense provides us with [all this data](https://drive.google.com/drive/folders/10ekx0_KFzeYvsL9WS5DWXQeoQy2rGcJW), we could skip this characterisation: although we should verify some of the data with random batches.
-
-After having characterised PCB settings, we need to obtain the factor _n_ in this formula:
-
-$$
-Concentration = {I_{WE}-n(I_{AE}) \over Sensitivity(T,H)} + g(T,H) + h(Others)
-$$
-
-For this we need to test for the relationship between working and auxiliary electrodes currents relationship with **zero air testing**: 20min good flow of zero air for all three sensors. Also, ideally, the sensor current is directly proportional to:
-
-$$
-I_L = k C_T
-$$
-
-In controlled conditions. Therefore, we need to assess this value and with it the f function.
-
-#### Combined testing
-
-For both sensors, it would be desirable to **assess the models including sensor reading, T, H and other sensor data** for cross-sensitivity and their uncertainty. These are the *g* and *h* functions and they should be based on additional sensor data for reference.
-
-Reference sensor possibilities:
-
-- outdoor with other reference sensors
-- iScape sensing campaigns
-- or more indoor testing with more calibrated gas bottles (expensive, not a good approach)
-
-We also need to check how the sensor behaves in a **temporal manner**:
-
-* Repeteability
-* Short term drift
-* Long term drift
-
-**Proposal: Inchamber - Outdoor testing sequences**
-
-Using any of the above references, perform *in-chamber with bottles* + *outdoor exposure with reference*, *in-chamber with bottles* testing. Vary exposure time to uncontrolled pollutants and conditions and recenter data with calibration bottles to understand:
-- How the sensor drifts in short and long term
-- What's the longest time we can test in uncontrolled exposure
-- Identify if we can extract data from calibration chamber and prioritise it in the modelling
-
-Calibration and modelling is reviewed below.
-
-## Calibration and model notes
-
-For the outdoor exposure time, we need to understand how the sensor is exposed in an uncontrolled environment. We need to answer these questions:
-
-- **Are the readings *multicollinear*?**: do several sensor readings could be correlated with others and therefore not prioritised in our model?
-- **Are the readings *heteroscedastic***: does the sensor reading vary in the different measurement conditions? Is it likely that we will overfit data? Is it likely that sensor readings in different conditions would have different variabilities?
-- Are we going to be calibrate with a **small amount of observations** vs **number of variables** (T, H, sensor readings mics (CO, NO~2~), aS (O3 + NO~2~, NO~2~, CO))?
-
-If so, we should then use reference sensors:
-
-- Check regularisation techniques: Lasso / Ridge to reduce model complexity
-- Check PCR or PLS for feature extraction: create different principal components that are not *multicollinear* (but depend on other variables)
-- If dependent variable is continuous and model is suffering from collinearity or there are a lot of independent variables: PCR, PLS, ridge, lasso and elastic net regressions. Then select the final model based on Adjusted R-Square, RMSE, AIC and BIC.
+!!! info "Plantower PMS 5003"
+	Read more on the Plantower PMS 5003 implementation on the [**Gas Pro Sensor Board**](/Components/PM%20Sensor%20Board/).

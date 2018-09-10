@@ -32,6 +32,12 @@ An example of the workflow can be seen below:
 
 ![](https://i.imgur.com/bAtUNFf.png)
 
+!!! tip "Step by step guides"
+	* [Install the framework](/Sensor Analysis Framework/guides/Install the framework/)
+	* [Use Machine Learning to Create Models for Sensors Calibration](/Sensor Analysis Framework/guides/Creating Models for Sensors Calibration/)
+	* [Post process the stations data](/Sensor Analysis Framework/guides/Post processing the Stations Data/)
+
+
 #### Loading in the data
 
 As mentioned, data can be downloaded from the SmartCitizen API with the KIT IDs or using local csv. In order to tidy up the data, the recordings are organised around the concept of **test**, an entity containing all the kits' references, sensors and general information regarding the conditions at which the measurements were carried out:

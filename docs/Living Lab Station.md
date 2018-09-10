@@ -52,7 +52,7 @@ The station operates as a platform where new sensor modules can be shipped and d
 ![](https://i.imgur.com/RRu8MiV.jpg)
 
 !!! tip "Learn more"
-    Learn more about all the components and the software inside the station in the [**Components**](../Components) documentation section.
+    Learn more about all the components and the software inside the station in the [**Components**](/Components) documentation section.
 
 ## How to install?
 
@@ -199,7 +199,7 @@ The particle sensors measurements are delivered as averages of the two sensors w
 We have developed an algorithm that ingests the data from either the platform or the local csv and processes electrochemical sensor sensor data. This algorithm is **in validation stage** and will be included in the online platform flow from Smart Citizen once validated.
 
 !!! info "Sensor Analysis Framework"
-    Learn more about the sensors calibration on the [Sensor Analysis Framework](../Sensor Analysis Framework) section.
+    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor Analysis Framework) section.
 
 ## Outdoor installation
 

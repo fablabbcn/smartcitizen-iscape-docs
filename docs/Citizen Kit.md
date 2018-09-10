@@ -91,7 +91,7 @@ The Citizen Kit is a modular system based on different sensor board that connect
     ![](https://i.imgur.com/il20Xqa.png)
 
 !!! tip "Learn more"
-    Learn more about all the components and the software inside the kit in the [**Components**](../Components) documentation section.
+    Learn more about all the components and the software inside the kit in the [**Components**](/Components) documentation section.
 
 ### Connectivity
 

@@ -11,17 +11,17 @@ The sensor hardware operates as a platform where new sensor modules can be shipp
 
 ## Hardware
 
-* [**Data Board:**](Data Board) A datalogger on asteroids and the heart of the sensors architecure supporting the [Citizen Kit](../Citizen Kit) and the [Living Lab Stations](../Living Lab Station).
+* [**Data Board:**](Data Board) A datalogger on asteroids and the heart of the sensors architecure supporting the [Citizen Kit](/Citizen Kit) and the [Living Lab Stations](/Living Lab Station).
 
 	* [**Firmware:**](Firmware) The software running inside the sensors.
 
-* **Sensor Board:** Multiple sensor board have been developed. They can be combined to built the different sensor solutions as the [Citizen Kit](../Citizen Kit) and the [Living Lab Stations](../Living Lab Station).
+* **Sensor Board:** Multiple sensor board have been developed. They can be combined to built the different sensor solutions as the [Citizen Kit](/Citizen Kit) and the [Living Lab Stations](/Living Lab Station).
 
-	* [**Urban Sensor Board:**](Urban Sensor Board) A selection of low-cost sensors in a board ready to measure the urban environment: temperature, humidity, noise and even PM2.5. Together with the [Data Board](Data Board) they create the [Citizen Kit](../Citizen Kit).
+	* [**Urban Sensor Board:**](Urban Sensor Board) A selection of low-cost sensors in a board ready to measure the urban environment: temperature, humidity, noise and even PM2.5. Together with the [Data Board](Data Board) they create the [Citizen Kit](/Citizen Kit).
 
-	* [**PM Sensor Board:**](PM Sensor Board) An auxiliary board capable of driving two Particulate Matter sensor as well as other auxiliary sensors required for specific deployments as an external temperature sensor or an anemometer. It is used in the [Living Lab Stations](../Living Lab Station).
+	* [**PM Sensor Board:**](PM Sensor Board) An auxiliary board capable of driving two Particulate Matter sensor as well as other auxiliary sensors required for specific deployments as an external temperature sensor or an anemometer. It is used in the [Living Lab Stations](/Living Lab Station).
 
-	* [**Gas Pro Sensor Board:**](Gas Pro Sensor Board) An auxiliary board driving 3 Alphasense Ltd. Electrochemical Series B Gas Sensors designed for ultra-low noise, high-performance and low power operation. It is used in the [Living Lab Stations](../Living Lab Station).
+	* [**Gas Pro Sensor Board:**](Gas Pro Sensor Board) An auxiliary board driving 3 Alphasense Ltd. Electrochemical Series B Gas Sensors designed for ultra-low noise, high-performance and low power operation. It is used in the [Living Lab Stations](/Living Lab Station).
 
 ## Open Source
 
