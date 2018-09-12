@@ -19,8 +19,8 @@ The sensor does not require to stay always powered but requires charging at leas
 
 | Measurement                                  | Units                                        | Sensor                | Component              |
 |----------------------------------------------|----------------------------------------------|-----------------------|--------------------|
-| Air Temperature                              | ºC                                           | Sensirion SHT-21      | Urban Sensor Board |
-| Relative Humidity                            | % REL                                        | Sensirion SHT-21      | Urban Sensor Board |
+| Air Temperature                              | ºC                                           | Sensirion SHT-31      | Urban Sensor Board |
+| Relative Humidity                            | % REL                                        | Sensirion SHT-31      | Urban Sensor Board |
 | Noise Level                                  | dBA                                | Invensense ICS-434342 | Urban Sensor Board |
 | Ambient Light                                | Lux                                          | Rohm BH1721FVC        | Urban Sensor Board |
 | Barometric pressure and AMSL                 | Pa and Meters                                | NXP MPL3115A26        | Urban Sensor Board |
