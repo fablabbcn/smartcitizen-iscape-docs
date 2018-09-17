@@ -1757,6 +1757,33 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-we-use-it" title="How we use it?" class="md-nav__link">
+    How we use it?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citizen-kits" title="Citizen Kits" class="md-nav__link">
+    Citizen Kits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#living-lab-stations" title="Living Lab Stations" class="md-nav__link">
+    Living Lab Stations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#framework-structure" title="Framework structure" class="md-nav__link">
     Framework structure
   </a>
@@ -2339,6 +2366,33 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-we-use-it" title="How we use it?" class="md-nav__link">
+    How we use it?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citizen-kits" title="Citizen Kits" class="md-nav__link">
+    Citizen Kits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#living-lab-stations" title="Living Lab Stations" class="md-nav__link">
+    Living Lab Stations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#framework-structure" title="Framework structure" class="md-nav__link">
     Framework structure
   </a>
@@ -2417,12 +2471,31 @@
                 
                 
                 <h1 id="sensor-analysis-framework">Sensor Analysis Framework<a class="headerlink" href="#sensor-analysis-framework" title="Permanent link">Link</a></h1>
-<p>The following section details the framework used for post processing the data in the iScape project. Based on <a href="http://jupyter.org/">Jupyter Notebooks</a> and running <a href="http://www.python.org">Python</a> and <a href="https://www.r-project.org/">R</a>, it is intended to provide a state-of-the-art data handling and analysis framework, which can be easily expanded due to it's flexibility and ease of use.</p>
+<p>The following section details the framework used for post processing the data in the iScape project.</p>
+<p><img alt="" src="https://i.imgur.com/siufqdY.png" /></p>
+<p>Based on <a href="http://jupyter.org/">Jupyter Notebooks</a> and running <a href="http://www.python.org">Python</a> and <a href="https://www.r-project.org/">R</a>, it is intended to provide a state-of-the-art data handling and analysis framework, which can be easily expanded due to it's flexibility and ease of use.</p>
 <p>All the files and notebooks related to this document can be found online in our Github repository:</p>
 <p><a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data" aria-label="Check the source code">Check the source code</a></p>
+<h2 id="how-we-use-it">How we use it?<a class="headerlink" href="#how-we-use-it" title="Permanent link">Link</a></h2>
+<h3 id="citizen-kits">Citizen Kits<a class="headerlink" href="#citizen-kits" title="Permanent link">Link</a></h3>
+<p>Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread for their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. Therefore, metal oxyde sensors require a careful characterisation and modelisation in both, laboratory and open air conditions. As well, metal oxyde sensors show short and long term drifts in their calibrations.</p>
+<p><img alt="" src="https://i.imgur.com/qFexJ8A.png" /></p>
+<p>When CO and NO<sub>2</sub> reference data is available from nearby Living Lab Sation or other sources as EPA stations the iSCAPE Sensor Analysis Framework can be used to estimate the absolute values from the Citizen Kits NO<sub>2</sub> and CO sensors.</p>
+<div class="admonition info">
+<p class="admonition-title">No references available</p>
+<p>CO and NO<sub>2</sub> data should be considered as qualitative air pollutants indicators. We should qualitatively use the data to compare short time intervals (no longer than a week). We can ask questions as <em>Is pollution higher at night?</em></p>
+</div>
+<h3 id="living-lab-stations">Living Lab Stations<a class="headerlink" href="#living-lab-stations" title="Permanent link">Link</a></h3>
+<p>Electrochemical sensors can achieve significant accuracy, but they require a particular data acquisition and data post-processing that combines the measurement at the sensor electrodes with the sensor baseline calibration on the factory as well as other environmental parameters as air temperature. Luckily the manufacturer of the Stations sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can't be done inside the sensing device as it uses advanced statistical operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is <strong>in a beta stage</strong> and later it will be applied automatically on the data once it arrives at the platform.</p>
+<p><img alt="" src="https://i.imgur.com/Mi896Jh.png" /></p>
+<p>CO, NO<sub>2</sub> and O<sub>3</sub> data needs to be posprocessed using the iSCAPE Sensor Analysis Framework (SAF). That process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.</p>
+<div class="admonition info">
+<p class="admonition-title">References data is available</p>
+<p>When referenced data from a nearby referenced source as an EPA station is available, the iSCAPE Sensor Analysis Framework can be used to validate the recorded data as well as performing the standard post-processing.</p>
+</div>
 <h2 id="framework-structure">Framework structure<a class="headerlink" href="#framework-structure" title="Permanent link">Link</a></h2>
 <p>The structure of this framework can be split between two main areas: one dedicated to sensor data analysis and model generation; and an automated sensor correction script that recovers sensor data from the API, processes it, and posts it back to the API with the use of the results obtained in the data analysis. This structure is decribed in the following diagram:</p>
-<p><img alt="" src="https://i.imgur.com/CLlzFs7.png" /></p>
+<p><img alt="" src="https://i.imgur.com/AWjv3ci.png" /></p>
 <p>Furthermore, within the sensor data analysis, a notebook and several scripts are included, intended for <strong>modeling and data visualisation</strong>, including exploratory data analysis and a testing environment for sensor model calibration. This includes interfacing with the <strong>SmartCitizen API</strong> in order to download available sensors from the platform, as well as local csv analysis. Further functionalities are explained in the following sections.</p>
 <h3 id="data-analysis-notebook">Data analysis notebook<a class="headerlink" href="#data-analysis-notebook" title="Permanent link">Link</a></h3>
 <p>This notebook aims to provide the following features:</p>
@@ -2434,9 +2507,9 @@
 <li>An interface to statistically validate and study the performance of these models, export and store them</li>
 <li>As a bonus, an interface to convert the python objects into the statistical analysis language R</li>
 </ul>
-<p>The framework also provides several functionalities within signal analysis field using numpy and scipy frameworks. </p>
+<p>The framework also provides several functionalities within signal analysis field using numpy and scipy frameworks.</p>
 <p>An example of the workflow can be seen below:</p>
-<p><img alt="" src="https://i.imgur.com/bAtUNFf.png" /></p>
+<p><img alt="" src="https://i.imgur.com/U1S9hLR.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Step by step guides</p>
 <ul>
@@ -2454,7 +2527,7 @@
 <li>Availability of reference equipment measurement and type</li>
 </ul>
 <p>A brief schema of the test structure is specified below:</p>
-<p><img alt="" src="https://i.imgur.com/LkKgC9D.png" /></p>
+<p><img alt="" src="https://i.imgur.com/CSi5tL4.png" /></p>
 <p>All this structure is filled up at the test creation  with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.</p>
 <p>Finally, the devices' data is stored as Time Series data, with DateTime index in ISO8601 format. This is an important consideration for data visualisation and posterious modelling.</p>
 <p>An example from the API download can be seen in the below's image:</p>
