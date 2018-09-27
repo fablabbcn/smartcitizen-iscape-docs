@@ -3,7 +3,7 @@ Living Lab Station
 
 ![](https://i.imgur.com/p9lDxiv.jpg)
 
-The Living Lab Station, formerly known as the High-End Sensors,  is aimed at providing the Living Labs with a system for monitoring the performance of their interventions. The Station aims at providing a solution that can be used by the Living Labs not just from a scientific point of view but also as a tool to engage local communities on air pollution related issues.
+The Living Lab Station, formerly known as the High-End Sensors, is aimed at providing the Living Labs with a system for monitoring the performance of their interventions. The Station aims at providing a solution that can be used by the Living Labs not just from a scientific point of view but also as a tool to engage local communities on air pollution related issues.
 
 ![](https://i.imgur.com/QB5P4r9.jpg)
 
@@ -20,17 +20,18 @@ With all the sensor together this Kit provides information on Air Temperature, R
 
 | Measurement                                  | Units                                          | Sensor                        | Component              |
 |----------------------------------------------|------------------------------------------------|-------------------------------|------------------------|
-| Air Temperature                              | ºC                                             | Sensirion SHT-21              | Urban Sensor Board     |
-| Relative Humidity                            | % REL                                          | Sensirion SHT-21              | Urban Sensor Board     |
-| Noise Level                                  | dBA                                  | Invensense ICS-434342         | Urban Sensor Board     |
+| Air Temperature                              | ºC                                             | Sensirion SHT-31              | Urban Sensor Board     |
+| Relative Humidity                            | % REL                                          | Sensirion SHT-31              | Urban Sensor Board     |
+| Noise Level                                  | dBA                                            | Invensense ICS-434342         | Urban Sensor Board     |
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC                | Urban Sensor Board     |
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26                | Urban Sensor Board     |
 | Carbon Monoxide                              | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
 | Dioxide Nitrogen                             | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
-| Particle Matter PM2.5 (external - power req) | µg/m3                                          | PMS 7003                      | Urban Sensor Board     |
-| Carbon Monoxide                              | ppm                                            | Alphasense CO-B4              | Gas Sensor Pro Board  |
-| Dioxide Nitrogen                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board  |
-| Ozone                                        | ppb                                            | Alphasense OX-B431            | Gas Sensor Pro Board  |
+| Carbon Monoxide                              | ppm                                            | Alphasense CO-B4              | Gas Sensor Pro Board   |
+| Dioxide Nitrogen                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board   |
+| Ozone                                        | ppb                                            | Alphasense OX-B431            | Gas Sensor Pro Board   |
+| Gases Board Temperature                      | ºC                                             | Sensirion SHT-31              | Gas Sensor Pro Board   |
+| Gases Board Rel. Humidity                    | % REL                                          | Sensirion SHT-31              | Gas Sensor Pro Board   |
 | PM 1                                         | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
 | PM 2.5                                       | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
 | PM 10                                        | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
