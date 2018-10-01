@@ -15,6 +15,10 @@ From the non-technical user side, the sensor includes an easy to follow online s
 
 The sensor does not require to stay always powered but requires charging at least every two days. The charging is done using a standard USB adapter like on any Smartphone; a process already by many users familiar.
 
+!!! warning "Citizen Kit Enclosure"
+	Please, notice the final enclosure for the Citizen Kit its is under development as the one shopwcased on the documentation does not support the PM sensor yet. The documentation will be updated once the new enclosure is ready.
+
+
 ## Sensors
 
 | Measurement                                  | Units                                        | Sensor                | Component              |
