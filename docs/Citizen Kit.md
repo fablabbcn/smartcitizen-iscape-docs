@@ -82,8 +82,25 @@ The sensor does not require to stay always powered but requires charging at leas
 	14. Look at the data!
 	![](https://i.imgur.com/mmrDVFC.png)
 
+## Troubleshooting
+
+!!! info "Reboot your Kit"
+	You can fully reboot your Kit by pressing the reset button located under the sensors board as seen on the picture.
+
+	![](https://i.imgur.com/tAofJ0g.png)
+
+	That will not delete any configuration, it will simply restart your device.
+
+	Press the `RESET` button for a second. The light will go off and on and the device will start again.
 
 
+
+<!-- !!! info "Factory reset your Kit"
+	You can fully reset the Kit to the default settings so you can register again your device.
+
+	Press the main button for 15 seconds. After 5 seconds the light will go off and will go on again after 15 seconds. Then you can release the button and your device will be fully resetted as a brand new Kit.
+
+	![](https://i.imgur.com/tAofJ0g.png) -->
 
 ## Technical specs
 
@@ -100,7 +117,7 @@ The Citizen Kit is a modular system based on different sensor board that connect
 ### Connectivity
 
 ###### WI-FI
-The SCK 2.0 is designed to publish data using your home or office Wi-Fi. It currently supports most standard networks (b/g/n) with open, WEP or WPA/WPA2 authentication. 
+The SCK 2.0 is designed to publish data using your home or office Wi-Fi. It currently supports most standard networks (b/g/n) with open, WEP or WPA/WPA2 authentication.
 
 WPA2 Enterprise networks are not currently supported.
 
@@ -121,7 +138,7 @@ The SCK 2.0 comes with a 2000mAh LiPo battery. The battery is meant to be a comp
 * Without air quality sensors on SD card: 25 days
 
 ###### Battery charging
-The SCK 2.0 has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port. 
+The SCK 2.0 has a micro USB port and can be charged like any Smartphone or Tablet using a dedicated adapter or a computer USB port.
 We recommend using a tablet power adaptor, instead of a computer USB port, for quicker charging. Autonomy can be extended by using a Power Bank, a 5V PV Panel, or with a through-glass induction charger (currently under development).
 
 ### Configuration And Updates
