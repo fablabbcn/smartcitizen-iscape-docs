@@ -202,6 +202,10 @@ We have developed an algorithm that ingests the data from either the platform or
 !!! info "Sensor Analysis Framework"
     Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor Analysis Framework) section.
 
+## Dimensions
+
+![](https://i.imgur.com/udiYnTe.png)
+
 ## Outdoor installation
 
 Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench.
