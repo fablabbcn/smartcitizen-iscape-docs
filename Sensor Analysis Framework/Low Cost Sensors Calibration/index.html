@@ -1795,29 +1795,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#principles" title="Principles" class="md-nav__link">
-    Principles
+  <a href="#citizen-kits" title="Citizen Kits" class="md-nav__link">
+    Citizen Kits
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metal-oxyde-sensors" title="Metal Oxyde Sensors" class="md-nav__link">
-    Metal Oxyde Sensors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#electrochemical-sensors" title="Electrochemical Sensors" class="md-nav__link">
-    Electrochemical Sensors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pm-sensors" title="PM Sensors" class="md-nav__link">
-    PM Sensors
+  <a href="#living-lab-stations" title="Living Lab Stations" class="md-nav__link">
+    Living Lab Stations
   </a>
   
 </li>
@@ -2306,29 +2292,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#principles" title="Principles" class="md-nav__link">
-    Principles
+  <a href="#citizen-kits" title="Citizen Kits" class="md-nav__link">
+    Citizen Kits
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metal-oxyde-sensors" title="Metal Oxyde Sensors" class="md-nav__link">
-    Metal Oxyde Sensors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#electrochemical-sensors" title="Electrochemical Sensors" class="md-nav__link">
-    Electrochemical Sensors
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pm-sensors" title="PM Sensors" class="md-nav__link">
-    PM Sensors
+  <a href="#living-lab-stations" title="Living Lab Stations" class="md-nav__link">
+    Living Lab Stations
   </a>
   
 </li>
@@ -2351,22 +2323,30 @@
                 
                 
                 <h1 id="low-cost-sensors-calibration">Low Cost Sensors Calibration<a class="headerlink" href="#low-cost-sensors-calibration" title="Permanent link">Link</a></h1>
-<h2 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">Link</a></h2>
-<p>The <strong>sensor calibration procedure</strong> for the iScape sensor solution can be split into three stages:</p>
+<p>Low cost sensor calibration and assessment pose a great challenge for data quality objectives. We follow this <strong>sensor calibration procedure</strong> for the iScape sensor solution, which can be split into three stages:</p>
+<div style="text-align:center">
+<image src="https://i.imgur.com/6BZqNrR.png" width="500px"/>
+</div>
+
 <ol>
 <li>
-<p><strong>Behaviour assesment</strong>: Base testing for assessing general sensor response, stabilisation time or operational modes. Pulse mode operation is also explored in this stage for energy saving purposes.</p>
+<p><strong>Behaviour assesment</strong>: in laboratory conditions, serving as base testing for assessing general sensor behaviour.</p>
 </li>
 <li>
-<p><strong>Characterisation</strong>: Laboratory condisiorAssess generic sensor parameters sensitivity, zero and span.</p>
+<p><strong>Characterisation</strong>: also in laboratory conditions, assess generic sensor parameters as sensitivity, zero and span.</p>
 </li>
 <li>
-<p><strong>Modelisation</strong>: Include other variables such as environmental factors and sensor cross-sensitivity.</p>
+<p><strong>Modelisation with real world deployment</strong>: including other variables such as environmental factors and sensor cross-sensitivity.</p>
 </li>
 </ol>
-<p>Each of these stages apply differently depending on the type of sensor, for instance the electrochemical sensors present in the <em>Station</em> are already characterised by the manufacturer, while the Metal Oxyde Sensors in the <em>Urban Board</em> of the <em>Citizen Kit</em> are not. The different characteristics of these sensors make different calibration approaches to be carried out.</p>
+<p>Each of these stages apply differently depending on the type of sensor. For instance the electrochemical sensors present in the <em>Station</em> are already characterised by the manufacturer, while the Metal Oxyde Sensors in the <em>Urban Board</em> of the <em>Citizen Kit</em> are not. The different characteristics of these sensors make different calibration approaches to be carried out.</p>
 <p>An <strong>initial behaviour assessment</strong> is to be carried out in laboratory conditions in order to determine the optimal operational modes. This includes basic parameters such as sensor response, heating time and temperature as well as more advanced ones such as heating pulse mode operation. For this purpose, a portable, open source, reproducible <strong>test cell</strong> has been developed for controlled testing with a web based acquisition interface.</p>
+<p><img alt="" src="https://i.imgur.com/A7HmeqM.jpg" /></p>
 <p>Secondly, <strong>base calibration parameters</strong> need to be determined in controlled conditions. In this stage, the aim would be to find parameters such as:</p>
+<div style="text-align:center">
+<image src="https://i.imgur.com/FprLD0n.png" width="300px"/>
+</div>
+
 <ul>
 <li><strong>Sensor sensitivity</strong>: the sensor response per each ppm of target pollutant in <em>nominal</em> conditions</li>
 <li><strong>Zero</strong>: the sensor reading in zero air (pure air at 25degC).</li>
@@ -2374,44 +2354,37 @@
 <li><strong>Sensor range</strong>: maximum and minimum readings for the sensor</li>
 </ul>
 <p>Finally, after this initial calibration assessment, it is critical to gather as much data as possible from <strong>long term sensor deployments</strong>. These deployments should aim to cover the widest range of sensor exposure conditions, in order to generate robust models. While dealing with low cost sensors this stage is very important, as it is detailed in the sections below.</p>
-<p>These sensor deployments serve for two main purposes: to generate <strong>quantitative classification methods</strong> that can classify the air quality in predefined ranges (i.e. 'poor', 'fair', good'); and to generate <strong>predictive qualitative models</strong> for more accurate values. Either of them need large amounts of data if the models are aimed to be representative. Additionally, by the mere nature of the data and the sensors themselves, these models would need to be capable of:</p>
+<p>These sensor deployments serve for two main purposes: to generate <strong>quantitative classification methods</strong> that can classify the air quality in predefined ranges (i.e. 'poor', 'fair', good'); and to generate <strong>predictive qualitative models</strong> for more accurate values. Either of them need large amounts of data if the models are aimed to be representative. Additionally, by the mere nature of the data and the sensors themselves, these models would need to be:</p>
 <ul>
-<li>Robust to noise</li>
-<li>Learn non-linear relationships</li>
-<li>Multivariate inputs</li>
-<li>Learned temporal dependence</li>
+<li>Robusts to noise</li>
+<li>Capable of learning non-linear relationships</li>
+<li>Handle multivariate inputs</li>
+<li>Capable of learning temporal dependence</li>
 </ul>
-<p>These needs make <strong>machine learning</strong> methods great canditates for modeling the data. Traditionally, time series forecasting has been dominated by linear methods because they are well understood and effective on many simpler forecasting problems. However, deep learning neural networks are able to automatically learn arbitrary complex mappings from inputs to outputs and support multiple inputs and outputs. Therefore, deep learning methods such as MLPs and LSTMs offer a lot of promise for the type of problem presented in the iScape project. The combination of these algorithms with large amounts of data gathered during the iScape project offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.</p>
-<p>These deployments should at least guarantee the following needs:</p>
-<ul>
-<li>A checked reference measurement for the sensors to be compared against it</li>
-<li>Sufficient sensor stabilisation time and varied operational conditions</li>
-<li>Careful monitoring of the sensor correct operation: connectivity and power supply, among others</li>
-</ul>
-<h2 id="metal-oxyde-sensors">Metal Oxyde Sensors<a class="headerlink" href="#metal-oxyde-sensors" title="Permanent link">Link</a></h2>
-<p>Due to their construction, low cost metal oxyde sensors suffer from high levels of spread for their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. Therefore, metal oxyde sensors require a careful characterisation and modelisation in both, laboratory and open air conditions.</p>
-<p>Furthermore, metal oxyde sensors show short and long term drifts in their calibrations. For this reason, a <strong>recursive calibration</strong> approach is proposed. This procedure would comprise:</p>
-<p><img alt="" src="https://i.imgur.com/TELqobn.png" /></p>
-<ul>
-<li><strong>Sensor characterisation</strong> in laboratory conditions to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors</li>
-<li><strong>Sensor collocation</strong> with reference equipment for model development, accounting for the laboratory factors obtained in the previous stage and in order to include more complex environmental factors</li>
-<li><strong>Sensor deployment</strong> stage with independent measurement</li>
-<li><strong>Sensor re-assessment</strong> by either laboratory characterisation or collocation with reference equipment. This could serve for correction for the model parameters used during the deployment and to assess the sensor reliability and need for replacement</li>
-</ul>
-<p>Further to the sensor re-assessment, other deployments could be explored should there not be sensor breakdown.</p>
-<div class="admonition info">
-<p class="admonition-title">SGX MICS-4514 implementation</p>
-<p>Read more on the SGX MICS-4514 implementation on the <a href="/Components/Urban%20Sensor%20Board/#metal-oxide-no2-and-co-sensor"><strong>Urban Sensor Board</strong></a>.</p>
+<p>These needs make <strong>machine learning</strong> methods great canditates for modeling the data. These methods are implemented in the Sensor Analysis Framework, as well as other <em>more traditional</em> linear methods. The combination of these algorithms with large amounts of data gathered during the iScape project offers a great opportunity to demonstrate the use of low cost sensors for air quality monitoring.</p>
+<h3 id="citizen-kits">Citizen Kits<a class="headerlink" href="#citizen-kits" title="Permanent link">Link</a></h3>
+<p>Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread in their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. As well, metal oxyde sensors show short and long term drifts in their calibrations. Therefore, metal oxyde sensors require a careful characterisation and modelisation in both, laboratory and open air conditions. </p>
+<div style="text-align:center">
+<image src="https://i.imgur.com/JfujXTA.png" width="500px"/>
 </div>
-<h2 id="electrochemical-sensors">Electrochemical Sensors<a class="headerlink" href="#electrochemical-sensors" title="Permanent link">Link</a></h2>
-<p>The <strong>electrochemical sensor</strong> manufacturer keeps a database of the sensor sensitivities and zero currents (baseline response) of each individual sensor. Therefore, the calibration approach for the electrochemical sensors is reduced to an in-field validation of their behaviour and a model proposal that is described in the <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration"><em>Electrochemical sensor baseline methodology</em> Section</a>.</p>
-<p>Surely, further models developed after long term data collection with field deployments are to be considered in order to improve sensor readings.</p>
+
+<p>Initially, a <strong>sensor characterisation</strong> in laboratory conditions is needed to assess sensitiviy, baseline resistances sensor-to-sensor spread, aiming to obtain normalising factors for each sensor or group of sensors.</p>
+<p>Once <strong>deployed</strong>, data from the citizen kits is ingested in the analysis framework and referenced with other sources, such as a Living Lab Station or another reference equipment available. When CO and NO<sub>2</sub> reference data is available from nearby Living Lab Sation or other sources as EPA stations the iSCAPE Sensor Analysis Framework can be used to estimate the absolute values from the Citizen Kits NO<sub>2</sub> and CO sensors.</p>
+<p><img alt="" src="https://i.imgur.com/qFexJ8A.png" /></p>
+<p>After data collection, a <strong>sensor re-assessment can be performed</strong>, either in laboratory conditions or collocation with reference equipment. This stage serves for correction for the model parameters used during the deployment and to assess the sensor reliability and need for replacement.</p>
 <div class="admonition info">
-<p class="admonition-title">Alphasense Series B implementation</p>
-<p>Read more on the Alphasense Series B implementation on the <a href="/Components/Gas%20Pro%20Sensor%20Board/"><strong>Gas Pro Sensor Board</strong></a>.</p>
+<p class="admonition-title">No references available</p>
+<p>This approach might not always be possible. Then, CO and NO<sub>2</sub> data should be considered as qualitative air pollutants indicators. We should qualitatively use the data to compare short time intervals (no longer than a week). We can ask questions as <em>Is pollution higher at night?</em></p>
 </div>
-<h2 id="pm-sensors">PM Sensors<a class="headerlink" href="#pm-sensors" title="Permanent link">Link</a></h2>
-<p>The selected PM sensor is as well, characterised by the manufacturer and it provides an accurate measurement with it's calibration. As with the above mentioned electrochemical sensors, a long term field deployment with reference equipment is to considered in order to develop more complex models including environmental features such as humidity, which has been demonstrated to have an influence on PM readings.</p>
+<h3 id="living-lab-stations">Living Lab Stations<a class="headerlink" href="#living-lab-stations" title="Permanent link">Link</a></h3>
+<p><strong>Electrochemical sensors</strong> can achieve significant accuracy, but they require a particular data post-processing that combines the measurement at the sensor electrodes with the sensor characterisation on the factory as well as other environmental parameters as air temperature and relative humidity (i.e. absolute humidity). Luckily the manufacturer of these sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can not be done inside the sensing device as it uses advanced operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is <strong>in a beta stage</strong> and later it will be applied automatically on the data once it arrives at the platform. More details can be found in the <a href="https://docs.iscape.smartcitizen.me/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration"><em>Electrochemical sensor baseline methodology</em> Section</a>.</p>
+<p><img alt="" src="https://i.imgur.com/Mi896Jh.png" /></p>
+<p>This process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.</p>
+<div class="admonition info">
+<p class="admonition-title">References data is available</p>
+<p>When referenced data from a nearby referenced source as an EPA station is available, the iSCAPE Sensor Analysis Framework can be used to validate the recorded data as well as performing the standard post-processing.</p>
+</div>
+<p>The selected <strong>PM sensor</strong> is as well, characterised by the manufacturer and it provides an accurate measurement with it's calibration. It's measurements can be as well improved when reference data is available, as some have noted that the PM sensors can be affected by relative humidity. </p>
 <div class="admonition info">
 <p class="admonition-title">Plantower PMS 5003</p>
 <p>Read more on the Plantower PMS 5003 implementation on the <a href="/Components/PM%20Sensor%20Board/"><strong>Gas Pro Sensor Board</strong></a>.</p>
