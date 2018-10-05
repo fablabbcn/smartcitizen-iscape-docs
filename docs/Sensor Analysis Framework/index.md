@@ -5,47 +5,45 @@ The following section details the framework used for post processing the data in
 
 ![](https://i.imgur.com/siufqdY.png)
 
-Based on [Jupyter Notebooks](http://jupyter.org/) and running [Python](http://www.python.org) and [R](https://www.r-project.org/), it is intended to provide a state-of-the-art data handling and analysis framework, which can be easily expanded due to it's flexibility and ease of use.
+Based on [Jupyter Notebooks](http://jupyter.org/) and running [Python](http://www.python.org) and [R](https://www.r-project.org/), it is intended to provide an state-of-the-art data handling and analysis framework, which can be easily expanded for other use cases.
 
-All the files and notebooks related to this document can be found online in our Github repository:
+The Sensor Analysis Framework is mainly used to handle sensor data acquisition and apply sensor models for actual pollutant concentration calculations. In the following sections, we detail the principles of low cost sensor calibration that we follow, as well as the usage within the framework.
+
+All the files and notebooks related to this document can be found online in our Github repository.
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-data" aria-label="Check the source code">Check the source code</a>
 
-## How we use it?
+## How we use it
 
-### Citizen Kits
+Generally, the sensor data is ingested in the Sensor Analysis Framework directly from the API, or by inserting it via csv. As detailed in the [Low Cost Sensor Calibration Section](https://docs.iscape.smartcitizen.me/Sensor%20Analysis%20Framework/Low%20Cost%20Sensors%20Calibration/), each of the sensors is treated differently, and some of them require more analysis than others, e.g.: the Metal Oxyde sensors vs the electrochemical sensors.
 
-Due to their construction, low-cost metal oxyde sensors suffer from high levels of spread for their baseline resistance and sensitivity. As well, these sensors are generally reactive to other pollutants in the atmosphere, with a low selectivity of the actual target pollutant and drifts in their behaviour can be seen after some weeks of exposure. Therefore, metal oxyde sensors require a careful characterisation and modelisation in both, laboratory and open air conditions. As well, metal oxyde sensors show short and long term drifts in their calibrations.
-
-![](https://i.imgur.com/qFexJ8A.png)
-
-When CO and NO~2~ reference data is available from nearby Living Lab Sation or other sources as EPA stations the iSCAPE Sensor Analysis Framework can be used to estimate the absolute values from the Citizen Kits NO~2~ and CO sensors.
-
-!!! info "No references available"
-	CO and NO~2~ data should be considered as qualitative air pollutants indicators. We should qualitatively use the data to compare short time intervals (no longer than a week). We can ask questions as _Is pollution higher at night?_
-
-### Living Lab Stations
-
-Electrochemical sensors can achieve significant accuracy, but they require a particular data acquisition and data post-processing that combines the measurement at the sensor electrodes with the sensor baseline calibration on the factory as well as other environmental parameters as air temperature. Luckily the manufacturer of the Stations sensors, Alphasense, provides us with that reference data. However, the complexity of the operations performed can not be done inside the sensing device as it uses advanced statistical operations as well as historical data from the same device. For that reason, the data needs to be post processed using the Sensors Analysis Framework. The algorithm is **in a beta stage** and later it will be applied automatically on the data once it arrives at the platform.
+The framework can be used to process the Living Labs Station's data, loading the data and applying tailor made algorithms for the sensors within:
 
 ![](https://i.imgur.com/Mi896Jh.png)
 
-CO, NO~2~ and O~3~ data needs to be posprocessed using the iSCAPE Sensor Analysis Framework (SAF). That process doesn't require any on-site reference data but requires the data to be processed using the manufacturer calibration reference per sensor as well as other environmental values as temperature and humidity.
+Additionally, the Framework can be used to load in data from the Citizen Kit's sensors and used to generate models and analysis based on other references, following the diagram below:
 
-!!! info "References data is available"
-	When referenced data from a nearby referenced source as an EPA station is available, the iSCAPE Sensor Analysis Framework can be used to validate the recorded data as well as performing the standard post-processing.
+![](https://i.imgur.com/qFexJ8A.png)
+
+Similarly, this approach can be used to improve the Living Labs Station's data, where known effects from temperature or humidity can be input as corrections for the models generated.
+
+Finally, all the models generated are stored and can be easily loaded from the Github Repository.
+
+<a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-iscape-models" aria-label="Check the source code">Check the source code</a>
 
 ## Framework structure
 
 The structure of this framework can be split between two main areas: one dedicated to sensor data analysis and model generation; and an automated sensor correction script that recovers sensor data from the API, processes it, and posts it back to the API with the use of the results obtained in the data analysis. This structure is decribed in the following diagram:
 
-![](https://i.imgur.com/AWjv3ci.png)
+<div style="text-align:center">
+<image src="https://i.imgur.com/AWjv3ci.png" width="500px"/>
+</div>
 
 Furthermore, within the sensor data analysis, a notebook and several scripts are included, intended for **modeling and data visualisation**, including exploratory data analysis and a testing environment for sensor model calibration. This includes interfacing with the **SmartCitizen API** in order to download available sensors from the platform, as well as local csv analysis. Further functionalities are explained in the following sections.
 
-### Data analysis notebook
+### A deeper look
 
-This notebook aims to provide the following features:
+The main component of the Framework is a Jupyter Notebook with the following features: 
 
 - An interface to either retrieve data from the Smart Citizen's API in a simple way or to load them from local sources (in csv format, compatible with the SCK SD card data)
 - A data handling framework based on the well known [Pandas](http://www.pandas.org) package
@@ -58,13 +56,14 @@ The framework also provides several functionalities within signal analysis field
 
 An example of the workflow can be seen below:
 
-![](https://i.imgur.com/U1S9hLR.png)
+<div style="text-align:center">
+<image src="https://i.imgur.com/U1S9hLR.png" width="400px"/>
+</div>
 
 !!! tip "Step by step guides"
-	* [Install the framework](/Sensor Analysis Framework/guides/Install the framework/)
-	* [Use Machine Learning to Create Models for Sensors Calibration](/Sensor Analysis Framework/guides/Creating Models for Sensors Calibration/)
-	* [Post process the stations data](/Sensor Analysis Framework/guides/Post processing the Stations Data/)
-
+	* [Install the framework](/Sensor%20Analysis%20Framework/guides/Install%20the%20framework/)
+	* [Use Machine Learning to Create Models for Sensors Calibration](/Sensor%20Analysis%20Framework/guides/Creating%20Models%20for%20Sensors%20Calibration/)
+	* [Post process the stations data](/Sensor%20Analysis%20Framework/guides/Post%20processing%20the%20Stations%20Data/)
 
 #### Loading in the data
 
@@ -77,18 +76,15 @@ As mentioned, data can be downloaded from the SmartCitizen API with the KIT IDs 
 
 A brief schema of the test structure is specified below:
 
-![](https://i.imgur.com/CSi5tL4.png)
-
+<div style="text-align:center">
+<image src="https://i.imgur.com/CSi5tL4.png" width="500px"/>
+</div>
 
 All this structure is filled up at the test creation  with a dedicated script, saving future time to understand mismatching reading units, timestamps formats and so on.
 
 Finally, the devices' data is stored as Time Series data, with DateTime index in ISO8601 format. This is an important consideration for data visualisation and posterious modelling.
 
-An example from the API download can be seen in the below's image:
-
-![](https://i.imgur.com/xJnWWf7.png)
-
-#### Exploratory data analysis (WIP)
+#### Exploratory data analysis
 
 The device's data can be quickly analysed using a simple interface in order to quickly select the desired channels and timeframes. Some of the functionalities already included are:
 
@@ -99,7 +95,7 @@ The device's data can be quickly analysed using a simple interface in order to q
 
 This section uses interactive plotting frameworks as [Plotly](http://plot.ly) and well know [matplotlib](http://matplotlib.org/) to serve differente exploratory analysis tools:
 
-#### Data models (WIP)
+#### Data models
 
 The data models section includes an easy to use and full interface to select data from different devices within a test in order to calibrate different models. Since the data is mainly based on Time Series analysis, it interfaces with common statistics and machine learning frameworks such as [sci-kit learn](http://scikit-learn.org/), [tensorflow](https://www.tensorflow.org), [keras](http://keras.io/), and [stats models](http://www.statsmodels.org/dev/tsa.html#module-statsmodels.tsa). These frameworks provide tools to perform:
 
@@ -121,13 +117,13 @@ The data models section includes an easy to use and full interface to select dat
 
 An example of the model is shown below for the estimation of the SGX4514 CO with the use of the rest of the Kit's available sensor, using a single layer LSTM network only two weeks of training:
 
-![](https://i.imgur.com/aoX2GcF.png)
+![](https://i.imgur.com/Sdy5vWy.png)
 
 Depending on the model selected, different validation techniques are implemented, in order to verify models' assumptions and avoid data misinterpretation (i.e. *Durbin Watson* or *Jacque Bera* test for linear regression). Finally, it is important to follow carefully the instructions as stated in the notebook, in order to avoid low model quality.
 
 #### Model import/export and storage
 
-Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with [Pickle](https://docs.python.org/2/library/pickle.html) and can be uploaded to a git repository for later use.
+Once the model is analysed and validated, it can be saved and exported. This allows using the model in the future with the same variables in other sensor studies. The model objects are serialised with [joblib](https://github.com/joblib/joblib) and can be uploaded to the [Models Github Repository](https://github.com/fablabbcn/smartcitizen-iscape-models) for later use.
 
 ## Source files
 
