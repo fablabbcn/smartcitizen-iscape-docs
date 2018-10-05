@@ -7,7 +7,7 @@ The Citizen Kit, formerly known as the Low-Cost Sensor, is aimed at providing a 
 
 ![](https://i.imgur.com/KH6Kny0.jpg)
 
-The design is built around two boards the Smart Citizen Data Board and the Smart Citizen Urban Sensor Board. The first board contains the data acquisition, the power management, and the communication unit. The second contains a set of sensors aimed at the outdoor urban environment including: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Air Particles, a Carbon Monoxide, and a Dioxide Nitrogen detectors. This sensor while not capable of offering precise measurements can be used to understand the behavior of different urban locations especially when they are calibrated on the field using certified equipment. Both boards are later described in detail on the Sensor Components section.
+The design is built around two boards the Smart Citizen Data Board and the Smart Citizen Urban Sensor Board. The first board contains the data acquisition, the power management, and the communication unit. The second contains a set of sensors aimed at the outdoor urban environment including: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Air Particles, a Carbon Monoxide, and a Nitrogen Dioxide detectors. This sensor while not capable of offering precise measurements can be used to understand the behavior of different urban locations especially when they are calibrated on the field using certified equipment. Both boards are later described in detail on the Sensor Components section.
 
 From the non-technical user side, the sensor includes an easy to follow online setup process that guides the users on the whole install procedure: The Smart Citizen Onboarding.
 
@@ -29,7 +29,7 @@ The sensor does not require to stay always powered but requires charging at leas
 | Ambient Light                                | Lux                                          | Rohm BH1721FVC        | Urban Sensor Board |
 | Barometric pressure and AMSL                 | Pa and Meters                                | NXP MPL3115A26        | Urban Sensor Board |
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         | Urban Sensor Board |
-| Dioxide Nitrogen                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         | Urban Sensor Board |
+| Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         | Urban Sensor Board |
 | Particle Matter PM2.5 (external - power req) | µg/m3                                        | PMS 7003              | Urban Sensor Board |
 
 ## How to install?

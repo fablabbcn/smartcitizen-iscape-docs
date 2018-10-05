@@ -12,7 +12,7 @@ The Gases Sensor Board is a custom, ultra-low noise, high-performance, low power
 | Measurement      | Units | Sensor              |
 |------------------|-------|---------------------|
 | Carbon Monoxide  | ppm   | Alphasense CO-B4    |
-| Dioxide Nitrogen | ppb   | Alphasense NO2-B43F |
+| Nitrogen Dioxide | ppb   | Alphasense NO2-B43F |
 | Ozone            | ppb   | Alphasense OX-B431  |
 
 ## Sensors selection

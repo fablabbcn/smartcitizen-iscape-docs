@@ -7,7 +7,7 @@ The Urban Sensor Board contains a selection of sensors for the measuring the urb
 
 <a class="github-button" data-size="large" href="https://github.com/fablabbcn/smartcitizen-kit-20" aria-label="Check the source code">Check the source code</a>
 
-A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particles Matter, a Carbon Monoxide and a Dioxide Nitrogen detectors. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.
+A major effort has been carried out on this design to improve the accuracy of the data provided. The sensors on the board include: Air Temperature, Relative Humidity, Noise Level, Ambient Light and Barometric Pressure. The board also features a section especially focused on Air Quality including a Particles Matter, a Carbon Monoxide and a Nitrogen Dioxide detectors. The sensor density of the board design offers more than ten different environmental metrics at a cost below 50€ and differentiates the design from other existing solutions. The following sections describe in detail each of the sensors available.
 
 !!! info "Board assembly"
     The Urban Sensor Board connect to the Data Board connector named **Sensor Board**
@@ -22,13 +22,13 @@ A major effort has been carried out on this design to improve the accuracy of th
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC        |
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         |
-| Dioxide Nitrogen                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         |
+| Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Particle Matter PM2.5 (external - power req) | µg/m3                                          | PMS 7003              |
 
 
 ## Metal Oxide NO~2~ and CO Sensor
 
-The SGX Sensortech (formerly e2v) MICS 4514 [^2]is a dual, robust MEMS sensor for the detection of pollution from automobile exhausts. It integrates on a single SMD package the more well-known SGX MICS 5525 for Carbon Monoxide detection and the SGX MICS 2710 for Dioxide Nitrogen detection. The sensor includes two sensor chips with independent heaters and sensitive layers. One sensor chip detects Oxidizing gases (OX) primarily NO~2~ in a 0.05-10ppm, and the other sensor detects reducing gases (RED) primarily NO~2~ in a 1-1000ppm.
+The SGX Sensortech (formerly e2v) MICS 4514 [^2]is a dual, robust MEMS sensor for the detection of pollution from automobile exhausts. It integrates on a single SMD package the more well-known SGX MICS 5525 for Carbon Monoxide detection and the SGX MICS 2710 for Nitrogen Dioxide detection. The sensor includes two sensor chips with independent heaters and sensitive layers. One sensor chip detects Oxidizing gases (OX) primarily NO~2~ in a 0.05-10ppm, and the other sensor detects reducing gases (RED) primarily NO~2~ in a 1-1000ppm.
 
 The following characteristics have been considered for the sensor choice:
 

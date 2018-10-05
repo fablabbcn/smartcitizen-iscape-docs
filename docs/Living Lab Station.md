@@ -11,9 +11,9 @@ The station is designed with a modular principle where sensors can be added easi
 
 ![](https://i.imgur.com/HUq7Anz.jpg)
 
-The design builds on top of the Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. The sensors include the Gas Sensor Board, featuring EC Carbon Monoxide, Dioxide Nitrogen and Ozone sensors and the PM Sensor Board, featuring a PM 2.5 / PM 10 sensor.
+The design builds on top of the Citizen Kit adding an extra set of more accurate sensors especially aimed at measuring air pollutants. The sensors include the Gas Sensor Board, featuring EC Carbon Monoxide, Nitrogen Dioxide and Ozone sensors and the PM Sensor Board, featuring a PM 2.5 / PM 10 sensor.
 
-With all the sensor together this Kit provides information on Air Temperature, Relative Humidity, Noise Level, Ambient Light, Barometric Pressure, Particles Matter (PM 2.5 / 10),  Carbon Monoxide, Dioxide Nitrogen and Ozone. The sensors are later described in detail in the document at the Sensor Components section.
+With all the sensor together this Kit provides information on Air Temperature, Relative Humidity, Noise Level, Ambient Light, Barometric Pressure, Particles Matter (PM 2.5 / 10),  Carbon Monoxide, Nitrogen Dioxide and Ozone. The sensors are later described in detail in the document at the Sensor Components section.
 
 
 ## Sensors
@@ -26,9 +26,9 @@ With all the sensor together this Kit provides information on Air Temperature, R
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC                | Urban Sensor Board     |
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26                | Urban Sensor Board     |
 | Carbon Monoxide                              | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
-| Dioxide Nitrogen                             | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
+| Nitrogen Dioxide                             | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
 | Carbon Monoxide                              | ppm                                            | Alphasense CO-B4              | Gas Sensor Pro Board   |
-| Dioxide Nitrogen                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board   |
+| Nitrogen Dioxide                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board   |
 | Ozone                                        | ppb                                            | Alphasense OX-B431            | Gas Sensor Pro Board   |
 | Gases Board Temperature                      | ºC                                             | Sensirion SHT-31              | Gas Sensor Pro Board   |
 | Gases Board Rel. Humidity                    | % REL                                          | Sensirion SHT-31              | Gas Sensor Pro Board   |
