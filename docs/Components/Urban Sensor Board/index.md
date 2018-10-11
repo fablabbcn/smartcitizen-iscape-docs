@@ -23,7 +23,7 @@ A major effort has been carried out on this design to improve the accuracy of th
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26        |
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         |
 | Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         |
-| Particle Matter PM2.5 (external - power req) | µg/m3                                          | PMS 7003              |
+| Particulate Matter PM2.5 (external - power req) | µg/m3                                          | PMS 5003              |
 
 
 ## Metal Oxide NO~2~ and CO Sensor

@@ -30,7 +30,7 @@ The sensor does not require to stay always powered but requires charging at leas
 | Barometric pressure and AMSL                 | Pa and Meters                                | NXP MPL3115A26        | Urban Sensor Board |
 | Carbon Monoxide                              | ppm (Periodic Baseline Calibration Required) | SGX MICS-4514         | Urban Sensor Board |
 | Nitrogen Dioxide                             | ppb (Periodic Baseline Calibration Required) | SGX MICS-4514         | Urban Sensor Board |
-| Particle Matter PM2.5 (external - power req) | µg/m3                                        | PMS 7003              | Urban Sensor Board |
+| Particulate Matter PM2.5 (external - power req) | µg/m3                                        | PMS 5003              | Urban Sensor Board |
 
 ## How to install?
 
