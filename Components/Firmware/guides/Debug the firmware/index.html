@@ -2587,7 +2587,7 @@
 <p><img alt="" src="https://i.imgur.com/qJ2fV3N.jpg" /></p>
 <p><em>Image Credit: Smart Citizen</em></p>
 <p>These adapters are sometimes packaged as discrete dongles, which may generically be called <strong>hardware interface dongles</strong> (and are quite expensive). Some development boards also integrate them directly, which may let the development board connect directly to the debug host over USB (and sometimes also to power it over USB, like the <a href="https://store.arduino.cc/genuino-zero">Arduino Genuino Zero</a>). In the case of the <strong>Smart Citizen Kit</strong>, we have a <strong>SWD</strong> Adapter that supports <em>Serial Wire Debug</em> signaling to communicate with the <em>ARM core</em>. In our approach, <strong>using a complete open toolchain</strong>, OpenOCD is be running on a Raspberry Pi, and communicating with the SCK's SWD through the GPIO pins of the Pi.</p>
-<pre class="uml-sequence-diagram"><code>GDB-&gt;OpenOCD: Let's debug the SCK
+<div class="codehilite"><pre><span></span>GDB-&gt;OpenOCD: Let&#39;s debug the SCK
 OpenOCD-&gt;GDB: OK!
 OpenOCD-&gt;SCK: We are debugging you
 Note right of SCK: SCK thinks
@@ -2599,7 +2599,8 @@ OpenOCD-&gt;SCK: Run!
 Note right of SCK: SCK runs
 Note right of SCK: SCK hits a breakpoint
 SCK-&gt;GDB: Temperature sensor reading is 500ºC
-Note left of GDB: Oh, oh...</code></pre>
+Note left of GDB: Oh, oh...
+</pre></div>
 
 <p>Finally, to be able to actually <strong>see what is going on inside our firmware while it executes</strong>, we need something that is able to read and understand the machine code and hand it over to a human understandable interface. This is where <a href="https://www.gnu.org/software/gdb/"><strong>GDB</strong></a> kicks in and helps us by:</p>
 <ul>
