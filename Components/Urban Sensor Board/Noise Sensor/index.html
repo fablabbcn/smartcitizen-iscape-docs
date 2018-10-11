@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
     
     
       
@@ -60,8 +60,8 @@
       <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -2560,7 +2560,7 @@ x = {\sqrt{x_1^2+x_2^2+...+x_N^2 \over N}}
 <p><em>Image credit: Smart Citizen</em></p>
 <p>This example shows how our ears are only capable of perceiving the signal in red, but the actual sound components are in blue -- being much higher in the amplitude spectrum. If you want to get into the thick of it, here you have the actual <a href="https://github.com/oscgonfer/AudioI2S_SCK/tree/master/OCTAVE/A_WEIGHTING">implementation in Matlab</a> of the A-weighting function that we'll use in the SCK V2.0.</p>
 <p>And finally, to close, let's take a look at the whole chain of processing, where we will continue in future sections:</p>
-<div class="codehilite"><pre><span></span>st=&gt;start: Signal acquisition
+<pre class="uml-flowchart"><code>st=&gt;start: Signal acquisition
 e=&gt;end: RMS calculation
 op=&gt;operation: Windowing
 op2=&gt;operation: FFT
@@ -2568,8 +2568,7 @@ op3=&gt;operation: Spectrum Normalisation
 op4=&gt;operation: Equalisation
 op5=&gt;operation: A-weighting
 
-st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e
-</pre></div>
+st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e</code></pre>
 
 <p><em>Image credit: Smart Citizen</em></p>
 <p>This is the whole signal treatment process we use for the I2S microphone ICS43432. We will have a look at <em>windowing</em> and its use in future sections, as well as its implementation in the SAMD21 Cortex M0+ for our firmware.</p>
@@ -2809,7 +2808,7 @@ st-&gt;op-&gt;op2-&gt;op3-&gt;op4-&gt;op5-&gt;e
     
       <script src="../../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.0.2",url:{base:"../../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
