@@ -192,7 +192,7 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 | **FACTORY RESET** | Push the button 15 seconds for a full reset                                              |
 
 
-![](https://i.imgur.com/fy3rSbc.png)
+![](https://i.imgur.com/uJ0JJIb.jpg)
 
 
 ## Operation modes
@@ -250,7 +250,7 @@ If we do not have an internet connection we can use the SD mode. In this case th
 
 Before configuring the Station setup make sure the LED is red. If not, press the button multiple times until the LED turns red.
 
-![](https://i.imgur.com/9iK1ZLl.jpg)
+![](https://i.imgur.com/uJ0JJIb.jpg)
 
 ### The station does not respond
 
@@ -265,14 +265,14 @@ If the station does not respond or does not work properly you can do two things:
 
     You can also perform a reboot by disconnecting the battery and the USB cable so that the station is restarted. In this way we will not lose any data and configuration except the time in case of being in **SD mode**.
 
-    ![](https://i.imgur.com/uWJHCyr.jpg)
+    ![](https://i.imgur.com/uJ0JJIb.jpg)
 
 
 !!! info "Factory reset your Station"
 
     You can fully reset the Station to the default settings so you can register again your device. Press the main button for **15 seconds**.
 
-    ![](https://i.imgur.com/9iK1ZLl.jpg)
+    ![](https://i.imgur.com/uJ0JJIb.jpg)
 
     After 5 seconds the light will go off and will go on again after 15 seconds. Then you can release the button and your device will be fully resetted as a brand new Station.
 
@@ -288,6 +288,8 @@ We will know that it is charging when the LED emits <span class="led orange blin
 ### The station does not store the data on the SD card.
 
 Some SD cards may have problems over time. We can try [formatting it]() but in case it does not work any micro SD card we buy at any mobile or computer store it will work. The size is not important and any micro SD or micro SDHC 512MB card up to 32GB will work.
+
+![](https://i.imgur.com/h2db2Ch.jpg)
 
 ## Dimensions
 
