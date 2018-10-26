@@ -123,6 +123,34 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | <span class="led busy"></span>           |  :hourglass_flowing_sand:  Busy, please wait!                 |
 | <span class="led firmware"></span>       | :wrench: Software update going on!
 
+## :umbrella: Build your own enclosure
+
+If we want to leave the kit on the outside for a few days you will need to provide it with extra protection.
+ 
+!!! warning
+    Keep in mind that casing is designed for short outdoor deployments. If you want a case for long exhibitions abroad, we will soon have a much more rugged enclosure ready!
+
+!!! example "Step by step"
+
+    1.Use scissors to cut an empty plastic bottle at about 12 cm from the top
+
+    ![](https://i.imgur.com/heo8cwW.jpg)
+
+    2.Use the rubber band to fix it using the bottle cap
+
+    ![](https://i.imgur.com/CjKDBBl.jpg)
+
+    3.Place the Kit inside and use the rubber band to hold it
+
+    ![](https://i.imgur.com/8KzbAqV.jpg)
+
+    4.You have now a simple enclosure to use your Kit outdoors for short measurement periods!
+
+    ![](https://i.imgur.com/IhGxV67.jpg)
+
+**You can now install the sensor outdoors!**
+
+![](https://i.imgur.com/0kV6gie.jpg)
 
 ## :construction_worker: Troubleshooting
 
