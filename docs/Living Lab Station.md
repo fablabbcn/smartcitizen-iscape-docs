@@ -38,20 +38,21 @@ The station operates as a platform where new sensor modules can be shipped and d
 | Measurement                                  | Units                                          | Sensor                        | Component              |
 |----------------------------------------------|------------------------------------------------|-------------------------------|------------------------|
 | Air Temperature                              | ºC                                             | Sensirion SHT-31              | Urban Sensor Board     |
-| Relative Humidity                            | % REL                                          | Sensirion SHT-31              | Urban Sensor Board     |
+| Relative Humidity                            | % rel                                          | Sensirion SHT-31              | Urban Sensor Board     |
 | Noise Level                                  | dBA                                            | Invensense ICS-434342         | Urban Sensor Board     |
 | Ambient Light                                | Lux                                            | Rohm BH1721FVC                | Urban Sensor Board     |
 | Barometric pressure and AMSL                 | Pa and Meters                                  | NXP MPL3115A26                | Urban Sensor Board     |
-| Carbon Monoxide                              | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
-| Nitrogen Dioxide                             | µg/m3 (Periodic Baseline Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
+| Carbon Monoxide                              | µg/m3 (Periodic Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
+| Nitrogen Dioxide                             | µg/m3 (Periodic Calibration Required) | SGX MICS-4514                 | Urban Sensor Board     |
 | Carbon Monoxide                              | ppm                                            | Alphasense CO-B4              | Gas Sensor Pro Board   |
 | Nitrogen Dioxide                             | ppb                                            | Alphasense NO2-B43F           | Gas Sensor Pro Board   |
 | Ozone                                        | ppb                                            | Alphasense OX-B431            | Gas Sensor Pro Board   |
 | Gases Board Temperature                      | ºC                                             | Sensirion SHT-31              | Gas Sensor Pro Board   |
-| Gases Board Rel. Humidity                    | % REL                                          | Sensirion SHT-31              | Gas Sensor Pro Board   |
+| Gases Board Rel. Humidity                    | % rel                                          | Sensirion SHT-31              | Gas Sensor Pro Board   |
 | PM 1                                         | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
 | PM 2.5                                       | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
 | PM 10                                        | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
+| Air temperature                                       | ºC                                      | Maxim DS18B20 | PM Sensors Board       |
 
 
 ## The Pack
@@ -81,7 +82,10 @@ To start the installation simply visit the setup website [**stations.iscape.smar
 
 ![](https://i.imgur.com/9slH1Ze.png)
 
-Some helpful and important notes before you start:
+Some helpful and **important notes** before you start:
+
+!!! warning
+    :warning: We will need you to send us the following information once you are done with the setup: the *device ID*, which appears in the URL of your device https://smartcitizen.me/kits/*XXXX* and the physical station ID that corresponds to that *device ID*, which can be found in a sticker underneath.
 
 !!! warning
     We keep track internally of all sensor deployments and it is very important not to swap the internal components between Station to avoid mismatchs on the calibration data.
@@ -95,7 +99,7 @@ Some helpful and important notes before you start:
 
     First turn off your Kit by pressing the button for 5 seconds. Then remove the micro SD card and plug the card on your computer using a Micro SD card reader.
 
-    You will find inside a `YYYY-MM-DD.CSV`  with all the data. You can follow the [**Manual CSV data upload**](/Sensor Platform/guides/Uploading SD Card Data/) guide to manually upload the data to the platform.
+    You will find inside a `YYYY-MM-DD.CSV` with all the data. You can follow the [**Manual CSV data upload**](/Sensor Platform/guides/Uploading SD Card Data/) guide to manually upload the data to the platform.
 
     _:warning: **Data processing** The collected data requires a custom and complex data processing using the **[iScape Sensor Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data)** The process will be fully documented here on the next few weeks._
 
@@ -109,7 +113,21 @@ Use the perforated steel tape and the M6 provided to mount the Station on any st
 
 **Electrochemical sensor**
 
-The electrochemical sensors **need stabilisation time under the testing conditions** they will be at. It is important to set and power the sensors with sufficient time (1-2 days) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.
+Information about the electrochemical sensors by Alphasense Ltd. is shown below:
+
+| Target Pollutant | Sensor Range (ppm) | Temperature Range (degC) | Humidity Range (% rh) | Stabilisation time (days) |
+| :---- | :----: | :----: | :----: | :---: | 
+| CO | 0-1000ppm | -30 - 50 | 15 - 90 | 5 - 7 | 
+| NO2 | 0-20ppm | -30 - 40 | 15 - 85 | 5 - 7 | 
+| O3 | 0-20ppm | -30 - 40 | 15 - 85 | 5 - 7 |
+
+Further information can be found in the datasheets listed below:
+
+- [CO-B4](http://www.alphasense.com/WEB1213/wp-content/uploads/2015/04/COB41.pdf)
+- [NO2-B43F](http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/NO2B43F.pdf)
+- [OX-B431](http://www.alphasense.com/WEB1213/wp-content/uploads/2017/07/OX-B431.pdf)
+
+The electrochemical sensors **need stabilisation time under the testing conditions** they will be at. It is important to set and power the sensors with sufficient time (minimum 4-5 days for new sensors) on the test environment for them to adapt. The newer the sensor, the more stabilisation time it requires. For this deployment, you will be receiving brand new sensors.
 
 Humidity and temperature extremes will require of further sensor adaptation, in order to dry out or absorb the necessary humidity for their proper functioning.
 
@@ -118,17 +136,44 @@ Humidity and temperature extremes will require of further sensor adaptation, in 
 
 **Particle Sensor**
 
+| Target Pollutant | Detectable size (um) | Temperature Range (degC) | Humidity Range (% rh) | Stabilisation time|
+| :---- | :----: | :----: | :----: | :---: | 
+| PM 1.0 | 0.3 - 1| na | 15 - 90 | < 1min | 
+| PM 2.5 | 1.0 - 2.5 | na | 15 - 85 | < 1min | 
+| PM 10 | 2.5 - 10 | na | 15 - 85 | < 1min |
+
 The particle sensors measurements are delivered as averages of the two sensors with periodic validity checks. We are currently developing one-shot strategies for battery life improvement, but in the meantime, please make sure the sensor has reliable energy supply if you will use these sensors permanently.
+
+!!! info
+    PM sensor has been reported to be influenced by humidity and it’s likely that humidity extremes will damage the sensor. Dust accumulation can also occur in the sensor and it has to be cleaned if working in environments with large amounts of dust.
 
 ### Sensor data processing
 
-We have developed an algorithm that ingests the platform data and processes electrochemical sensor sensor data. This algorithm is **in validation stage** and will be included in the online platform flow from Smart Citizen once validated.
+In the table below, the different sensors are detailed with regards to their data processing and calibration needs: 
+
+| Sensor | Device | Raw output valid | Output needs specific process | Output needs referencing | Output improvable with referencing |
+| :---- | :----: | :----: | :----: |:----: | :----: |
+| Temperature | Kit/Station | X | | | |
+| Humidity | Kit/Station | X | | | |
+| Noise | Kit/Station | X |  | |  |
+| Light | Kit/Station | X |  | |  |
+| Pressure | Kit/Station | X | |  |  |
+| MOS | Kit/Station | X | | X | X |
+| PM | Kit/Station | X |  | | X |
+| EC Sensors | Kit/Station | | X |  | X |
+
+
+The **electrochemical sensor** data will be processed following an [specific algorithm](/Components/Gas%20Pro%20Sensor%20Board/Electrochemical%20Sensors/#sensor-calibration) accounting for temperature and humidity daily variations. This algorithm is **in validation stage** and will be included in the online platform flow from Smart Citizen once validated.
+
+The **PMS** will be processed with regression techniques using referenced data, in order to improve data quality. Finally, the **MOS** sensors are currently being treated as qualitative measures but we are also developing [more advanced techniques for them](/Sensor%20Analysis%20Framework/Low%20Cost%20Sensors%20Calibration/).
 
 !!! warning "Get in contact"
     Currently we will run the algorithm manually for each station. Please, contact us once you finish the installation.
 
+For processing all this data, we have developed an analysis framework that ingests the platform data and calculates all sensor results. 
+
 !!! info "Sensor Analysis Framework"
-    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor Analysis Framework) section.
+    Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor%20Analysis%20Framework) section.
 
 ## Power
 
@@ -182,9 +227,9 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 
 ## States of the Kit
 
-## The button
+### The button
 
-| Funció            | Acció del botó                                                                                   |
+| Function            | Button Action                                                                                 |
 |-------------------|--------------------------------------------------------------------------------------------------|
 | **ON**                | Push the button                                                                                  |
 | **OFF**               | Push the button for 5 seconds                                                                |
@@ -195,7 +240,7 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 ![](https://i.imgur.com/uJ0JJIb.jpg)
 
 
-## Operation modes
+### Operation modes
 
 #### <span class="led small red"> </span> Setup mode
 
@@ -294,6 +339,68 @@ Some SD cards may have problems over time. We can try [formatting it]() but in c
 ## Dimensions
 
 ![](https://i.imgur.com/udiYnTe.png)
+
+## Sensor Evaluation Campaign
+
+Prior to sensor deployment, some Living Lab Stations will be evaluated and compared against reference measurement under different conditions. They will be deployed in different cities among the iScape partners to assess DQO and develop models for sensor calibration under different climatic and pollution conditions. This will be done in a 2,5 months campaign in several sites across Europe.
+
+### Main objectives
+
+This campaign aim to cover the following points:
+
+- Assess data quality levels and positioning with respect to the DQO set by the European Air Quality Directive
+- Stablish match scores for the different range of sensors available in the Living Lab Station
+- Validation and assessment of Alphasense EC sensor methodology for NO2 and O3 compounds in urban conditions (urban background and traffic) in various conditions
+- Validation of PMS PM raw data accuracy and effect of climatic conditions
+- Calibration of Alphasense’s EC sensors and PMS PM sensors for model quality improvement accounting for climatic conditions
+- Feasibility assessment for the calibration of metal oxide sensor models with the use of reference data and/or Living Lab station data
+- Validation of climatic sensors of the station itself (temperature, humidity, pressure, light if possible)
+- Drifts and stability:
+    - Drifts and possible root causes for EC sensor sensitivities variations over time
+    - Calibration stability for SGX MOS sensors
+    - Sensor decay and recoverability of PMS sensors due to dust accumulation or others
+
+### Test 
+
+The table below shows a description of the proposed test campaign:
+
+| Stage | Duration | Exposure | Reference equipment | Purpose |
+|:---|:---:|:---:|:---:|:---:|
+| Pre-test| 2 weeks| Urban Background| No| Stabilise electrochemical sensors to urban background on site.  and verify overall functioning| 
+| Low Exposure test | 1 month | Urban Background | Yes | Evaluate response in low transient areas and evaluate repeatability of urban background measurements in higher exposure testing phases | 
+| High Exposure test | 1 month | Urban with traffic (canyon or junction) | Yes | Evaluate response in high transient / high concentration areas and validate current model and post-processing approach. Propose further models with more variables | 
+
+
+### Sensor Installation
+
+#### Height
+Between 2,5 and 3,5m. Not reachable by hand.
+
+#### Reference equipment
+Within <2m and with similar exposure, air flow (both either on wall, or lamppost)
+
+#### Desired measurements
+
+- Chemical compounds (higher priority above): 
+    - NO2
+    - CO, O3
+    - NOx, NO
+    - NMHC
+
+- Particulate Matter (higher priority above)
+    - PM 2.5
+    - PM 1.0, PM 10
+
+- Climatic conditions (higher priority above)
+    - Temperature and relative humidity
+    - Wind speed and direction
+
+!!! warning "Important Guidelines"
+    Avoid direct exposure to intense sunlight for long periods of time, since this can severely affect the measurements (direct sun or intense transients).
+    
+    Avoid locations where high temperature or humidity transients are present since the sensor response is affected by these rapid changes.
+    
+    Avoid locations with low air flow or with direct exposure to air conditioning exhausts.
 
 
 <style>
