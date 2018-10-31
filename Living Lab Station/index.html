@@ -431,19 +431,25 @@
     Components
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#sensors" title="Sensors" class="md-nav__link">
     Sensors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#the-pack" title="The Pack" class="md-nav__link">
     The Pack
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -456,8 +462,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#outdoor" title="Outdoor" class="md-nav__link">
-    Outdoor
+  <a href="#on-boarding" title="On boarding" class="md-nav__link">
+    On boarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-data-from-the-sd-card" title="Get data from the SD card" class="md-nav__link">
+    Get data from the SD card
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outdoor-installation" title="Outdoor installation" class="md-nav__link">
+    Outdoor installation
   </a>
   
 </li>
@@ -2523,19 +2543,25 @@
     Components
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#sensors" title="Sensors" class="md-nav__link">
     Sensors
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#the-pack" title="The Pack" class="md-nav__link">
     The Pack
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2548,8 +2574,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#outdoor" title="Outdoor" class="md-nav__link">
-    Outdoor
+  <a href="#on-boarding" title="On boarding" class="md-nav__link">
+    On boarding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-data-from-the-sd-card" title="Get data from the SD card" class="md-nav__link">
+    Get data from the SD card
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outdoor-installation" title="Outdoor installation" class="md-nav__link">
+    Outdoor installation
   </a>
   
 </li>
@@ -2802,7 +2842,7 @@
 <p class="admonition-title">Learn more</p>
 <p>Learn more about all the components and the software inside the station in the <a href="/Components"><strong>Components</strong></a> documentation section.</p>
 </div>
-<h2 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">Link</a></h2>
+<h3 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">Link</a></h3>
 <table>
 <thead>
 <tr>
@@ -2911,7 +2951,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="the-pack">The Pack<a class="headerlink" href="#the-pack" title="Permanent link">Link</a></h2>
+<h3 id="the-pack">The Pack<a class="headerlink" href="#the-pack" title="Permanent link">Link</a></h3>
 <p><img alt="" src="https://i.imgur.com/zVPlOcz.jpg" /></p>
 <ul>
 <li>
@@ -2938,30 +2978,28 @@
 </li>
 </ul>
 <h2 id="instructions">Instructions<a class="headerlink" href="#instructions" title="Permanent link">Link</a></h2>
-<p>To start the installation simply visit the setup website <a href="https://stations.iscape.smartcitizen.me"><strong>stations.iscape.smartcitizen.me</strong></a></p>
+<h3 id="on-boarding">On boarding<a class="headerlink" href="#on-boarding" title="Permanent link">Link</a></h3>
+<p>To start the installation simply visit the setup website <a href="https://stations.iscape.smartcitizen.me"><strong>stations.iscape.smartcitizen.me</strong></a>.</p>
 <p><img alt="" src="https://i.imgur.com/9slH1Ze.png" /></p>
-<p>Some helpful and <strong>important notes</strong> before you start:</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><img alt="⚠" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/26a0.svg" title=":warning:" /> We will need you to send us the following information once you are done with the setup: the <em>device ID</em>, which appears in the URL of your device <a href="https://smartcitizen.me/kits/">https://smartcitizen.me/kits/</a><em>XXXX</em> and the physical station ID that corresponds to that <em>device ID</em>, which can be found in a sticker underneath.</p>
 </div>
+<h3 id="get-data-from-the-sd-card">Get data from the SD card<a class="headerlink" href="#get-data-from-the-sd-card" title="Permanent link">Link</a></h3>
+<p>You will need to access the Kit in order to get the SD card. For this, first unscrew the <strong>two white layers at the top of the station</strong> with the keys provided in the Pack:</p>
+<p><img alt="" src="https://i.imgur.com/WPb3tnr.jpg" /></p>
+<p>Then turn off your Kit by pressing the button for <strong>5 seconds</strong>. Then remove the micro SD card and plug the card on your computer using a Micro SD card reader. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>We keep track internally of all sensor deployments and it is very important not to swap the internal components between Station to avoid mismatchs on the calibration data.</p>
+<p>Handle the SD card with care! It might drop inside the station</p>
 </div>
+<p>You will find inside a <code class="codehilite">YYYY-MM-DD.CSV</code> with all the data. You can follow the <a href="/Sensor%20Platform/guides/Uploading%20SD%20Card%20Data/"><strong>Manual CSV data upload</strong></a> guide to manually upload the data to the platform.</p>
 <div class="admonition info">
 <p class="admonition-title">Done for today? Turn off</p>
 <p>Every time you want to stop the Kit from logging simply press the button for 5 seconds. The led should stop bliking and your Kit will be <em>OFF</em>. To turn it <em>ON</em> simply press the button again.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Get your data from the SD card</p>
-<p><em>Download the data from the SD card</em></p>
-<p>First turn off your Kit by pressing the button for 5 seconds. Then remove the micro SD card and plug the card on your computer using a Micro SD card reader.</p>
-<p>You will find inside a <code class="codehilite">YYYY-MM-DD.CSV</code> with all the data. You can follow the <a href="/Sensor Platform/guides/Uploading SD Card Data/"><strong>Manual CSV data upload</strong></a> guide to manually upload the data to the platform.</p>
-<p><em><img alt="⚠" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/26a0.svg" title=":warning:" /> <strong>Data processing</strong> The collected data requires a custom and complex data processing using the <strong><a href="https://github.com/fablabbcn/smartcitizen-iscape-data">iScape Sensor Analysis Framework</a></strong> The process will be fully documented here on the next few weeks.</em></p>
-</div>
-<h3 id="outdoor">Outdoor<a class="headerlink" href="#outdoor" title="Permanent link">Link</a></h3>
-<p>Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench.</p>
+<h3 id="outdoor-installation">Outdoor installation<a class="headerlink" href="#outdoor-installation" title="Permanent link">Link</a></h3>
+<p>Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench:</p>
 <p><img alt="" src="https://i.imgur.com/36El7ds.jpg" /></p>
 <h3 id="sensor-considerations">Sensor considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">Link</a></h3>
 <p><strong>Electrochemical sensor</strong></p>
@@ -3142,6 +3180,10 @@
 <div class="admonition info">
 <p class="admonition-title">Sensor Analysis Framework</p>
 <p>Learn more about the sensors calibration on the <a href="/Sensor%20Analysis%20Framework">Sensor Analysis Framework</a> section.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We keep track internally of all sensor deployments and it is very important not to swap the internal components between Station to avoid mismatchs on the calibration data.</p>
 </div>
 <h2 id="power">Power<a class="headerlink" href="#power" title="Permanent link">Link</a></h2>
 <p>The kit has a battery life of 12 hours as is intended as a backup solution only. That's why a power supply needs to be installed as decribed below.</p>
@@ -3364,7 +3406,7 @@ Press the <code class="codehilite">RESET</code> button for a second. The light w
 <h2 id="dimensions">Dimensions<a class="headerlink" href="#dimensions" title="Permanent link">Link</a></h2>
 <p><img alt="" src="https://i.imgur.com/udiYnTe.png" /></p>
 <h2 id="sensor-evaluation-campaign">Sensor Evaluation Campaign<a class="headerlink" href="#sensor-evaluation-campaign" title="Permanent link">Link</a></h2>
-<p>Prior to sensor deployment, some Living Lab Stations will be evaluated and compared against reference measurement under different conditions. They will be deployed in different cities among the iScape partners to assess DQO and develop models for sensor calibration under different climatic and pollution conditions. This will be done in a 2,5 months campaign in several sites across Europe.</p>
+<p>Prior to sensor deployment, some Living Lab Stations will be evaluated and compared against reference measurement under different conditions. They will be deployed in different cities among the iScape partners in order to assess DQO and develop models for sensor calibration under different climatic and pollution conditions. This will be done in a 2,5 months campaign in several sites across Europe.</p>
 <h3 id="main-objectives">Main objectives<a class="headerlink" href="#main-objectives" title="Permanent link">Link</a></h3>
 <p>This campaign aim to cover the following points:</p>
 <ul>
