@@ -33,7 +33,7 @@ The station operates as a platform where new sensor modules can be shipped and d
 !!! tip "Learn more"
     Learn more about all the components and the software inside the station in the [**Components**](/Components) documentation section.
 
-## Sensors
+### Sensors
 
 | Measurement                                  | Units                                          | Sensor                        | Component              |
 |----------------------------------------------|------------------------------------------------|-------------------------------|------------------------|
@@ -54,11 +54,9 @@ The station operates as a platform where new sensor modules can be shipped and d
 | PM 10                                        | µg/m3                                          | Plantower PMS5003 Dual System | PM Sensors Board       |
 | Air temperature                                       | ºC                                      | Maxim DS18B20 | PM Sensors Board       |
 
-
-## The Pack
+### The Pack
 
 ![](https://i.imgur.com/zVPlOcz.jpg)
-
 
 * iSCAPE Living Lab Station
     * Urban Board 2.0
@@ -78,34 +76,36 @@ The station operates as a platform where new sensor modules can be shipped and d
 
 ## Instructions
 
-To start the installation simply visit the setup website [**stations.iscape.smartcitizen.me**](https://stations.iscape.smartcitizen.me)
+### On boarding
+
+To start the installation simply visit the setup website [**stations.iscape.smartcitizen.me**](https://stations.iscape.smartcitizen.me).
 
 ![](https://i.imgur.com/9slH1Ze.png)
-
-Some helpful and **important notes** before you start:
 
 !!! warning
     :warning: We will need you to send us the following information once you are done with the setup: the *device ID*, which appears in the URL of your device https://smartcitizen.me/kits/*XXXX* and the physical station ID that corresponds to that *device ID*, which can be found in a sticker underneath.
 
-!!! warning
-    We keep track internally of all sensor deployments and it is very important not to swap the internal components between Station to avoid mismatchs on the calibration data.
+### Get data from the SD card
+
+You will need to access the Kit in order to get the SD card. For this, first unscrew the **two white layers at the top of the station** with the keys provided in the Pack:
+
+![](https://i.imgur.com/WPb3tnr.jpg)
+
+Then turn off your Kit by pressing the button for **5 seconds** and remove the micro SD card. You can plug the card on your computer using a Micro SD card reader.
+
+![](https://i.imgur.com/DfRiI4s.jpg)
+
+!!! warning 
+    Handle the SD card with care! It might drop inside the station
+
+You will find inside a `YYYY-MM-DD.CSV` with all the data. You can follow the [**Manual CSV data upload**](/Sensor%20Platform/guides/Uploading%20SD%20Card%20Data/) guide to manually upload the data to the platform.
 
 !!! info "Done for today? Turn off"
     Every time you want to stop the Kit from logging simply press the button for 5 seconds. The led should stop bliking and your Kit will be _OFF_. To turn it _ON_ simply press the button again.
 
-!!! info "Get your data from the SD card"
+### Outdoor installation
 
-    _Download the data from the SD card_
-
-    First turn off your Kit by pressing the button for 5 seconds. Then remove the micro SD card and plug the card on your computer using a Micro SD card reader.
-
-    You will find inside a `YYYY-MM-DD.CSV` with all the data. You can follow the [**Manual CSV data upload**](/Sensor Platform/guides/Uploading SD Card Data/) guide to manually upload the data to the platform.
-
-    _:warning: **Data processing** The collected data requires a custom and complex data processing using the **[iScape Sensor Analysis Framework](https://github.com/fablabbcn/smartcitizen-iscape-data)** The process will be fully documented here on the next few weeks._
-
-### Outdoor
-
-Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench.
+Use the perforated steel tape and the M6 provided to mount the Station on any street light or pole. The Pack also includes the required wrench:
 
 ![](https://i.imgur.com/36El7ds.jpg)
 
@@ -175,6 +175,9 @@ For processing all this data, we have developed an analysis framework that inges
 !!! info "Sensor Analysis Framework"
     Learn more about the sensors calibration on the [Sensor Analysis Framework](/Sensor%20Analysis%20Framework) section.
 
+!!! warning
+    We keep track internally of all sensor deployments and it is very important not to swap the internal components between Station to avoid mismatchs on the calibration data.
+
 ## Power
 
 The kit has a battery life of 12 hours as is intended as a backup solution only. That's why a power supply needs to be installed as decribed below.
@@ -224,7 +227,6 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 
         ![](https://i.imgur.com/JAK6NMd.jpg)
 
-
 ## States of the Kit
 
 ### The button
@@ -236,9 +238,7 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 | **CHANGE MODE**       | Push the button multiple times to choose: *Setup* <span class="led small red"></span>  *Wi-Fi* <span class="led small blue"></span> *Pink* <span class="led small pink"></span> |
 | **FACTORY RESET** | Push the button 15 seconds for a full reset                                              |
 
-
 ![](https://i.imgur.com/uJ0JJIb.jpg)
-
 
 ### Operation modes
 
@@ -342,7 +342,7 @@ Some SD cards may have problems over time. We can try [formatting it]() but in c
 
 ## Sensor Evaluation Campaign
 
-Prior to sensor deployment, some Living Lab Stations will be evaluated and compared against reference measurement under different conditions. They will be deployed in different cities among the iScape partners to assess DQO and develop models for sensor calibration under different climatic and pollution conditions. This will be done in a 2,5 months campaign in several sites across Europe.
+Prior to sensor deployment, some Living Lab Stations will be evaluated and compared against reference measurement under different conditions. They will be deployed in different cities among the iScape partners in order to assess DQO and develop models for sensor calibration under different climatic and pollution conditions. This will be done in a 2,5 months campaign in several sites across Europe.
 
 ### Main objectives
 
@@ -369,7 +369,6 @@ The table below shows a description of the proposed test campaign:
 | Pre-test| 2 weeks| Urban Background| No| Stabilise electrochemical sensors to urban background on site.  and verify overall functioning| 
 | Low Exposure test | 1 month | Urban Background | Yes | Evaluate response in low transient areas and evaluate repeatability of urban background measurements in higher exposure testing phases | 
 | High Exposure test | 1 month | Urban with traffic (canyon or junction) | Yes | Evaluate response in high transient / high concentration areas and validate current model and post-processing approach. Propose further models with more variables | 
-
 
 ### Sensor Installation
 
