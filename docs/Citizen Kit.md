@@ -14,13 +14,13 @@ The iSCAPE Citizen Kit is based on the Smart Citizen Kit 2.0.
 
 ![](https://i.imgur.com/vgt8m3p.jpg)
 
-1. Smart Citizen Kit 2.0 with particle and battery sensor with two mounting brackets.
+1. Smart Citizen Kit 2.0 with particle sensor and battery with two mounting brackets.
 2. MicroSD card and microSD adapter to SD.
 3. USB cable and a USB charger to charge the battery.
 
 ## :ear: Measurements
 
-| Mesura                                       | Unitats                                        | Sensors               |
+| Measurements                                       | Units                                        | Sensors               |
 |----------------------------------------------|------------------------------------------------|-----------------------|
 | Air temperature                        | ºC                                             | Sensirion SHT-31      |
 | Relative Humidity                              | % REL                                          | Sensirion SHT-31      |

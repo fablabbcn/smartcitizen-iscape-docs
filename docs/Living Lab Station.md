@@ -85,6 +85,8 @@ To start the installation simply visit the setup website [**stations.iscape.smar
 !!! warning
     :warning: We will need you to send us the following information once you are done with the setup: the *device ID*, which appears in the URL of your device https://smartcitizen.me/kits/*XXXX* and the physical station ID that corresponds to that *device ID*, which can be found in a sticker underneath.
 
+    ![](https://i.imgur.com/ARC6V42.jpg)
+
 ### Get data from the SD card
 
 You will need to access the Kit in order to get the SD card. For this, first unscrew the **two white layers at the top of the station** with the keys provided in the Pack:
