@@ -114,6 +114,14 @@ Use the perforated steel tape and the M6 provided to mount the Station on any st
 
 ![](https://i.imgur.com/36El7ds.jpg)
 
+Also, a temperature probe needs to be extracted from the bottom of the station:
+
+![](https://i.imgur.com/HIwz1yG.jpg)
+
+And it should look like this:
+ 
+![](https://i.imgur.com/hXtS4Gq.jpg)
+
 ### Sensor considerations
 
 **Electrochemical sensor**
