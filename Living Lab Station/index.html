@@ -483,12 +483,18 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sensor-considerations" title="Sensor considerations" class="md-nav__link">
     Sensor considerations
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#sensor-data-processing" title="Sensor data processing" class="md-nav__link">
@@ -513,6 +519,13 @@
           <li class="md-nav__item">
   <a href="#power-supply" title="Power supply" class="md-nav__link">
     Power supply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-power-supplies" title="Changing power supplies" class="md-nav__link">
+    Changing power supplies
   </a>
   
 </li>
@@ -2568,12 +2581,18 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sensor-considerations" title="Sensor considerations" class="md-nav__link">
     Sensor considerations
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#sensor-data-processing" title="Sensor data processing" class="md-nav__link">
@@ -2598,6 +2617,13 @@
           <li class="md-nav__item">
   <a href="#power-supply" title="Power supply" class="md-nav__link">
     Power supply
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-power-supplies" title="Changing power supplies" class="md-nav__link">
+    Changing power supplies
   </a>
   
 </li>
@@ -2958,7 +2984,7 @@
 <p><img alt="" src="https://i.imgur.com/HIwz1yG.jpg" /></p>
 <p>And it should look like this:</p>
 <p><img alt="" src="https://i.imgur.com/hXtS4Gq.jpg" /></p>
-<h3 id="sensor-considerations">Sensor considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">Link</a></h3>
+<h2 id="sensor-considerations">Sensor considerations<a class="headerlink" href="#sensor-considerations" title="Permanent link">Link</a></h2>
 <p><strong>Electrochemical sensor</strong></p>
 <p>Information about the electrochemical sensors by Alphasense Ltd. is shown below:</p>
 <table>
@@ -3149,7 +3175,8 @@
 <p>The battery takes about 4 hours to fully charge. When the battery is fully charged, change the orange to green <span class="led small green"> </span>.</p>
 <p><em>Remember that in addition to the colors you will have the state color of the kit: configuration, network and sd.</em></p>
 <h3 id="power-supply">Power supply<a class="headerlink" href="#power-supply" title="Permanent link">Link</a></h3>
-<p>The Station can be directly powered at 220V AC (Consumption MAX 33W).</p>
+<p>The Station can be directly powered at 220V AC (Consumption MAX 33W). It can also be powered via USB, with a normal phone charger. However, there is a bit to do in order to change it. Let's see how!</p>
+<p><img alt="" src="https://i.imgur.com/S8cVo9z.jpg" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Batteries</p>
 <p>The Living Lab Station has a higher consumption, mostly due to the fans on the two PM sensors.</p>
@@ -3161,28 +3188,86 @@
 <p>Unfortunately, we are having some problems with the PV Solar Panel system to power the Station independently. The system is currently under tests, and it will be available in the next few months.</p>
 <p><img alt="" src="https://i.imgur.com/vfp6nB5.jpg" /></p>
 </div>
+<h3 id="changing-power-supplies">Changing power supplies<a class="headerlink" href="#changing-power-supplies" title="Permanent link">Link</a></h3>
+<p>Before we start, some tools that will be helpful during the process:</p>
+<p><img alt="" src="https://i.imgur.com/GiZkuwe.jpg" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Unplug the station before starting this process from any type of external supply</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Step by step</p>
 <ul>
 <li>
-<p>Remove the two covers using the allen keys as explained on the setup instructions.
-    <img alt="" src="https://i.imgur.com/WPb3tnr.jpg" /></p>
+<p>Remove the two covers using the allen keys as explained on the setup instructions.</p>
+<p><img alt="" src="https://i.imgur.com/4BRDnQO.jpg" /></p>
 </li>
 <li>
-<p>Remove the USB cable and bring inside the 220V power cable.</p>
-<p><img alt="" src="https://i.imgur.com/y54xC4p.jpg" /></p>
+<p>Remove the layer which contains the kit. The kit is attached to the layers below, as seen in the image</p>
+<p><img alt="" src="https://i.imgur.com/nP9aqsk.jpg" /></p>
 </li>
 <li>
-<p>Connect the cable wires with the power supply.</p>
-<p><img alt="" src="https://i.imgur.com/U49BppQ.jpg" /></p>
+<p>Unplug the different connectors in the kit: I2C, battery and USB</p>
+<p><img alt="" src="https://i.imgur.com/pXTL3ku.jpg" /></p>
 </li>
 <li>
-<p>Remove the third cover and place the power adapter as seen on the picture.</p>
-<p><img alt="" src="https://i.imgur.com/WYvxUyy.jpg" /></p>
+<p>You can use nose pliers for the USB and the battery</p>
+<p><img alt="" src="https://i.imgur.com/9j6GznE.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/2STYawe.jpg" /></p>
 </li>
 <li>
-<p>Close the cover and run the Setup process again</p>
-<p><img alt="" src="https://i.imgur.com/JAK6NMd.jpg" /></p>
+<p>Time to get to the power layer, this time, two blue layers will come off</p>
+<p><img alt="" src="https://i.imgur.com/X4RlUqr.jpg" /></p>
+</li>
+<li>
+<p>Unscrew the cover for the power area</p>
+<p><img alt="" src="https://i.imgur.com/4cfxCZv.jpg" /></p>
+</li>
+<li>
+<p>Make sure there is no energy left in the power supply by checking that there is no LED on in it. Then, remove the cables from the power supply and the white brackets</p>
+<p><img alt="" src="https://i.imgur.com/h9iufVc.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/1yulbbU.jpg" /></p>
+</li>
+<li>
+<p>Extract the cable from the base's cable gland</p>
+<p><img alt="" src="https://i.imgur.com/jJF9VbJ.jpg" /></p>
+</li>
+<li>
+<p>Cover the cable gland again and remove the square cable gland on the other side</p>
+<p><img alt="" src="https://i.imgur.com/P3m4q7Q.jpg" /></p>
+</li>
+<li>
+<p>Exchange the rubber in the cable gland with the one provided with a hole</p>
+<p><img alt="" src="https://i.imgur.com/NiUeiJ5.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/IXMLkM4.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/OrNZRyT.jpg" /></p>
+</li>
+<li>
+<p>Put the cable in and fix the gland in place. Leave sufficient overhead in the cable to be able to connect it to the kit</p>
+<p><img alt="" src="https://i.imgur.com/28wLcXA.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/STZ0Yu8.jpg" /></p>
+</li>
+<li>
+<p>Put the power cover back on</p>
+<p><img alt="" src="https://i.imgur.com/2GTVg90.jpg" /></p>
+</li>
+<li>
+<p>Put the kit's layer back on and pass the cables through</p>
+<p><img alt="" src="https://i.imgur.com/UO5OmbK.jpg" /></p>
+</li>
+<li>
+<p>Connect everything in this order: first, the I2C connector, second, the battery, third, the USB</p>
+<p><img alt="" src="https://i.imgur.com/pXTL3ku.jpg" /></p>
+</li>
+<li>
+<p>Put the kit's layer on again. Verify that the o-ring fit's in properly. Close everything and put both layers back on on</p>
+<p><img alt="" src="https://i.imgur.com/yeh1enO.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/4BRDnQO.jpg" /></p>
+</li>
+<li>
+<p>Now, you can use the USB power supply or the battery pack!</p>
+<p><img alt="" src="https://i.imgur.com/9iIflcg.jpg" /></p>
+<p><img alt="" src="https://i.imgur.com/ZPzbFI9.jpg" /></p>
 </li>
 </ul>
 </div>
