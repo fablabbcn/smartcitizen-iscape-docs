@@ -122,7 +122,7 @@ And it should look like this:
  
 ![](https://i.imgur.com/hXtS4Gq.jpg)
 
-### Sensor considerations
+## Sensor considerations
 
 **Electrochemical sensor**
 
@@ -205,7 +205,9 @@ _Remember that in addition to the colors you will have the state color of the ki
 
 ### Power supply
 
-The Station can be directly powered at 220V AC (Consumption MAX 33W).
+The Station can be directly powered at 220V AC (Consumption MAX 33W). It can also be powered via USB, with a normal phone charger. However, there is a bit to do in order to change it. Let's see how!
+
+![](https://i.imgur.com/S8cVo9z.jpg)
 
 !!! warning "Batteries"
     The Living Lab Station has a higher consumption, mostly due to the fans on the two PM sensors.
@@ -219,26 +221,95 @@ The Station can be directly powered at 220V AC (Consumption MAX 33W).
 
     ![](https://i.imgur.com/vfp6nB5.jpg)
 
+### Changing power supplies
+
+Before we start, some tools that will be helpful during the process:
+
+![](https://i.imgur.com/GiZkuwe.jpg)
+
+!!! danger
+    
+    Unplug the station before starting this process from any type of external supply
+
 !!! example "Step by step"
 
     * Remove the two covers using the allen keys as explained on the setup instructions.
-        ![](https://i.imgur.com/WPb3tnr.jpg)
 
-    * Remove the USB cable and bring inside the 220V power cable.
+        ![](https://i.imgur.com/4BRDnQO.jpg)
 
-        ![](https://i.imgur.com/y54xC4p.jpg)
+    * Remove the layer which contains the kit. The kit is attached to the layers below, as seen in the image
 
-    * Connect the cable wires with the power supply.
+        ![](https://i.imgur.com/nP9aqsk.jpg)
 
-        ![](https://i.imgur.com/U49BppQ.jpg)
+    * Unplug the different connectors in the kit: I2C, battery and USB
 
-    * Remove the third cover and place the power adapter as seen on the picture.
+        ![](https://i.imgur.com/pXTL3ku.jpg)
 
-        ![](https://i.imgur.com/WYvxUyy.jpg)
+    * You can use nose pliers for the USB and the battery
 
-    * Close the cover and run the Setup process again
+        ![](https://i.imgur.com/9j6GznE.jpg)
 
-        ![](https://i.imgur.com/JAK6NMd.jpg)
+        ![](https://i.imgur.com/2STYawe.jpg)
+
+    * Time to get to the power layer, this time, two blue layers will come off
+
+        ![](https://i.imgur.com/X4RlUqr.jpg)
+
+    * Unscrew the cover for the power area
+
+        ![](https://i.imgur.com/4cfxCZv.jpg)
+
+    * Make sure there is no energy left in the power supply by checking that there is no LED on in it. Then, remove the cables from the power supply and the white brackets
+
+        ![](https://i.imgur.com/h9iufVc.jpg)
+
+        ![](https://i.imgur.com/1yulbbU.jpg)
+
+    * Extract the cable from the base's cable gland
+
+        ![](https://i.imgur.com/jJF9VbJ.jpg)
+
+    * Cover the cable gland again and remove the square cable gland on the other side
+
+        ![](https://i.imgur.com/P3m4q7Q.jpg)
+
+    * Exchange the rubber in the cable gland with the one provided with a hole
+
+        ![](https://i.imgur.com/NiUeiJ5.jpg)
+
+        ![](https://i.imgur.com/IXMLkM4.jpg)
+
+        ![](https://i.imgur.com/OrNZRyT.jpg)
+
+    * Put the cable in and fix the gland in place. Leave sufficient overhead in the cable to be able to connect it to the kit
+
+        ![](https://i.imgur.com/28wLcXA.jpg)
+
+        ![](https://i.imgur.com/STZ0Yu8.jpg)
+
+    * Put the power cover back on
+
+        ![](https://i.imgur.com/2GTVg90.jpg)
+
+    * Put the kit's layer back on and pass the cables through
+
+        ![](https://i.imgur.com/UO5OmbK.jpg)
+
+    * Connect everything in this order: first, the I2C connector, second, the battery, third, the USB
+
+        ![](https://i.imgur.com/pXTL3ku.jpg)
+
+    * Put the kit's layer on again. Verify that the o-ring fit's in properly. Close everything and put both layers back on on
+
+        ![](https://i.imgur.com/yeh1enO.jpg)
+
+        ![](https://i.imgur.com/4BRDnQO.jpg)
+
+    * Now, you can use the USB power supply or the battery pack!
+
+        ![](https://i.imgur.com/9iIflcg.jpg)
+
+        ![](https://i.imgur.com/ZPzbFI9.jpg)
 
 ## States of the Kit
 
