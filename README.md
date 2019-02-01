@@ -3,6 +3,8 @@ iSCAPE SmartCitizen Documentation
 
 Public documentation of the iSCAPE hardware and software Sensor technology based on the Smart Citizen ecosystem
 
+[![DOI](https://zenodo.org/badge/145716521.svg)](https://zenodo.org/badge/latestdoi/145716521)
+
 ## Contribute
 
 ### Setup
