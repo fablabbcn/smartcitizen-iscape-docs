@@ -205,7 +205,7 @@ _Remember that in addition to the colors you will have the state color of the ki
 
 ### Power supply
 
-The Station can be directly powered at 220V AC (Consumption MAX 33W). It can also be powered via USB, with a normal phone charger. However, there is a bit to do in order to change it. Let's see how!
+The Station can be directly powered at 220-240V AC (Max. consumption with the AC supply is 5W). It can also be powered via USB, with a normal phone charger (5V and 750mA max). However, there is a bit to do in order to change it. Let's see how!
 
 ![](https://i.imgur.com/S8cVo9z.jpg)
 
