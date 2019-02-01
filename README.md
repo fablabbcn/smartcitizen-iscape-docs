@@ -1,6 +1,9 @@
-# smartcitizen-iscape-docs
-Documentation
+iSCAPE SmartCitizen Documentation
+=================================
 
+Public documentation of the iSCAPE hardware and software Sensor technology based on the Smart Citizen ecosystem
+
+## Contribute
 
 ### Setup
 
@@ -19,3 +22,7 @@ If you want to use an specific port other than the localhost:8000:
 ### Deploy
 
 `mkdocs gh-deploy`
+
+## Funding
+
+This work has received funding from the European Union's Horizon 2020 research and innovation program under the grant agreement [No. 689954](https://cordis.europa.eu/project/rcn/202639_en.html)
