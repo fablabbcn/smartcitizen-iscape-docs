@@ -63,7 +63,7 @@ _Remember that in addition to the colors you will have the state color of the ki
 
 ## The button
 
-| Funció 			| Acció del botó																       		       |
+| Function 			| Button Action															       		       |
 |-------------------|--------------------------------------------------------------------------------------------------|
 | **ON** 				| Push the button																				   |
 | **OFF** 				| Push the button for 5 seconds																   |
@@ -121,7 +121,7 @@ If we do not have an internet connection we can use the SD mode. In this case th
 | LED color                            |  Kit status                             |
 |------------------------------------------|------------------------------------------- |
 | <span class="led busy"></span>           |  :hourglass_flowing_sand:  Busy, please wait!                 |
-| <span class="led firmware"></span>       | :wrench: Software update going on!
+| <span class="led firmware"></span>       | :wrench: Software update going on! |
 
 ## :umbrella: Build your own enclosure
 

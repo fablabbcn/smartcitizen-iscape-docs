@@ -122,6 +122,63 @@ And it should look like this:
  
 ![](https://i.imgur.com/hXtS4Gq.jpg)
 
+#### Umbrella cover installation
+
+Due to some issues with the waterproofness of the Living Lab Station, we have developed a solution to protect it from the rain. This solution is shown in the pictures below, and it's meant to solve these problems for the current version of the LLS. The newer version of the LLS has a simpler setup, already including such cover to protect it from the rain or sun radiation.
+
+![](https://i.imgur.com/abJOKRa.jpg)
+
+!!! warning "Beware of collisions"
+    As you can see, the cover is a rugged piece and it's only meant for the current version of the station. Please, be careful and do not fit it in places where people could bump into it.
+
+This is what you get in the package (except the wrench):
+
+![](https://i.imgur.com/ftZRoT6.jpg)
+
+!!! example "Step by step"
+
+    * If you have the 3D printed cover on the Smart Citizen Kit, it's time to remove it. 
+
+    * There is no need to remove the two top white layers (in the pictures we did it without them)
+
+        ![](https://i.imgur.com/4BRDnQO.jpg)
+
+    * Insert the threads in the already mounted t-slots. The distance between them is ~50mm
+
+        ![](https://i.imgur.com/zRh2JJI.jpg)
+
+        ![](https://i.imgur.com/44Y2WjZ.jpg)
+
+        ![](https://i.imgur.com/jn8XnVD.jpg)
+
+    * Insert the 4x flat spacer in the threads
+
+        ![](https://i.imgur.com/a4NRjmz.jpg)
+
+    * Place the cover on the station
+
+        ![](https://i.imgur.com/v2CKMtr.jpg)
+
+        ![](https://i.imgur.com/EqZDdzy.jpg)
+
+    * Place the serrated spacers, with the serrated side on the outer part (they help to hold the station in place)
+
+        ![](https://i.imgur.com/EOG8UvW.jpg)
+
+    * Place the perforated steel stripe in one of the sides. Don't tight it too much, so that you have room to place it in the pole
+
+        ![](https://i.imgur.com/EOG8UvW.jpg)
+
+        ![](https://i.imgur.com/JJmuU7d.jpg)
+
+    * Put the station in it's final location, and tighten it with the perforated steel stripes. Play with both sides, so that the stripes are tight on the pole
+
+        ![](https://i.imgur.com/IKfu75D.jpg)
+
+        ![](https://i.imgur.com/lkWg556.jpg)
+
+    * You are done!
+
 ## Sensor considerations
 
 **Electrochemical sensor**
